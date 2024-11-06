@@ -1,0 +1,8 @@
+site_name: Panelas Grill
+
+nave:
+   - Home: "Index.md"
+
+
+theme:
+   name: material 
