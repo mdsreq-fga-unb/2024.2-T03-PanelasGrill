@@ -1,8 +1,25 @@
+repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-PanelasGrill
+repo_name: 2024.2 - Panelas_Grill
+
+
 site_name: Panelas Grill
 
-nave:
+nav:
    - Home: "Index.md"
+   - Visão do produto e projeto:
+        - Cenário atual do cliente e do negócio: sessao1.md
 
 
 theme:
    name: material 
+   palette:
+    - scheme: default
+      toggle: 
+         icon: material/toggle-switch-off-outline
+         name: Dark mode
+      primary: brown
+    - scheme: slate
+      toggle:
+         icon: material/toggle-switch
+         name: Light mode
+      primary: brown
