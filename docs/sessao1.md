@@ -13,7 +13,7 @@ A Panelas Grill tem como objetivo expandir seus negócios. Com foco em crescimen
 Como atuante no setor alimentício, a empresa precisa monitorar seus insumos com precisão para evitar desperdícios e otimizar a produção. A implementação de um sistema eficiente de gerenciamento de estoques é essencial para que a Panelas Grill mantenha uma operação ágil e lucrativa, oferecendo o suporte necessário para um controle eficaz e sustentável de seus estoques.
 </p>
 A Figura, a seguir apresenta o diagrama de Ishikawa contendo as causas e o problema da Panelas Grill. 
-<div align="center"><img src="/imagens/diagrama.png" height=auto width=auto></div>
+<div align="center"><img src="imagens/diagrama.png" height=auto width=auto></div>
 
 
 ## 1.3 Desafios do Projeto 
