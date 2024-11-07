@@ -7,6 +7,8 @@ Somos um grupo da disciplina de Requisitos da Universidade de Brasília, ministr
 
 ## Mais informações 
 
+Para acessar a nossa documentação [clique aqui](https://mdsreq-fga-unb.github.io/2024.2-T03-PanelasGrill/).
+
 
 ## Equipe
 
