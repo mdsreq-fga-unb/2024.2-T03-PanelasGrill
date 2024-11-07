@@ -5,7 +5,7 @@ repo_name: 2024.2 - Panelas_Grill
 site_name: Panelas Grill
 
 nav:
-   - Home: "Index.md"
+   - Home: index.md
    - Visão do produto e projeto:
         - Cenário atual do cliente e do negócio: sessao1.md
 
