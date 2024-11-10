@@ -12,7 +12,11 @@ A empresa também lida com limitações na equipe, que possui pouco conhecimento
 
 A figura, a seguir, apresenta o diagrama de Ishikawa contendo as causas (organizados pelos 6M’s) e o problema do Panelas Grill.
 
-<div align="center"><img src="../imagens/Diagrama.png" height=auto width=auto></div>
+<center>
+  ![Diagrama de Ishikawa](../imagens/diagrama.png)
+</center>
+
+
 
 ## **1.3 Desafios do Projeto**
 O desafio deste projeto é desenvolver um sistema de controle de estoque que leve em consideração as limitações da equipe. Como a equipe possui pouca familiaridade com tecnologias, é fundamental que o sistema seja simples e intuitivo. Isso significa que ele deve ser fácil de entender e usar, sem a necessidade de conhecimentos técnicos avançados. As funcionalidades precisam ser claras, diretas e acessíveis, garantindo uma experiência fluida, sem complexidade e adequada às necessidades dos usuários.
