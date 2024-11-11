@@ -18,7 +18,15 @@
 
 ## **2.3 Tecnologias a Serem Utilizadas**
 
-<p>A ideia para o projeto é desenvolver uma aplicação web, o que permite uma ampla interação e acessibilidade dos usuários com a solução, independente do dispositivo utilizado. O desenvolvimento será feito utilizando tecnologias web como HTML, CSS, JavaScript e Bootstrap.</p>
+<p>A proposta do projeto consiste no desenvolvimento de uma aplicação web, com foco em alta interação e acessibilidade para os usuários, independentemente do dispositivo utilizado. A solução será construída utilizando as seguintes tecnologias:</p>
+<ul>
+    <li><strong>React:</strong>Framework para construção da interface de usuário, permitindo uma experiência dinâmica e responsiva.</li>
+    <li><strong>Next.js:</strong>Framework para React, que facilita o desenvolvimento de aplicações web com renderização do lado servidor (SSR), otimização de desempenho e geração de páginas estáticas.</li>
+    <li><strong>Flask:</strong>Micro-framework Python para a criação da API back-end, que gerenciará a lógica de negócios, bancos de dados e comunicação com o front-end.</li>
+    <li><strong>Git:</strong>Sistema de controle de versão distribuído, utilizado para gerenciar o código-fonte e colaborar na equipe de desenvolvimento.</li>
+    <li><strong>Jest</strong>Framework de testes JavaScript utilizado para garantir a qualidade e confiabilidade do código no front-end, com suporte a testes unitários, integração e cobertura de código.</li>
+    <li><strong>PyUnit</strong>Framework de testes para Python, utilizado para garantir a qualidade do back-end, permitindo a execução de testes unitários para validar a lógica da API desenvolvida com Flask.</li>
+</ul>
 
 ## **2.4 Pesquisa de Mercado e Análise Competitiva**
 
