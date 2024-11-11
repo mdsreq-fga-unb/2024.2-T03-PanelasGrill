@@ -48,9 +48,9 @@
 
 ## **2.5 Análise de Viabilidade**
 
-<p>A equipe de desenvolvimento possui ampla experiência e domínio nas tecnologias necessárias, assegurando a capacidade de implementar as soluções propostas. O prazo estimado para conclusão é até fevereiro, e para garantir o progresso contínuo, serão realizadas sprints, permitindo o desenvolvimento ágil e entregas rápidas de funcionalidades ao longo do projeto.</p>
+<p>A equipe de desenvolvimento possui um bom conhecimento das tecnologias necessárias, embora ainda esteja em processo de aprofundamento e familiarização com algumas delas. No entanto, isso não comprometerá a capacidade de implementar as soluções propostas. Para garantir o progresso contínuo, serão realizadas sprints, permitindo o desenvolvimento ágil e entregas rápidas de funcionalidades ao longo do projeto.</p>
 
-<p>A equipe se dedicará a atender todos os requisitos do projeto e a cumprir os prazos estabelecidos. Além disso, a equipe manterá contato contínuo com os clientes para garantir que as entregas atendam às expectativas e sejam realizadas conforme o planejado.</p>
+<p>A equipe se comprometerá a atender todos os requisitos do projeto e a cumprir os objetivos estabelecidos. Além disso, haverá uma comunicação constante com os clientes para garantir que as entregas atendam às expectativas e sejam realizadas conforme o planejado, ajustando o trabalho conforme necessário para atender aos objetivos do projeto.</p>
 
 ## **2.6 Impacto da Solução**
 
