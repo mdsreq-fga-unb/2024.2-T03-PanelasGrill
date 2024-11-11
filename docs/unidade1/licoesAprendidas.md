@@ -21,6 +21,10 @@ Durante o desenvolvimento inicial do projeto da Panelas Grill, várias lições 
       <li><strong>B.</strong> Ação de melhoria: Buscamos manter uma comunicação clara, utilizando todas as ferramentas disponíveis, além de garantir a organização dentro da equipe.</li>
     </ul>
   </li>
+</ol>
+
+**Dificuldades e Ações para Superá-las**
+<ol>
   <li>
     <strong>Colaboração com o cliente e entendimento dos requisitos</strong>
     <ul>
