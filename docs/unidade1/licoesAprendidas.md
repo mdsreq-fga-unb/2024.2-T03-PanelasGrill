@@ -8,7 +8,7 @@ Durante o desenvolvimento inicial do projeto da Panelas Grill, várias lições 
 
 <ol>
   <li>
-    <strong>Compressão de todos os membros da equipe</strong>
+    <strong>Compreenssão de todos os membros da equipe</strong>
     <ul>
       <li><strong>A.</strong> Desafio: No início, enfrentamos dificuldades para compreender todos os detalhes na definição dos requisitos do projeto, devido à falta de clareza na comunicação.</li>
       <li><strong>B.</strong> Ação de melhoria: Buscamos apoio em ferramentas externas, como histórias de usuário, GUPTA, gestão do conhecimento e planejamento de horários. Esses recursos nos ajudaram a estruturar melhor nossa linha de raciocínio e a alinhar o processo de levantamento de requisitos.</li>
