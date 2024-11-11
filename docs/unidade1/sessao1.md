@@ -13,7 +13,7 @@ A empresa também lida com limitações na equipe, que possui pouco conhecimento
 A figura, a seguir, apresenta o diagrama de Ishikawa contendo as causas (organizados pelos 6M’s) e o problema do Panelas Grill.
 
 <center>
-  ![Diagrama de Ishikawa](../imagens/Diagrama.png)
+  ![Diagrama de Ishikawa](../imagens/diagrama.png)
 </center>
 
 
