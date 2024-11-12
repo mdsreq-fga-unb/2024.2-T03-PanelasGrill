@@ -68,7 +68,7 @@
 
 O processo de validação da solução será realizado em três etapas principais:
 
-1. Antes de cada desenvolvimento de funcionalidade ou nova fase, os requisitos do cliente serão analisados e confirmados diretamente com ele. Esse processo ocorrerá em reuniões, nas quais o cliente poderá revisar e ajustar os requisitos propostos.
-2. A cada iteração do desenvolvimento do projeto, serão feitos testes unitários e de integração para garantir a qualidade do produto e minimizar a quantidade de bugs.
-3. Antes de cada entrega, o software passará por uma validação realizada pela equipe de QA. Eles serão responsáveis por identificar falhas, inconsistências ou problemas que possam ter sido negligenciados durante a fase de desenvolvimento para verificar a compatibilidade com os requisitos.
+1. Antes de cada implementação de funcionalidades, os requisitos do cliente serão analisados e confirmados diretamente com o mesmo. Esse processo ocorrerá em reuniões, nas quais o cliente poderá revisar e ajustar os requisitos propostos.
+2.A cada iteração do desenvolvimento do projeto, serão feitos testes unitário e de integração para garantir a qualidade do produto e para minimizar a quantidade de bugs.
+3. Antes de qualquer entrega, o produto passará por uma validação realizada pelo analista de QA.Ele será responsável por identificar falhas, inconsistências ou problemas que possam ter sido negligenciados durante a fase de desenvolvimento para verificar a compatibilidade com os requisitos.
 
