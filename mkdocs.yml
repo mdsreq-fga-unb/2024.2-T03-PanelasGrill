@@ -16,7 +16,7 @@ nav:
    - Políticas de boas práticas:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
-      - Políticas de Boas Práticas para Issues: Politicas/politica_issues.md
+      - Políticas de Boas Práticas para Issues: Politicas/politica_issue.md
 
 theme:
    name: material 
