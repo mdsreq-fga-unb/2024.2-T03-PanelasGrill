@@ -6,6 +6,16 @@
 ## Quem Somos?
 Somos um grupo da disciplina de Requisitos da Universidade de Brasília, ministrada pelo Professor Dr. George Marsicano. Esta disciplina tem como principal objetivo estabelecer uma compreensão clara do software e promover o compromisso entre todos os participantes de um projeto de desenvolvimento de software.
 
+# Video 
+
+video da nossa apresentação da missão 1 [Aqui](https://www.youtube.com/watch?v=ZLc3KXdBXrU).
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZLc3KXdBXrU" frameborder="0" allowfullscreen></iframe>
+
+
+</center>
+
 ## Equipe
 
 <center>
