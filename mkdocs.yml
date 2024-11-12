@@ -13,7 +13,10 @@ nav:
       - Cronogramas e Entregas: unidade1/sessao4.md
       - Interação entre Equipe e Cliente: unidade1/sessao5.md
       - Lições Aprendidas: unidade1/licoesAprendidas.md
-
+   - Políticas de boas práticas:
+      - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
+      - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
+      - Políticas de Boas Práticas para Issues: Politicas/politica_issues.md
 
 theme:
    name: material 
