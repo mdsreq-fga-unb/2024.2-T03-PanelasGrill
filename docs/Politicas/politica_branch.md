@@ -1,4 +1,4 @@
-# Políticas de Boas Práticas para Branches
+# Políticas de Boas Práticas para Branch
 
 
 ## 1. **Nomeação de Branches**
