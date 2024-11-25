@@ -6,9 +6,9 @@ A marmitaria Panelas Grill é uma empresa brasileira do setor alimentício, comp
 A Panelas Grill tem como objetivo expandir seus negócios. Com foco em crescimento sustentável, a empresa busca diversificar seus serviços, investindo em inovação no cardápio e na melhoria contínua dos processos de produção e atendimento.
 
 ## **1.2 Identificação da Oportunidade ou Problema**
-A marmitaria Panelas Grill está em fase de expansão, atraindo novos clientes e ampliando seu alcance no mercado. No entanto, enfrenta desafios significativos no controle de estoque, devido à ausência de um sistema automatizado e recursos tecnológicos insuficientes para rastreamento de insumos. Além disso, a falta de uma política clara de compras e de um planejamento estruturado de gestão de estoque dificultam o controle eficiente.
+A Panelas Grill enfrenta desafios significativos no controle de estoque, o que compromete sua eficiência operacional e capacidade de atender à demanda com qualidade. A ausência de um sistema automatizado para registro e monitoramento de insumos dificulta o rastreamento de produtos e o planejamento de compras.
 
-A empresa também lida com limitações na equipe, que possui pouco conhecimento em gestão e tecnologia, o que torna a adaptação a novos processos mais desafiadora. No setor alimentício, manter um controle rigoroso dos insumos é essencial para evitar desperdícios e otimizar a produção. A implementação de um sistema de gerenciamento de estoque adequado é essencial para que a Panelas Grill sustente operações lucrativas e ágeis, com controle eficaz e sustentável dos recursos.
+Esses problemas resultam em desperdício de insumos, interrupções no fluxo de operações e perda de recursos financeiros. Além disso, a equipe tem baixa familiaridade com tecnologia, tornando os métodos manuais ainda mais sujeitos a erros. Para sustentar seu crescimento e otimizar suas operações, a Panelas Grill precisa de uma solução que simplifique e automatize o controle de estoque, garantindo eficiência, redução de perdas e apoio à tomada de decisões.
 
 A figura, a seguir, apresenta o diagrama de Ishikawa contendo as causas (organizados pelos 6M’s) e o problema do Panelas Grill.
 
