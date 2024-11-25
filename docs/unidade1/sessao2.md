@@ -21,10 +21,11 @@
 <ul>
     <li><strong>React:</strong>Framework para construção da interface de usuário, permitindo uma experiência dinâmica e responsiva.</li>
     <li><strong>Next.js:</strong>Framework para React, que facilita o desenvolvimento de aplicações web com renderização do lado servidor (SSR), otimização de desempenho e geração de páginas estáticas.</li>
-    <li><strong>Flask:</strong>Micro-framework Python para a criação da API back-end, que gerenciará a lógica de negócios, bancos de dados e comunicação com o front-end.</li>
+    <li><strong>Tailwind CSS:</strong> Framework CSS utilitário que será usado para criar interfaces responsivas e modernas com mais rapidez. Ele oferece uma abordagem baseada em classes utilitárias, permitindo a personalização visual diretamente no HTML/JSX, eliminando a necessidade de escrever CSS personalizado para muitos casos.</li>    
+    <li><strong>Django:</strong>Framework Python robusto e escalável, que será utilizado para a criação do back-end. Django oferece ferramentas nativas para gerenciamento de banco de dados, autenticação de usuários.</li>
     <li><strong>Git:</strong>Sistema de controle de versão distribuído, utilizado para gerenciar o código-fonte e colaborar na equipe de desenvolvimento.</li>
-    <li><strong>Jest</strong>Framework de testes JavaScript utilizado para garantir a qualidade e confiabilidade do código no front-end, com suporte a testes unitários, integração e cobertura de código.</li>
-    <li><strong>PyUnit</strong>Framework de testes para Python, utilizado para garantir a qualidade do back-end, permitindo a execução de testes unitários para validar a lógica da API desenvolvida com Flask.</li>
+    <li><strong>Jest:</strong>Framework de testes JavaScript utilizado para garantir a qualidade e confiabilidade do código no front-end, com suporte a testes unitários, integração e cobertura de código.</li>
+    <li><strong>PyUnit:</strong>Framework de testes para Python, utilizado para garantir a qualidade do back-end, permitindo a execução de testes unitários para validar a lógica da API desenvolvida com Flask.</li>
 </ul>
 
 ## **2.4 Pesquisa de Mercado e Análise Competitiva**
