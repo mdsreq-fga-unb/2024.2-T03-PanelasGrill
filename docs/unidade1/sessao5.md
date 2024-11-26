@@ -40,7 +40,7 @@
       <td>Analista de Requisitos</td>
       <td>Define os requisitos funcionais e não funcionais do sistema e garante que eles sejam atendidos.</td>
       <td>Romulo</td>
-      <td>Marcos Vieira</td>
+      <td>Marcos Vieira, Pablo, Antonio, José Vinícius</td>
     </tr>
   </tbody>
 </table>
