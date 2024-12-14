@@ -3,12 +3,12 @@
 <div align="center"><img src="/docs/imagens/Panelas_Grill.jpeg" height=auto width=auto></div>
 
 ## Quem Somos?
+
 Somos um grupo da disciplina de Requisitos da Universidade de Brasília, ministrada pelo Professor Dr. George Marsicano. Esta disciplina tem como principal objetivo estabelecer uma compreensão clara do software e promover o compromisso entre todos os participantes de um projeto de desenvolvimento de software.
 
-## Mais informações 
+## Mais informações
 
 Para acessar a nossa documentação [clique aqui](https://mdsreq-fga-unb.github.io/2024.2-T03-PanelasGrill/).
-
 
 ## Equipe
 
@@ -48,4 +48,3 @@ Para acessar a nossa documentação [clique aqui](https://mdsreq-fga-unb.github.
   </tr>
 </table>
 </center>
-

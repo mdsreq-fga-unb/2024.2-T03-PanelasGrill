@@ -24,7 +24,7 @@ Os requisitos funcionais especificam as funcionalidades que o sistema deve imple
 
 ## **7.2 Lista de Requisitos Não Funcionais**
 
-Os requisitos não funcionais descrevem as características de qualidade que o sistema deve possuir para garantir sua eficiência, usabilidade, segurança e manutenção.
+Os requisitos não funcionais descrevem as características de qualidade que o sistema deve possuir para garantir sua eficiência, usabilidade e manutenção.
 
 - **RNF01 - Suportabilidade (Supportability)**: O sistema deve funcionar corretamente em navegadores modernos como Google Chrome (versão 90 ou superior), Mozilla Firefox (versão 88 ou superior), Safari (versão 14 ou superior), além de ser compatível com sistemas operacionais Android (versão 10 ou superior) e iOS (versão 13 ou superior), garantindo uma experiência consistente em diferentes plataformas.
 - **RNF02 - Usabilidade (Usability)**: A interface deve ser intuitiva, permitindo que os usuários realizem tarefas como localizar cardápios em poucos cliques, sem necessidade de suporte. Todas as funcionalidades principais devem ser acessíveis de forma clara e eficiente, minimizando erros e garantindo uma navegação fluida.
