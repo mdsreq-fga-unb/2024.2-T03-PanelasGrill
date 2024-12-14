@@ -17,7 +17,7 @@ nav:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
       - Políticas de Boas Práticas para Issues: Politicas/politica_issue.md
-
+   - Arquitetura de software: Arquitetura/arquitetura.md
 theme:
    name: material 
    palette:
