@@ -1,6 +1,6 @@
 
 <center>
-  ![Panelas_Grill](imagens/Panelas_Grill.jpeg)
+  ![Panelas_Grill](imagens/PanelasGrill.jpeg)
 </center>
 
 ## Quem Somos?
@@ -8,10 +8,10 @@ Somos um grupo da disciplina de Requisitos da Universidade de Brasília, ministr
 
 # Video 
 
-video da nossa apresentação da missão 1 [Aqui](https://www.youtube.com/watch?v=ZLc3KXdBXrU).
+video da nossa apresentação da missão 1 [Aqui](https://youtu.be/ZLc3KXdBXrU).
 <center>
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZLc3KXdBXrU" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZLc3KXdBXrU?si=vEJ5pDr5i6NigrDW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 </center>
