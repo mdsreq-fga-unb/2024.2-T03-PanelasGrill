@@ -106,3 +106,10 @@ Com base nos resultados apresentados pelo GUPTA, a equipe optou por adotar o Scr
 <small>Ucloud. Metodologia RAD. Disponível em: <https://ucloudglobal.com/br/blog/metodologia-rad/>. Acesso em: 23 nov. 2024.</small>
 
 <small>TreinaWeb. O que é RAD - Rapid Application Development?. Disponível em: <https://www.treinaweb.com.br/blog/o-que-e-rad-rapid-application-development/>. Acesso em: 23 nov. 2024.</small>
+
+
+## Historico de Versão 
+| Data       | Versão | Descrição                                             | Autor      |
+|------------|--------|-------------------------------------------------------|------------|
+| 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
+| 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Jose Vinicius      |
