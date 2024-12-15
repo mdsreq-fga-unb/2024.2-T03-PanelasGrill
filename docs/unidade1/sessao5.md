@@ -1,6 +1,6 @@
-# **5. INTERAÇÃO ENTRE EQUIPE E CLIENTE**
+# **6. INTERAÇÃO ENTRE EQUIPE E CLIENTE**
 
-## **5.1 Composição da Equipe**
+## **6.1 Composição da Equipe**
 
 <table>
   <thead>
@@ -45,7 +45,7 @@
   </tbody>
 </table>
 
-## **5.2 Comunicação**
+## **6.2 Comunicação**
 
 **Ferramentas de comunicação**
 
@@ -64,7 +64,7 @@
 
 
 
-## **5.3 Processo de Validação**
+## **6.3 Processo de Validação**
 
 O processo de validação da solução será realizado em três etapas principais:
 
