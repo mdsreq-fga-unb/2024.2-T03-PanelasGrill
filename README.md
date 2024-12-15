@@ -1,6 +1,6 @@
 # 2024.2-T03-PanelasGrill
 
-<div align="center"><img src="/docs/imagens/Panelas_Grill.jpeg" height=auto width=auto></div>
+<div align="center"><img src="/docs/imagens/PanelasGrill.jpeg" height=auto width=auto></div>
 
 ## Quem Somos?
 
