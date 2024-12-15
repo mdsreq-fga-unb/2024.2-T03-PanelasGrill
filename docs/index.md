@@ -1,6 +1,6 @@
 
 <center>
-  ![Panelas_Grill](imagens/PanelasGrill.jpeg)
+  ![Panelas_Grill](imagens/PanelasGrill.png)
 </center>
 
 ## Quem Somos?

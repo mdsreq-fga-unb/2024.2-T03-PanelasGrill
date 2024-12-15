@@ -1,4 +1,4 @@
-# Priorização do Backlog e MVP
+# 5. Priorização do Backlog e MVP
 
 ## Histórico de revisão
 
@@ -6,7 +6,7 @@
 |----------|----------|-----------------------------------------|-------|
 |15/12/2024|0.1       |Desenvolvimento da priorização para o MVP|Marcos |
 
-## Priorização do Backlog
+## 5.1 Priorização do Backlog
 
 Para critério de priorização do backlog, utilizamos os indicadores: complexidade técnica e valor de négocio. Seus graus e descrições são apresentados na tabela a seguir:
 
@@ -26,7 +26,7 @@ Para critério de priorização do backlog, utilizamos os indicadores: complexid
 |4                       |Gera um alto impacto, gerando melhorias visíveis e competitivas.|
 |5                       |Oferece um valor de negócio excepcional, transformando o negócio e diferenciando dos outros, criando oportunidades de liderança no mercado.|
 
-### Tabela de Priorização
+### 5.2 Tabela de Priorização
 
 Para calcular a priorização, utilizamos os User Stories (US) como base. Cada US é avaliado em termos de valor de negócio e complexidade técnica. A combinação desses dois fatores nos permite determinar a prioridade de cada item no backlog, ajudando a focar nos itens que trazem maior valor com menor esforço. O valor do resultado é dado pela fórmula:
 
@@ -53,11 +53,11 @@ Para calcular a priorização, utilizamos os User Stories (US) como base. Cada U
 | **US07**|2                     |3                         |1              |
 | **US15**|2                     |3                         |1              |
 
-## Definição do MVP  
+## 5.3 Definição do MVP  
 
 Com base na priorização do backlog, foram selecionadas para o MVP as histórias de usuário com resultado **igual ou maior que 3**. Esse critério assegura que o MVP abranja funcionalidades essenciais, como controle de acesso, consulta de insumos, geração de relatórios e gerenciamento de estoque e cardápios, atendendo às demandas principais do sistema.
 
-### Tabela de Histórias de Usuário no MVP  
+### 5.4 Tabela de Histórias de Usuário no MVP  
 
 ---
 

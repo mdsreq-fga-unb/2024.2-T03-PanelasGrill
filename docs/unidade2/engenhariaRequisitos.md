@@ -140,3 +140,9 @@ da equipe sobre o que foi feito na sprint e discutir em equipe.<br></span>
     </tr>
   </tbody>
 </table>
+
+
+## Historico de Versão 
+| Data       | Versão | Descrição                                             | Autor      |
+|------------|--------|-------------------------------------------------------|------------|
+| 15/12/2024 | 1.0    | Documento inicial  | Jose Vinicius    |

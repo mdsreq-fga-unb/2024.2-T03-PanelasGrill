@@ -70,3 +70,10 @@
     <li><strong>Tomada de Decisão Informada:</strong> Com relatórios confiáveis, a empresa terá maior clareza para decidir sobre compras e uso de recursos.</li>
     <li><strong>Apoio ao Crescimento:</strong> Com um estoque bem gerenciado, a Panelas Grill poderá atender a demandas maiores sem interrupções.</li>    
 </ol>
+
+
+## Historico de Versão 
+| Data       | Versão | Descrição                                             | Autor      |
+|------------|--------|-------------------------------------------------------|------------|
+| 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
+| 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Marcos Vieira      |

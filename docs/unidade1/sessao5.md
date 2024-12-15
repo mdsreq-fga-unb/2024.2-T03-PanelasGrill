@@ -72,3 +72,8 @@ O processo de validação da solução será realizado em três etapas principai
 2.A cada iteração do desenvolvimento do projeto, serão feitos testes unitário e de integração para garantir a qualidade do produto e para minimizar a quantidade de bugs.
 3. Antes de qualquer entrega, o produto passará por uma validação realizada pelo analista de QA.Ele será responsável por identificar falhas, inconsistências ou problemas que possam ter sido negligenciados durante a fase de desenvolvimento para verificar a compatibilidade com os requisitos.
 
+
+## Historico de Versão 
+| Data       | Versão | Descrição                                             | Autor      |
+|------------|--------|-------------------------------------------------------|------------|
+| 10/10/2024 | 1.0    | Documento inicial  | Grupo    |

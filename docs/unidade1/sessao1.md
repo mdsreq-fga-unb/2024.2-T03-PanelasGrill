@@ -25,3 +25,11 @@ O desafio deste projeto é desenvolver um sistema de controle de estoque que lev
 Os usuários finais são do tipo de segmentos:
 
 - **Proprietários**: Donos do próprio negócio que buscam soluções para administrar seus negócios, têm mais de 40 anos e não tiveram contato com tecnologia desde cedo, o que pode representar um desafio no uso de sistemas mais avançados.
+
+
+
+## Historico de Versão 
+| Data       | Versão | Descrição                                             | Autor      |
+|------------|--------|-------------------------------------------------------|------------|
+| 06/10/2024 | 1.0    | Documento inicial  | Grupo    |
+| 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Marcos Vieira      |
