@@ -1,4 +1,4 @@
-# DoR e DoD
+# 6 DoR e DoD
 
 ## Histórico de revisão
 
@@ -6,7 +6,7 @@
 |----------|----------|-----------------------------------------|-------|
 |15/12/2024|0.1       |Criação do DoR e DoD                     |Marcos |
 
-## Definition of Ready (DoR)
+## 6.1 Definition of Ready (DoR)
 
 O DoR é um acordo entre o time e o Product Owner (PO) indicando quando um requisito estará preparado para ser puxado para uma Sprint. Alguns itens que podem ser verificados para determinar se um requisito está "Ready" são:
 
@@ -17,7 +17,7 @@ O DoR é um acordo entre o time e o Product Owner (PO) indicando quando um requi
 - **Prioridade definida:** O requisito deve estar priorizado no backlog, com base em valores de negócio e complexidade técnica.
 - **Viabilidade técnica confirmada:** A equipe de desenvolvimento deve entender como implementar o requisito e confirmar que possui as ferramentas e recursos necessários para tal.
 
-## Definition of Done (DoD)
+## 6.2 Definition of Done (DoD)
 
 O DoD é um acordo que demonstra a qualidade do requisito produzido, indicando que “Done” comprova a satisfação de todos com o trabalho realizado. Se um requisito não atende ao “Done”, ele não deve ser liberado ou apresentado na Sprint Review. Alguns itens que devem ser verificados para determinar se um requisito está "Done" são:
 
