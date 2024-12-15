@@ -28,6 +28,14 @@
     <li><strong>PyUnit:</strong>Framework de testes para Python, utilizado para garantir a qualidade do back-end, permitindo a execução de testes unitários para validar a lógica da API desenvolvida com Flask.</li>
 </ul>
 
+# **Arquitetura de software**
+
+## **padrão MTV (Model-Template-View)**
+
+<center>
+  ![arquitetura](../imagens/arquitetura.png)
+</center>
+
 ## **2.4 Pesquisa de Mercado e Análise Competitiva**
 
 <p>A análise de mercado mostra que, na região onde a Panelas Grill atua, os concorrentes principais são restaurantes e marmitas locais. Embora esses concorrentes atendam à demanda, eles ainda não adotaram soluções tecnológicas avançadas para a gestão de estoque e operações. Isso cria uma oportunidade para a Panelas Grill se modernizar e se destacar ao oferecer uma solução tecnológica mais eficiente.</p>
