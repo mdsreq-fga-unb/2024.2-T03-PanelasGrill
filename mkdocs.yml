@@ -13,8 +13,13 @@ nav:
       - Cronogramas e Entregas: unidade1/sessao4.md
       - Interação entre Equipe e Cliente: unidade1/sessao5.md
       - Lições Aprendidas: unidade1/licoesAprendidas.md
-      - Requisitos de Software: unidade1/sessao7.md
-      - Backlog do Produto: unidade1/sessao9.md
+   - Backlog:
+      - Lista de Requisitos: Backlog/sessao7.md
+      - Épicos: Backlog/epicos.md
+      - User Stories: Backlog/sessao9.md
+      - Backlog do Produto: Backlog/backlog.md
+      - Priorização e MVP: Backlog/mvp.md
+      - DoR e DoD: Backlog/dor_dod.md
    - Políticas de boas práticas:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
@@ -27,12 +32,12 @@ theme:
       toggle: 
          icon: material/toggle-switch-off-outline
          name: Dark mode
-      primary: brown
+      primary: orange
     - scheme: slate
       toggle:
          icon: material/toggle-switch
          name: Light mode
-      primary: brown
+      primary: orange
    
 extra_css:
    - css/custom.css
