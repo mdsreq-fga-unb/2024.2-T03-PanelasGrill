@@ -12,16 +12,16 @@ Para critério de priorização do backlog, utilizamos os indicadores: complexid
 
 |Grau de Complexidade Técnica|Descrição|
 |----------------------------|---------|
-|1                           |Tabelas de fácil e rápida execulçao, que demandam conhecimentos básicos.|
-|2                           |Compreende tarefas com um grau de complexidade um pouco maios, mas ainda não apresenta muitos desafios.|
+|1                           |Tabelas de fácil e rápida execuçao, que demandam conhecimentos básicos.|
+|2                           |Compreende tarefas com um grau de complexidade um pouco maior, mas ainda não apresenta muitos desafios.|
 |3                           |Requer habilidades técnicas intermediárias, envolvendo desafios técnicos moderados.|
-|4                           |Compreende tarefas mais desafiadoras, exigem conhecimentos técnicos avançados|
-|5                           |Inclui atividades complexas, demandam conhecimentos técnicos excepcionais e são de difícil execução|
+|4                           |Compreende tarefas mais desafiadoras, exigem conhecimentos técnicos avançados.|
+|5                           |Inclui atividades complexas, demandam conhecimentos técnicos excepcionais e são de difícil execução.|
 
 |Grau de Valor de Negócio|Descrição|
 |------------------------|---------|
-|1                       |Impacto mínimo no negócio, gerando poucos benefícios e com pouco impacto nos resultados gerais do negócio|
-|2                       |Traz benefícios úteis, mas contribuindo ainda de forma limitada para os objetivos do negócio|
+|1                       |Impacto mínimo no negócio, gerando poucos benefícios e com pouco impacto nos resultados gerais do negócio.|
+|2                       |Traz benefícios úteis, mas contribuindo ainda de forma limitada para os objetivos do negócio.|
 |3                       |Gera um valor significativo, contribuindo para melhorias relevantes no negócio.|
 |4                       |Gera um alto impacto, gerando melhorias visíveis e competitivas.|
 |5                       |Oferece um valor de negócio excepcional, transformando o negócio e diferenciando dos outros, criando oportunidades de liderança no mercado.|

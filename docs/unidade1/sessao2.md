@@ -77,3 +77,4 @@
 |------------|--------|-------------------------------------------------------|------------|
 | 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
 | 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Marcos Vieira      |
+| 15/12/2024 | 1.2    | Adição do diagrama da arquitetura de software     | Pablo|
