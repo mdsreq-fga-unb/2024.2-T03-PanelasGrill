@@ -5,6 +5,7 @@
 |Data      |Versão    |Descrição                                |Autores|
 |----------|----------|-----------------------------------------|-------|
 |15/12/2024|0.1       |Desenvolvimento do backlog do produto    |Marcos |
+|16/12/2024|0.2       |Organizando em Temas, Épicos e User Stories   |Marcos |
 
 ------------
 

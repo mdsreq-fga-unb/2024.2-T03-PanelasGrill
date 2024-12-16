@@ -5,6 +5,7 @@
 |Data      |Versão    |Descrição                                |Autores|
 |----------|----------|-----------------------------------------|-------|
 |15/12/2024|0.1       |Adicionando os requisitos do produto     |Marcos |
+|16/12/2024|0.2       |Separando os Requisitos em três colunas   |Marcos |
 
 ------------
 
