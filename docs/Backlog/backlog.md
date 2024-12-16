@@ -10,6 +10,14 @@
 
 ### **2.1 Tabela com Temas e Épicos**
 
+A tabela organiza os componentes do backlog do produto da seguinte forma:
+
+1. **Tema**: Agrupa funcionalidades relacionadas, representando áreas principais do sistema (ex: segurança, gestão de estoque).
+
+2. **Épicos**: São grandes funcionalidades dentro de cada tema, que são desmembradas em tarefas menores.
+
+3. **User Stories**: Descrevem necessidades específicas dos usuários de forma simples, explicando o que querem fazer no sistema e por quê.
+
 | **Tema**                        | **Épicos**                                      | **User Stories**                                                                                   |
 |---------------------------------|------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | **TM01** - Segurança e Controle de Acesso| **EP01** - Gerenciamento de Acesso                        | **US01** - Eu como usuário quero logar na plataforma para acessar as informações de estoque e suas ferramentas. |
