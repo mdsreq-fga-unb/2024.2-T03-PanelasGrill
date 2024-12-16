@@ -62,18 +62,17 @@
 
 - **Reuniões com o cliente**: Ao final de todas as entregas parciais, será realizada uma reunião com o cliente para validar o que foi construído para entrega.
 
-
-
 ## **6.3 Processo de Validação**
 
 O processo de validação da solução será realizado em três etapas principais:
 
-1. Antes de cada implementação de funcionalidades, os requisitos do cliente serão analisados e confirmados diretamente com o mesmo. Esse processo ocorrerá em reuniões, nas quais o cliente poderá revisar e ajustar os requisitos propostos.
-2.A cada iteração do desenvolvimento do projeto, serão feitos testes unitário e de integração para garantir a qualidade do produto e para minimizar a quantidade de bugs.
-3. Antes de qualquer entrega, o produto passará por uma validação realizada pelo analista de QA.Ele será responsável por identificar falhas, inconsistências ou problemas que possam ter sido negligenciados durante a fase de desenvolvimento para verificar a compatibilidade com os requisitos.
+1. **Análise de Requisitos**: Antes de cada implementação de funcionalidades, os requisitos do cliente serão analisados e confirmados diretamente com ele. Esse processo ocorrerá em reuniões, nas quais o cliente poderá revisar e ajustar os requisitos propostos.
+2. **Testes de Desenvolvimento**: A cada iteração do desenvolvimento do projeto, serão realizados testes unitários e de integração para garantir a qualidade do produto e minimizar a quantidade de bugs.
+3. **Validação Final**: Antes de qualquer entrega, o produto passará por uma validação realizada por todo o grupo. Todos os membros da equipe serão responsáveis por identificar falhas, inconsistências ou problemas que possam ter sido negligenciados durante a fase de desenvolvimento, verificando a compatibilidade com os requisitos.
 
+## Historico de Versão
 
-## Historico de Versão 
 | Data       | Versão | Descrição                                             | Autor      |
 |------------|--------|-------------------------------------------------------|------------|
 | 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
+| 16/12/2024 | 1.0    | Alterando 6.3 Processo de Validação | Marcos   |
