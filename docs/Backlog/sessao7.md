@@ -1,4 +1,4 @@
-# **1 REQUISITOS DE SOFTWARE**
+# **1. REQUISITOS DE SOFTWARE**
 
 ## Histórico de revisão
 
@@ -12,25 +12,25 @@
 
 Os requisitos funcionais especificam as funcionalidades que o sistema deve implementar para atender às necessidades operacionais do Panelas Grill. A seguir, apresenta-se o conjunto preliminar de requisitos.
 
-| Código | Descrição                                                                                     |
-|--------|-----------------------------------------------------------------------------------------------|
-| RF01   | Logar na plataforma                     |
-| RF02   | Gerar relatório diário de movimentação de estoque|
-| RF03   | Visualizar relatório de entrada e saída de estoque (Mensal)|
-| RF04   | Atualizar insumos do estoque |
-| RF05   | Consultar estoque      |
-| RF06   | Registrar insumos no estoque                |
-| RF07   | Cadastrar cardápio     |
-| RF08   | Notificar insumos em baixo estoque |
-| RF09   | Cadastrar insumos                |
-| RF10   | Notificar estoque próximo ao vencimento |
-| RF11   | Analisar custo de pratos: |
-| RF12   | Editar o cardápio                             |
-| RF13   | Excluir cardápios                          |
-| RF14   | Excluir insumo                               |
-| RF15   | Dashboard de análise de indicadores|
-| RF16   | Pesquisa inteligente|
-| RF17   | Histórico de movimentações no estoque|
+| **ID**    | **Funcionalidade**                         | **Descrição**                                                                                     |
+|-----------|--------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **RF01**  | Autenticar na plataforma                   | Logar na plataforma: dar acesso à plataforma a um usuário já cadastrado.                         |
+| **RF02**  | Gerar relatório diário de estoque          | Disponibilizar, ao final do expediente, um relatório detalhado das entradas e saídas de itens no estoque. |
+| **RF03**  | Visualizar relatório mensal de estoque     | Fornecer relatórios mensais de movimentação de estoque.                                           |
+| **RF04**  | Atualizar insumos                          | Permitir a atualização das informações dos insumos no estoque.                                   |
+| **RF05**  | Consultar insumos no estoque               | Permitir a consulta detalhada dos insumos disponíveis no estoque.                                |
+| **RF06**  | Registrar novos insumos no estoque         | Permitir a adição de novos insumos no estoque.                                                   |
+| **RF07**  | Cadastrar cardápio                         | Permitir o registro de cardápios, associando os insumos necessários.                             |
+| **RF08**  | Notificar insumos em baixo estoque         | Enviar notificações automáticas sobre insumos com estoque abaixo do limite mínimo.               |
+| **RF09**  | Cadastrar insumos                          | Permitir o registro de insumos utilizados na produção.                                           |
+| **RF10**  | Notificar insumos com vencimento próximo   | Enviar alertas automáticos para determinados insumos com validade próxima.                       |
+| **RF11**  | Analisar custo de pratos                   | Calcular o custo de pratos para auxílio na definição de preços e controle de margem.             |
+| **RF12**  | Editar cardápios                           | Atualizar os insumos utilizados no cardápio.                                                     |
+| **RF13**  | Excluir cardápios                          | Permitir a exclusão de cardápios na plataforma.                                                  |
+| **RF14**  | Excluir insumos                            | Permitir a exclusão de insumos na plataforma.                                                    |
+| **RF15**  | Oferecer dashboard de análise de indicadores | Oferecer um painel visual com gráficos e métricas, como insumos mais utilizados e itens com maior custo. |
+| **RF16**  | Implementar pesquisa inteligente           | Implementar um sistema de busca avançada para encontrar insumos ou cardápios por nome, categoria ou data de criação. |
+| **RF17**  | Registrar histórico de movimentações do estoque | Registrar todas as movimentações realizadas no estoque, permitindo consultas detalhadas de eventos passados. |
 
 ## **1.2 Lista de Requisitos Não Funcionais**
 
