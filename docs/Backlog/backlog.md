@@ -1,4 +1,4 @@
-# **2. Backlog do Produto**
+# **3. Backlog do Produto**
 
 ## Histórico de revisão
 
@@ -9,7 +9,7 @@
 
 ------------
 
-### **2.1 Tabela com Temas e Épicos**
+### **3.1 Tabela com Temas e Épicos**
 
 A tabela organiza os componentes do backlog do produto da seguinte forma:
 

@@ -23,15 +23,14 @@ Os requisitos funcionais especificam as funcionalidades que o sistema deve imple
 | **RF06**  | Registrar novos insumos no estoque         | Permitir a adição de novos insumos no estoque.                                                   |
 | **RF07**  | Cadastrar cardápio                         | Permitir o registro de cardápios, associando os insumos necessários.                             |
 | **RF08**  | Notificar insumos em baixo estoque         | Enviar notificações automáticas sobre insumos com estoque abaixo do limite mínimo.               |
-| **RF09**  | Cadastrar insumos                          | Permitir o registro de insumos utilizados na produção.                                           |
-| **RF10**  | Notificar insumos com vencimento próximo   | Enviar alertas automáticos para determinados insumos com validade próxima.                       |
-| **RF11**  | Analisar custo de pratos                   | Calcular o custo de pratos para auxílio na definição de preços e controle de margem.             |
-| **RF12**  | Editar cardápios                           | Atualizar os insumos utilizados no cardápio.                                                     |
-| **RF13**  | Excluir cardápios                          | Permitir a exclusão de cardápios na plataforma.                                                  |
-| **RF14**  | Excluir insumos                            | Permitir a exclusão de insumos na plataforma.                                                    |
-| **RF15**  | Oferecer dashboard de análise de indicadores | Oferecer um painel visual com gráficos e métricas, como insumos mais utilizados e itens com maior custo. |
-| **RF16**  | Implementar pesquisa inteligente           | Implementar um sistema de busca avançada para encontrar insumos ou cardápios por nome, categoria ou data de criação. |
-| **RF17**  | Registrar histórico de movimentações do estoque | Registrar todas as movimentações realizadas no estoque, permitindo consultas detalhadas de eventos passados. |
+| **RF09**  | Notificar insumos com vencimento próximo   | Enviar alertas automáticos para determinados insumos com validade próxima.                       |
+| **RF10**  | Analisar custo de pratos                   | Calcular o custo de pratos para auxílio na definição de preços e controle de margem.             |
+| **RF11**  | Editar cardápios                           | Atualizar os insumos utilizados no cardápio.                                                     |
+| **RF12**  | Excluir cardápios                          | Permitir a exclusão de cardápios na plataforma.                                                  |
+| **RF13**  | Excluir insumos                            | Permitir a exclusão de insumos na plataforma.                                                    |
+| **RF14**  | Oferecer dashboard de análise de indicadores | Oferecer um painel visual com gráficos e métricas, como insumos mais utilizados e itens com maior custo. |
+| **RF15**  | Implementar pesquisa inteligente           | Implementar um sistema de busca avançada para encontrar insumos ou cardápios por nome, categoria ou data de criação. |
+| **RF16**  | Consultar histórico de movimentações do estoque | Consultar todas as movimentações realizadas no estoque, permitindo consultas detalhadas de eventos passados. |
 
 ## **1.2 Lista de Requisitos Não Funcionais**
 

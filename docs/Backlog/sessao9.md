@@ -1,4 +1,4 @@
-# **3 User Stories**
+# **2 User Stories**
 
 ## Histórico de revisão
 
