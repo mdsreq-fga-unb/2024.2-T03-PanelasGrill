@@ -15,7 +15,7 @@ Os requisitos funcionais especificam as funcionalidades que o sistema deve imple
 
 | **ID**    | **Funcionalidade**                         | **Descrição**                                                                                     |
 |-----------|--------------------------------------------|---------------------------------------------------------------------------------------------------|
-| **RF01**  | Autenticar na plataforma                   | Logar na plataforma: dar acesso à plataforma a um usuário já cadastrado.                         |
+| **RF01**  | Autenticar na plataforma                   | Dar acesso à plataforma a um usuário já cadastrado.                         |
 | **RF02**  | Gerar relatório diário de estoque          | Disponibilizar, ao final do expediente, um relatório detalhado das entradas e saídas de itens no estoque. |
 | **RF03**  | Visualizar relatório mensal de estoque     | Fornecer relatórios mensais de movimentação de estoque.                                           |
 | **RF04**  | Atualizar insumos                          | Permitir a atualização das informações dos insumos no estoque.                                   |
