@@ -8,7 +8,7 @@ A Panelas Grill tem como objetivo expandir seus negócios. Com foco em crescimen
 ## **1.2 Identificação da Oportunidade ou Problema**
 A Panelas Grill enfrenta desafios significativos no controle de estoque, o que compromete sua eficiência operacional e capacidade de atender à demanda com qualidade. A ausência de um sistema automatizado para registro e monitoramento de insumos dificulta o rastreamento de produtos e o planejamento de compras.
 
-Esses problemas resultam em desperdício de insumos, interrupções no fluxo de operações e perda de recursos financeiros. Além disso, a equipe tem baixa familiaridade com tecnologia, tornando os métodos manuais ainda mais sujeitos a erros. Para sustentar seu crescimento e otimizar suas operações, a Panelas Grill precisa de uma solução que simplifique e automatize o controle de estoque, garantindo eficiência, redução de perdas e apoio à tomada de decisões.
+Esses problemas resultam em desperdício de insumos, interrupções no fluxo de operações e perda de recursos financeiros. Além disso, a equipe tem baixa familiaridade com tecnologia, tornando os métodos manuais ainda mais sujeitos a erros. Para sustentar seu crescimento e otimizar suas operações, a Panelas Grill precisa de uma solução que simplifique e automatize o controle de estoque, reflita os preços atualizados, garantindo eficiência, redução de perdas e apoio à tomada de decisões.
 
 A figura, a seguir, apresenta o diagrama de Ishikawa contendo as causas (organizados pelos 6M’s) e o problema do Panelas Grill.
 
