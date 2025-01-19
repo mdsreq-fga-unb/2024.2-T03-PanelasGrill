@@ -82,23 +82,4 @@ if __name__ == "__main__":
         db = client["estoques"]
         collection = db["produtos"]
         
-        # Exemplo de limpeza da coleção
-        # limpar_colecao(collection)
-        
-        # Exemplo de inserção/atualização de documentos
-        documentos = [
-            {"item": "feijao", "tipo": "carioca", "referencia_quantidade": "kg", "quantidade": 20},
-            {"item": "arroz", "tipo": "branco", "referencia_quantidade": "kg", "quantidade": 20},
-            {"item": "alho", "tipo": "comum", "referencia_quantidade": "unidade", "quantidade": 15},
-            {"item": "óleo", "tipo": "soja", "referencia_quantidade": "lts", "quantidade": 10}
-        ]
-        inserir_ou_atualizar_documentos(collection, documentos)
-        
-        # Exemplo de consulta de documentos
-        consultar_documentos(collection)
-        
-        # Exemplo de edição de um item
-        editar_item(collection, "feijao", {"quantidade": 25, "tipo": "preto"})
-        
-        # Consultando após a edição
-        consultar_documentos(collection)
+        limpar_colecao(collection=collection)
