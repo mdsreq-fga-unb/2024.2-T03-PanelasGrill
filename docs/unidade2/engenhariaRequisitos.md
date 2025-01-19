@@ -7,8 +7,7 @@
 #### **Elicitação e Descoberta**
 
 - **Levantamento de requisitos:** Reunião para compreender as necessidades e expectativas dos stakeholders.  
-- **Entrevistas com stakeholders:** Obtenção de informações detalhadas por meio de entrevistas com as partes interessadas.  
-- **Histórias e cenários:** Captura de requisitos descritos de forma clara e simples, baseados na perspectiva dos usuários.  
+- **Entrevistas com stakeholders:** Obtenção de informações detalhadas por meio de entrevistas com as partes interessadas.   
 - **Análise de concorrentes:** Estudo do mercado para identificar forças, fraquezas e oportunidades, garantindo um diferencial competitivo.  
 
 **Resultado esperado:** Visão de produto e declaração do problema.
@@ -18,16 +17,24 @@
 - **Análise de requisitos:** Discussão e detalhamento dos requisitos para garantir que estejam compreendidos por todos.  
 - **Análise de risco:** Identificação e priorização de riscos que possam impactar negativamente o projeto.  
 
-**Resultado esperado:** Uma visão clara e compartilhada do produto.  
+**Resultado esperado:** Uma visão clara e compartilhada do produto. 
 
-#### **Organização e Atualização**
+#### **Verificação e Validação**
+
+- **Validando requisitos:** Validar os requisitos que foram levantados.  
+- **Definition of Done (DoD):** Garantia de que as histórias e tarefas estão prontas para serem iniciadas pelo time.
+- **Checklist de Verificação:** Checklis para verificar se todo o DoD foi atendido.  
+
+**Resultado esperado:** Verificar se é correspondente com o DoD..
+
+#### **Declaração**
 
 - **Refinamento de requisitos:** Revisão detalhada dos requisitos coletados, garantindo que estejam claros e objetivos.  
 - **Product Backlog Building (PBB):** Construção do backlog inicial, priorizando funcionalidades, melhorias e correções necessárias.  
 
 **Ferramentas sugeridas:** Trello, Jira ou Miro para organização do backlog.
 
-**Resultado esperado:** User stories claros e objetivos.
+**Resultado esperado:** Atualizar backlog.
 
 ---
 
@@ -118,9 +125,10 @@
 
 | **Fases do ScrumXP**       | **Atividade da Engenharia de Requisitos** | **Prática**                   | **Técnica**                                                       | **Resultados Esperados**                                                                 |
 |----------------------------|-------------------------------------------|---------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| **Planejamento da Release** | **Elicitação e Descoberta**            | Levantamento de requisitos     | Entrevistas com stakeholders, histórias e cenários, análise de concorrentes | Visão de produto e declaração do problema                                              |
-|                            | **Análise e Consenso**                 | Análise de requisitos          | Análise de risco                                                  | Visão clara e compartilhada do produto                                                |
-|                            | **Organização e Atualização**        | Refinamento de requisitos       | Product Backlog Building (PBB)                                      | User stories claros e objetivos                                                        |
+| **Planejamento da Release** | **Elicitação e Descoberta**            | Levantamento de requisitos     | Entrevistas com stakeholders, análise de concorrentes | Visão de produto e declaração do problema                                              |
+|                            | **Análise e Consenso**                 | Análise de requisitos          | Análise de risco                                                  | Visão clara e compartilhada do produto
+|                            | **Verificação e Validação**        | Validando requisitos       | Definition of Done (DoD) e Checklist de Verificação                                      | Verificar se corresponde com o DoD.                                                 |
+|                            | **Declaração**        | Refinamento de requisitos       | Product Backlog Building (PBB)                                      | Atualizar backlog                                          |
 | **Planejamento da Sprint** | **Análise e Consenso**                 | Análise de dependências        | Discussão com a equipe, análise de tarefas                       | Consenso da equipe sobre os requisitos e dependências necessárias                      |
 |                            | **Declaração**                       | Definição de critério de aceitação | Critérios de aceitação detalhados                                  | User stories com critérios de aceitação claros e objetivos bem definidos             |
 |                            | **Verificação e Validação**         | Verificação dos requisitos da sprint | Definition of Ready (DoR)                                          | Equipe pronta para iniciar o desenvolvimento                                           |
@@ -140,3 +148,5 @@
 |------------|--------|------------------------------------|-----------------|
 | 15/12/2024 | 1.0    | Documento inicial com melhorias   | Jose Vinicius   |
 | 16/12/2024 | 1.1    | Formatando a tabela e adicionando melhorias   | Marcos Vieira   |
+| 17/01/2025 | 2.1    | Atualizando tabela   | Jose Vinicius   |
+
