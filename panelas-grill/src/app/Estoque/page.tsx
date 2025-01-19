@@ -10,9 +10,16 @@ export default function Estoque() {
     const [searchValue, setSearchValue] = useState("");
     const [estoque, setEstoque] = useState<any[]>([]);
     const [showModal, setShowModal] = useState(false);  // Estado para controlar a exibição do modal
-    const [novoItem, setNovoItem] = useState({
+    interface NovoItem {
+        item: string;
+        tipo: string;
+        quantidade: number;
+        referencia_quantidade: string;
+    }
+
+    const [novoItem, setNovoItem] = useState<NovoItem>({
         item: "",
-        tipo: "",
+        tipo: "carne",
         quantidade: 0,
         referencia_quantidade: "kg",
     });
@@ -39,18 +46,19 @@ export default function Estoque() {
 
     // Função para adicionar itens ao estoque
     const adicionarItem = async () => {
+        console.log("Item a ser enviado:", novoItem); // Log dos dados
         try {
             const resultado = await inserirNoEstoque([novoItem]);
             if (resultado.status === "success") {
                 alert("Itens adicionados com sucesso!");
-                carregarEstoque(); // Atualiza a tabela após inserção
-                setShowModal(false); // Fecha o modal após a inserção
+                carregarEstoque();
+                setShowModal(false);
                 setNovoItem({
                     item: "",
                     tipo: "",
                     quantidade: 0,
                     referencia_quantidade: "kg",
-                }); // Limpa o formulário
+                });
             } else {
                 alert(`Erro ao adicionar itens: ${resultado.message}`);
             }
@@ -59,9 +67,10 @@ export default function Estoque() {
             alert("Erro ao adicionar itens no estoque. Por favor, tente novamente.");
         }
     };
+    
 
     // Função para atualizar os campos do formulário
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setNovoItem((prev) => ({
             ...prev,
@@ -162,7 +171,7 @@ export default function Estoque() {
                             <select
                                 name="tipo"
                                 value={novoItem.tipo}
-                                onChange={handleInputChange}
+                                onChange={(e) => handleInputChange(e as React.ChangeEvent<HTMLSelectElement>)}
                                 className="w-full p-2 border border-gray-300 rounded-md"
                             >
                                 <option value="carne">Carne</option>
@@ -171,9 +180,10 @@ export default function Estoque() {
                                 <option value="fruta">Fruta</option>
                                 <option value="processado">Processado</option>
                                 <option value="bebida">Bebida</option>
-                                <option value="tempero">tempero</option>
+                                <option value="tempero">Tempero</option>
                                 <option value="óleo e gordura">Óleo e Gordura</option>
                             </select>
+
                             <input
                                 type="number"
                                 name="quantidade"
@@ -188,8 +198,8 @@ export default function Estoque() {
                                 onChange={handleInputChange}
                                 className="w-full p-2 border border-gray-300 rounded-md"
                             >
-                                <option value="kg">unidade</option>
-                                <option value="g">Kg</option>
+                                <option value="unidade">unidade</option>
+                                <option value="Kg">Kg</option>
                                 <option value="litros">Litros</option>
                                 <option value="gramas">gramas</option>
                                 {/* Adicione outras opções conforme necessário */}

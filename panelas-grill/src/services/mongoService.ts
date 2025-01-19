@@ -7,8 +7,8 @@ export async function consultarEstoque() {
     const data = await response.json();
     return data;
 }
-
 export async function inserirNoEstoque(documents: any[]) {
+    console.log("Documentos enviados:", documents); // Log dos dados
     const response = await fetch(`${API_URL}/inserir`, {
         method: "POST",
         headers: {
@@ -17,5 +17,6 @@ export async function inserirNoEstoque(documents: any[]) {
         body: JSON.stringify(documents),
     });
     const data = await response.json();
+    console.log("Resposta da API:", data); // Verifique a resposta
     return data;
 }

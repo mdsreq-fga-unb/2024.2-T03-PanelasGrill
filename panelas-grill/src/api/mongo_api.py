@@ -9,10 +9,10 @@ app = FastAPI()
 # Adicionando o middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Altere se o frontend estiver rodando em outro domínio ou porta
+    allow_origins=["http://localhost:3000"],  # Adicione outros domínios, se necessário
     allow_credentials=True,
-    allow_methods=["GET", "POST"],  # Métodos permitidos
-    allow_headers=["*"],  # Cabeçalhos permitidos
+    allow_methods=["GET", "POST", "PUT"],  # Inclua o método PUT
+    allow_headers=["*"],  # Permita todos os cabeçalhos
 )
 
 CONNECTION_STRING = "mongodb+srv://romuloreis:y3H6bsXl0kWV7XsS@cluster0.3n2im.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
