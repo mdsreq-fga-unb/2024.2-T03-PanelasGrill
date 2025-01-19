@@ -2,12 +2,27 @@
 
 import Sidebar from "@/components/Sidebar";
 import {Search} from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Menu() {
+    const { data: session, status } = useSession();  // Usar useSession no topo
+    const router = useRouter();
+    
     const [showInput, setShowInput] = useState(false);
     const [searchValue, setSearchValue] = useState("");
-
+    useEffect(() => {
+        if (status === "unauthenticated") {
+          // Se o usuário não estiver autenticado, redireciona para a página de login
+          router.push("/Login");
+        }
+      }, [status, router]);  // Colocar o useEffect para redirecionar fora da verificação de hooks
+    
+      if (status === "loading") {
+        // Você pode exibir um carregando enquanto verifica a sessão
+        return <div>Carregando...</div>;
+      }
     return (
         <div className="bg-primary-gray h-screen flex">
             <Sidebar />
