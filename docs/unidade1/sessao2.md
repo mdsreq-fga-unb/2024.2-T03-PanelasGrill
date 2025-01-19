@@ -2,7 +2,8 @@
 
 ## **2.1 Objetivo do Produto**
 
-<p>O objetivo deste produto é desenvolver um sistema que simplifique e automatize o controle de estoque, permitindo à Panelas Grill registrar, monitorar e planejar com precisão a entrada e saída de insumos. Com essa solução, a empresa conseguirá melhorar a eficiência nas operações e otimizar o fluxo de trabalho, além de gerar relatórios detalhados que apoiarão a tomada de decisões estratégicas e contribuirão para o crescimento do negócio.</p>
+<p>
+O objetivo é simplificar e automatizar o controle de estoque da Panelas Grill, proporcionando um registro preciso e um monitoramento eficiente das entradas e saídas de insumos. Dessa forma, permitirá à empresa aprimorar a eficiência operacional, otimizar os fluxos de trabalho e gerar relatórios detalhados que servirão como base para decisões estratégicas, impulsionando o crescimento sustentável do negócio.</p>
 
 ## **2.2 Características da Solução**
 
@@ -78,3 +79,5 @@
 | 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
 | 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Marcos Vieira      |
 | 15/12/2024 | 1.2    | Adição do diagrama da arquitetura de software     | Pablo|
+| 18/01/2025 | 2.1    | Atualizando o tópico 2.1     | Jose Vinicius |
+
