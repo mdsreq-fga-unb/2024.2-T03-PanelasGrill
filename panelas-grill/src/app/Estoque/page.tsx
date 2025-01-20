@@ -25,9 +25,9 @@ export default function Estoque() {
 
   const [novoItem, setNovoItem] = useState<NovoItem>({
     item: "",
-    tipo: "carne",
+    tipo: "Carne",
     quantidade: 0,
-    referencia_quantidade: "kg",
+    referencia_quantidade: "unidade",
   });
 
   // Função para carregar os dados
@@ -191,14 +191,14 @@ export default function Estoque() {
                 onChange={(e) => handleInputChange(e as React.ChangeEvent<HTMLSelectElement>)}
                 className="w-full p-2 border border-gray-300 rounded-md"
               >
-                <option value="carne">Carne</option>
-                <option value="grão">Grão</option>
-                <option value="verdura">Verdura</option>
-                <option value="fruta">Fruta</option>
-                <option value="processado">Processado</option>
-                <option value="bebida">Bebida</option>
-                <option value="tempero">Tempero</option>
-                <option value="óleo e gordura">Óleo e Gordura</option>
+                <option value="Carne">Carne</option>
+                <option value="Grão">Grão</option>
+                <option value="Verdura">Verdura</option>
+                <option value="Fruta">Fruta</option>
+                <option value="Processado">Processado</option>
+                <option value="Bebida">Bebida</option>
+                <option value="Tempero">Tempero</option>
+                <option value="Óleo e gordura">Óleo e Gordura</option>
               </select>
 
               <input
