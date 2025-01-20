@@ -20,27 +20,27 @@ Histórias geradas apartir dos PBIs
 
 | **ID**                         | **Eu, como**                                | **Quero**                                                                                          | **Para**                                                                                          |
 |---------------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| US01  | Técnico de campo | Registrar diagnósticos dos equipamentos | Para que possa garantir que as informações sobre os serviços prestados estejam salvas.                                                                                          |
+| US01  | Técnico de campo | Registrar diagnósticos dos equipamentos | Para garantir que as informações sobre os serviços prestados estejam salvas.                                                                                          |
 | US02 | Técnico de campo | Consultar agenda de serviço | Para poder acompanhar a minha agenda de serviço                                                                                        |
-| US03 | Técnico de campo | Consultar status de serviço  | Para que eu saiba exatamente em que etapa está a solicitação e quando será concluída.                                                                                      |
-| US04 | Técnico de campo | Consultar feedback dos clientes  | Para que eu possa entender o que estou fazendo bem ou o que posso melhorar.                                                                                      |
-| US05 | Técnico de campo | Consultar histórico dos equipamento  | Para que eu tenha controle das manutenções realizadas e possa planejar serviços futuros.                                                                                       |
-| US06 | Atendente | Consultar disponibilidade da agenda | Para que possa verificar os horários disponíveis                                                                                        |
-| US07 | Atendente | Criar atendimento do cliente  | Para que fique registrado na agenda o atendimento do cliente                                                                                        |
-| US08 | Atendente | Cancelar atendimento do cliente | Para que possa apagar algum atendimento que foi cancelado                                                                                       |
-| US09 | Atendente | Editar atendimento do cliente | Para que possa editar algum atendimento quando houver alguma mudança                                                                                       |
-| US10    | Cliente Corporativo      | Solicitar serviço                                            | Para que possa solicitar algum atendimento.                                                      |
-| US11    | Cliente Corporativo      | Visualizar as minhas solicitações de serviço                 | Para que possa acompanhar todas as solicitações de serviço.                                      |
-| US12    | Cliente Corporativo      | Acessar o diagnóstico do equipamento                         | Para que possa visualizar o diagnóstico que o técnico fez.                                       |
-| US13    | Cliente Corporativo      | Avaliar serviço prestado                                     | Para poder mandar feedback sobre o serviço que foi prestado.                                     |
-| US14    | Cliente Corporativo      | Acessar status do serviço                                    | Para poder acompanhar o conserto do equipamento.                                                 |
+| US03 | Técnico de campo | Consultar status de serviço  | Para identificar a etapa atual da solicitação                                                                                      |
+| US04 | Técnico de campo | Consultar feedback dos clientes  | Para entender áreas de acerto e oportunidades de melhoria.                                                                                     |
+| US05 | Técnico de campo | consultar o histórico detalhado dos equipamentos | Para monitorar as manutenções realizadas e planejar serviços futuros com mais eficiência.                                                                                       |
+| US06 | Atendente | Consultar disponibilidade da agenda | Para verificar os horários disponíveis                                                                                        |
+| US07 | Atendente | Criar atendimento do cliente  | Para registrar o atendimento do cliente na agenda e garantir que o serviço seja agendado corretamente. |
+| US08 | Atendente | Cancelar atendimento do cliente | Para apagar algum atendimento que foi cancelado                                                                                       |
+| US09 | Atendente | Editar atendimento do cliente | Para editar algum atendimento quando houver alguma mudança                                                                                       |
+| US10    | Cliente Corporativo      | Solicitar serviço                                            | Para solicitar atendimento.                                                      |
+| US11    | Cliente Corporativo      | Visualizar as minhas solicitações de serviço                 | Para acompanhar todas as solicitações de serviço.                                      |
+| US12    | Cliente Corporativo      | Acessar o diagnóstico do equipamento                         | Para visualizar o diagnóstico que o técnico fez.                                       |
+| US13    | Cliente Corporativo      | Avaliar serviço prestado                                     | Para mandar feedback sobre o serviço que foi prestado.                                     |
+| US14    | Cliente Corporativo      | Acessar status do serviço                                    | Para acompanhar o conserto do equipamento.                                                 |
 | US15    | Gerente de operações     | Consultar a agenda de serviços                               | Para acompanhar as operações diárias.                                                           |
-| US16    | Gerente de operações     | Consultar relatório de desempenho da equipe                  | Para poder visualizar o desempenho individual da equipe de técnicos.                            |
-| US17    | Gerente de operações     | Consultar dashboard de visão geral das operações             | Para poder acompanhar as etapas dos serviços.                                                   |
-| US18    | Gerente de operações     | Consultar o relatório de avaliação do cliente                | Para poder acompanhar os feedbacks dos clientes.                                                 |
-| US19    | Gerente de operações     | Exportar para Excel o dashboard de visão geral das operações | Para que possa extrair do sistema e apresentar em outros lugares o relatório.                   |
-| US20    | Gerente de operações     | Exportar para PDF o relatório de avaliação do cliente        | Para que possa extrair do sistema e apresentar em outros lugares o relatório.                   |
-| US21    | Gerente de operações     | Exportar para PDF o relatório de desempenho da equipe        | Para que possa extrair do sistema e apresentar em outros lugares o relatório.                   |
+| US16    | Gerente de operações     | Consultar relatório de desempenho da equipe                  | Para visualizar o desempenho individual da equipe de técnicos.                            |
+| US17    | Gerente de operações     | Consultar dashboard de visão geral das operações             | Para acompanhar as etapas dos serviços.                                                   |
+| US18    | Gerente de operações     | Consultar o relatório de avaliação do cliente                | Para acompanhar os feedbacks dos clientes.                                                 |
+| US19    | Gerente de operações     | Exportar para Excel o dashboard de visão geral das operações | Para extrair do sistema e apresentar em outros lugares o relatório.                   |
+| US20    | Gerente de operações     | Exportar para PDF o relatório de avaliação do cliente        | Para extrair do sistema e apresentar em outros lugares o relatório.                   |
+| US21    | Gerente de operações     | Exportar para PDF o relatório de desempenho da equipe        | Para extrair do sistema e apresentar em outros lugares o relatório.                   |
 
 
 ## **3 - Histórias com critérios de aceitação declarados**
@@ -57,7 +57,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US02: Eu, como técnico de campo, quero consultar a agenda de serviço, para poder visualizar os próximos atendimentos da minha agenda.</strong>
+    <strong>US02: Eu, como técnico de campo, quero consultar a agenda de serviço, para poder acompanhar a minha agenda de serviço</strong>
     <ul>
       <li><strong>A -</strong> A agenda exibe o endereço, tipo de serviço e informações adicionais do cliente para cada atendimento.
       </li>
@@ -66,7 +66,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US05:  Eu, como técnico de campo,  quero  consultar históricos dos equipamentos, para que eu tenha controle das manutenções realizadas e possa planejar serviços futuros.</strong>
+    <strong>US05:  Eu, como técnico de campo,  quero  consultar históricos dos equipamentos, para monitorar as manutenções realizadas e planejar serviços futuros com mais eficiência.</strong>
     <ul>
       <li><strong>A -</strong> É permitido buscar o histórico de um equipamento por numero de protocolo ou cliente.
       </li>
@@ -75,7 +75,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US06: Eu. como atendente, quero consultar a disponibilidade da agenda, para que possa verificar os horários disponíveis  </strong>
+    <strong>US06: Eu. como atendente, quero consultar a disponibilidade da agenda, para verificar os horários disponíveis </strong>
     <ul>
       <li><strong>A -</strong> A disponibilidade da agenda é atualizada automaticamente, refletindo alterações feitas por outros atendentes ou eventos no sistema.
       </li>
@@ -85,7 +85,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US07: Eu, como atendente, quero criar atendimento do cliente, para que fique registrado na agenda o atendimento do cliente.  </strong>
+    <strong>US07: Eu, como atendente, quero criar atendimento do cliente, para registrar o atendimento do cliente na agenda e garantir que o serviço seja agendado corretamente. </strong>
     <ul>
       <li><strong>A -</strong> A atendente deve registrar as informações obrigatórias do cliente (nome, contato e endereço) do serviço solicitado.
       </li>
@@ -94,7 +94,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US10: Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento. </strong>
+    <strong>US10: Eu, como cliente corporativo, quero solicitar serviço, para solicitar atendimento. </strong>
     <ul>
       <li><strong>A -</strong> O cliente deve preencher campos obrigatórios(Nome, Endereço, tipo de aparelho).
       </li>
@@ -111,7 +111,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US16: Eu,como gerente de operações quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.</strong>
+    <strong>US16: Eu,como gerente de operações quero consultar relatório de desempenho de equipe, para visualizar o desempenho individual da equipe de técnicos.</strong>
     <ul>
       <li><strong>A -</strong> O relatório apresenta o desempenho individual de cada técnico (Total de serviços realizados e percentual de feedbacks positivos recebidos).
       </li>
@@ -129,7 +129,7 @@ Histórias geradas apartir dos PBIs
     </ul>
   </li>
   <li>
-    <strong>US18:  Eu, como gerente de operações , quero consultar relatório de avaliação do cliente, para poder acompanhar os feedbacks dos clientes.</strong>
+    <strong>US18:  Eu, como gerente de operações , quero consultar relatório de avaliação do cliente, para acompanhar os feedbacks dos clientes.</strong>
     <ul>
       <li><strong>A -</strong>O sistema deve exibir um relatório consolidado com os feedbacks recebidos dos clientes, incluindo avaliações numéricas (1 a 5 estrelas) e comentários textuais.
       </li>
@@ -191,7 +191,7 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>US07:</strong> Eu, como atendente, quero criar atendimento do cliente, para que fique registrado na agenda o atendimento do cliente.
+            <strong>US07:</strong> Eu, como atendente, quero criar atendimento do cliente, para registrar o atendimento do cliente na agenda e garantir que o serviço seja agendado corretamente.
             <ol type="a">
                 <li>
                     <strong>Atendente cria agendamento com todos os dados obrigatórios (nome, contato e endereço)</strong>
@@ -228,7 +228,7 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>US10:</strong> Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento.
+            <strong>US10:</strong> Eu, como cliente corporativo, quero solicitar serviço, para solicitar atendimento.
             <ol type="a">
                 <li>
                     <strong>Cliente corporativo solicita serviço com todos os dados obrigatórios (Nome, endereço etipo de aparelho).</strong>
@@ -296,7 +296,7 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>US16:</strong> Eu, como gerente de operações, quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.
+            <strong>US16:</strong> Eu, como gerente de operações, quero consultar relatório de desempenho de equipe, para visualizar o desempenho individual da equipe de técnicos.
             <ol type="a">
                 <li>
                     <strong>Gerente consulta relatório com dados disponíveis</strong>
