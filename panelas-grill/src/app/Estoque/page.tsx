@@ -323,8 +323,8 @@ export default function Estoque() {
                                 onChange={handleInputChange}
                                 className="w-full p-2 border border-gray-300 rounded-md"
                             >
-                                <option value="unidade">unidade</option>
                                 <option value="Kg">Kg</option>
+                                <option value="unidade">unidade</option>
                                 <option value="litros">Litros</option>
                                 <option value="gramas">gramas</option>
                             </select>
