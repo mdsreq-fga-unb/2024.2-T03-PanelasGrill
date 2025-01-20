@@ -26,5 +26,6 @@ As User Stories são descrições simples e curtas de funcionalidades ou caracte
 | **US12**| Eu como usuário quero excluir cardápios antigos ou obsoletos para manter os cardápios atuais e que reflitam a realidade |
 | **US13**| Eu como usuário quero excluir insumos que não são mais utilizados para manter o cadastro atualizado |
 | **US14**| Eu como usuário quero analisar o custo de cada prato produzido para definir preços adequados e controlar margem |
-| **US15**| Eu como usuário quero acessar um painel visual com gráficos e métricas para analisar o desempenho do estoque e da produção |
+| **US15**| Eu como usuário quero acessar um painel visual com gráficos e métricas para analisar os insumos mais utilizados|
 | **US16**| Eu como usuário quero usar uma pesquisa avançada para encontrar rapidamente insumos ou cardápios com base em critérios como nome, categoria ou data de criação |
+| **US17**| Eu como usuário quero encerrar minha sessão para evitar acessos não autorizados à minha conta |
