@@ -19,6 +19,8 @@ nav:
       - Backlog do Produto: Backlog/backlog.md
       - Priorização e MVP: Backlog/mvp.md
       - DoR e DoD: Backlog/dor_dod.md
+   - Estudos de caso:
+      - PBB: unidade3/pbb.md
    - Políticas de boas práticas:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
@@ -26,6 +28,7 @@ nav:
    - Lições Aprendidas: 
          - Unidade I: unidade1/licoesAprendidas.md
          - Unidade II: unidade2/LicoesAprendidasII.md
+         - Unidade III: unidade3/lincoesAprendidas3.md
 
 theme:
    name: material 
