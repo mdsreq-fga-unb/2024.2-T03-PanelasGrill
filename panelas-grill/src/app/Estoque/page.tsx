@@ -4,6 +4,8 @@ import Sidebar from "@/components/Sidebar";
 import { Search } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { consultarEstoque, inserirNoEstoque, atualizarEstoque } from "@/services/mongoService";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Estoque() {
     const [showInput, setShowInput] = useState(false);
@@ -11,8 +13,8 @@ export default function Estoque() {
     const [estoque, setEstoque] = useState<any[]>([]);
     const [showModal, setShowModal] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
-    const [tempItem, setTempItem] = useState<any | null>(null); // Estado temporário para editar
-     const [editItemData, setEditItemData] = useState<any | null>(null);
+    const [tempItem, setTempItem] = useState<any | null>(null);
+    const [editItemData, setEditItemData] = useState<any | null>(null);
 
     interface NovoItem {
         _id?: string;
@@ -28,6 +30,8 @@ export default function Estoque() {
         quantidade: 0,
         referencia_quantidade: "kg",
     });
+      const router = useRouter();
+      const { data: session, status } = useSession();
 
     const carregarEstoque = async () => {
         try {
@@ -43,6 +47,7 @@ export default function Estoque() {
         }
     };
 
+    // Carregar dados ao montar o componente
     useEffect(() => {
         carregarEstoque();
     }, []);
@@ -76,25 +81,25 @@ export default function Estoque() {
         setTempItem({ ...item });
         setEditItemData({ ...item });
     };
-    
- const atualizarItem = async () => {
+
+    const atualizarItem = async () => {
         if (!editItemData || !editItemData._id) {
             alert("Erro ao editar item: ID do item inválido.");
             return;
         }
-     try {
-         console.log("Item a ser atualizado (atualizarItem):", JSON.stringify(editItemData));
+        try {
+            console.log("Item a ser atualizado (atualizarItem):", JSON.stringify(editItemData));
             const payload = JSON.stringify(editItemData);
-           console.log("Payload antes do PUT (atualizarItem):", payload);
-           console.log("Tipo de _id antes do PUT (atualizarItem):", typeof editItemData._id);
+            console.log("Payload antes do PUT (atualizarItem):", payload);
+            console.log("Tipo de _id antes do PUT (atualizarItem):", typeof editItemData._id);
 
-         const resultado = await atualizarEstoque(editItemData);
+            const resultado = await atualizarEstoque(editItemData);
             if (resultado.status === "success") {
-                 alert("Item atualizado com sucesso!");
+                alert("Item atualizado com sucesso!");
                 carregarEstoque();
-                  setIsEditing(false);
-               setEditItemData(null);
-               setTempItem(null)
+                setIsEditing(false);
+                setEditItemData(null);
+                setTempItem(null)
             } else {
                 alert(`Erro ao atualizar item: ${resultado.message}`);
             }
@@ -104,25 +109,37 @@ export default function Estoque() {
         }
     };
 
-   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    // Função para atualizar os campos do formulário
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         if (isEditing && editItemData) {
-                setEditItemData(prev => ({
-                   ...prev,
-                    [name]:value
-                }))
-           } else {
-             setNovoItem((prev) => ({
-              ...prev,
-              [name]: value,
-          }));
-           }
+            setEditItemData((prev:any) => ({
+               ...prev,
+                [name]:value
+            }))
+       } else {
+         setNovoItem((prev) => ({
+          ...prev,
+          [name]: value,
+      }));
+       }
     };
 
-     const estoqueFiltrado = estoque.filter((item) =>
+    const estoqueFiltrado = estoque.filter((item) =>
         item.item.toLowerCase().includes(searchValue.toLowerCase())
     );
 
+     useEffect(() => {
+        if (status === "unauthenticated") {
+          // Se o usuário não estiver autenticado, redireciona para a página de login
+          router.push("/Login");
+        }
+      }, [status, router]);  // Colocar o useEffect para redirecionar fora da verificação de hooks
+
+      if (status === "loading") {
+        // Você pode exibir um carregando enquanto verifica a sessão
+        return <div>Carregando...</div>;
+      }
 
     return (
         <div className="bg-primary-gray h-screen flex">
@@ -264,7 +281,7 @@ export default function Estoque() {
                     </div>
                 </div>
             )}
-               {isEditing && tempItem && (
+            {isEditing && tempItem && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg w-96">
                         <h1 className="text-2xl font-semibold mb-4 text-black ">Editar Insumo</h1>

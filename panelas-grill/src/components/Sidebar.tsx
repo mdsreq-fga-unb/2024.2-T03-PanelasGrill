@@ -55,9 +55,9 @@ const Sidebar: React.FC = () => {
           Cardápio
         </Link>
         <Link
-          href="/Sair"
+          href="/Login"
           className={`p-4 w-full mt-auto flex flex-row items-center font-bold text-2xl ${
-            isActive("/Sair") ? "text-primary-orange" : "text-gray-700 hover:text-primary-orange"
+            isActive("/Login") ? "text-primary-orange" : "text-gray-700 hover:text-primary-orange"
           }`}
         >
           <LogOut className="mr-4" />
