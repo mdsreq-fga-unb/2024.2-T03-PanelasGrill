@@ -31,7 +31,7 @@ Para critério de priorização do backlog, utilizamos os indicadores: complexid
 Para calcular a priorização, utilizamos os User Stories (US) como base. Cada US é avaliado em termos de valor de negócio e complexidade técnica. A combinação desses dois fatores nos permite determinar a prioridade de cada item no backlog, ajudando a focar nos itens que trazem maior valor com menor esforço. O valor do resultado é dado pela fórmula:
 
 ```plaintext
-2 * Valor de Negócio - Complexidade Técnica
+(2 * Valor de Negócio) - Complexidade Técnica
 ```
 
 | **US**  | **Valor de Negócio** | **Complexidade Técnica** | **Resultado** |
@@ -46,6 +46,7 @@ Para calcular a priorização, utilizamos os User Stories (US) como base. Cada U
 | **US03**|4                     |4                         |4              |
 | **US13**|3                     |2                         |4              |
 | **US01**|3                     |3                         |3              |
+| **US17**|3                     |3                         |3              |
 | **US05**|3                     |3                         |3              |
 | **US12**|2                     |2                         |2              |
 | **US16**|3                     |4                         |2              |
@@ -74,5 +75,6 @@ Com base na priorização do backlog, foram selecionadas para o MVP as história
 | **US11** | Editar insumos associados ao cardápio    | Eu como usuário quero editar os insumos associados a um cardápio para refletir mudanças na receita ou produção. |
 | **US13** | Excluir insumos                          | Eu como usuário quero excluir insumos que não são mais utilizados para manter o cadastro atualizado. |
 | **US14** | Analisar custo de cada prato             | Eu como usuário quero analisar o custo de cada prato produzido para definir preços adequados e controlar margem. |
+| **US17**| Encerrar sessão na plataforma| Eu como usuário quero encerrar minha sessão para evitar acessos não autorizados à minha conta  |
 
 ---
