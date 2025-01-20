@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
   const isActive = (path: string) => pathname === path; 
 
   return (
-    <div className="h-screen bg-white border-2 border-x-2 border-[#E8E8E8] flex flex-col" style={{ width: "300px" }}>
+    <div className="h-screen bg-white border-2 border-x-2 border-[#E8E8E8] flex flex-col fixed" style={{ width: "300px" }}>
       <div className="flex items-center justify-center px-8 py-6">
         <Image src={Logo} alt="Panelas Grill" className="w-60 h-32" />
       </div>

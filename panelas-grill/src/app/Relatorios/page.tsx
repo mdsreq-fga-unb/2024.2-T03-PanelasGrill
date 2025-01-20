@@ -28,7 +28,7 @@ export default function Menu() {
             <Sidebar />
 
             <div className="flex-1 bg-white flex flex-col">
-                <header className="flex justify-between items-center p-6 border-b border-[#E8E8E8] bg-white">
+                <header className="flex justify-between items-center p-6 border-b border-[#E8E8E8] bg-white pl-72">
                     <div>
                         <h2 className="text-4xl font-bold text-slate-900 mb-2">Relatórios</h2>
                         <h3 className="text-xl text-gray-600">Guia de acesso!</h3>
