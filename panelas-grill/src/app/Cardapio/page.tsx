@@ -27,7 +27,7 @@ export default function Menu() {
         <div className="bg-primary-gray h-screen flex">
             <Sidebar />
 
-            <div className="flex-1 bg-white flex flex-col pl-72">
+            <div className="flex-1 bg-white flex flex-col pl-72 ml-5">
                 <header className="flex justify-between items-center p-6 border-b border-[#E8E8E8] bg-white">
                     <div>
                         <h2 className="text-4xl font-bold text-slate-900 mb-2">Cardápios</h2>
