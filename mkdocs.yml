@@ -21,6 +21,7 @@ nav:
       - DoR e DoD: Backlog/dor_dod.md
    - Estudos de caso:
       - PBB: unidade3/pbb.md
+      - USM: unidade3/usm.md
    - Políticas de boas práticas:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
