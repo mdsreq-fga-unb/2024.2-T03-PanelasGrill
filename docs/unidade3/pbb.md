@@ -1,6 +1,9 @@
 # **PBB - Unidade 3**
 
-**1 - CANVAS PBB**
+
+O conteúdo apresenta um estudo de caso da "TechFix", uma empresa especializada em serviços de manutenção e suporte técnico para empresas e residências, que enfrenta desafios significativos em suas operações.
+
+## **1 - CANVAS PBB**
 
 Canvas para a elaboração e a criação de um Product Backlog.
 
@@ -8,7 +11,10 @@ Canvas para a elaboração e a criação de um Product Backlog.
     <iframe width="768" height="432" src="https://miro.com/app/board/uXjVLwUsifU=/" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 </div>
 
-**2 - Histórias derivadas do CANVAS PBB**
+#
+#
+
+## **2 - Histórias derivadas do CANVAS PBB**
 
 Histórias geradas apartir dos PBIs
 
@@ -37,102 +43,106 @@ Histórias geradas apartir dos PBIs
 | US21    | Gerente de operações     | Exportar para PDF o relatório de desempenho da equipe        | Para que possa extrair do sistema e apresentar em outros lugares o relatório.                   |
 
 
-**Histórias com critérios de aceitação declarados**
+## **3 - Histórias com critérios de aceitação declarados**
 
+#
+#
 <ol>
   <li>
-    <strong>História de Usuário:  Eu, como técnico de campo, quero registrar diagnóstico dos equipamentos, para garantir que as informações sobre os serviços prestados estejam salvas  </strong>
+    <strong>US01:  Eu, como técnico de campo, quero registrar diagnóstico dos equipamentos, para garantir que as informações sobre os serviços prestados estejam salvas  </strong>
     <ul>
-      <li><strong>A.</strong>O técnico deve anexar fotos ou vídeos relacionados ao diagnóstico.</li>
-      <li><strong>B.</strong> O técnico deve preencher todos os campos obrigatórios(Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema, Descrição) para concluir o registro.</li>
-      <li><strong>C</strong> As informações registradas devem ser salvas automaticamente no sistema central.</li>
+      <li><strong>A -</strong>O técnico deve anexar fotos ou vídeos relacionados ao diagnóstico.</li>
+      <li><strong>B -</strong> O técnico deve preencher todos os campos obrigatórios(Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição) para concluir o registro.</li>
+      <li><strong>C -</strong> As informações registradas devem ser salvas automaticamente no sistema central.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu, como técnico de campo, quero consultar a agenda de serviço, para poder visualizar os próximos atendimentos da minha agenda.</strong>
+    <strong>US02: Eu, como técnico de campo, quero consultar a agenda de serviço, para poder visualizar os próximos atendimentos da minha agenda.</strong>
     <ul>
-      <li><strong>A.</strong> A agenda exibe o endereço, tipo de serviço e informações adicionais do cliente para cada atendimento.
+      <li><strong>A -</strong> A agenda exibe o endereço, tipo de serviço e informações adicionais do cliente para cada atendimento.
       </li>
-      <li><strong>B.</strong> As mudanças na agenda devem ser atualizadas automaticamente no sistema do técnico</li>
-      <li><strong>C.</strong> Cada atendimento deve possui um indicador de status (Pendente,em andamento,concluído e cancelado)</li>
+      <li><strong>B -</strong> As mudanças na agenda devem ser atualizadas automaticamente no sistema do técnico</li>
+      <li><strong>C -</strong> Cada atendimento deve possui um indicador de status (Pendente,em andamento,concluído e cancelado)</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário:  Eu, como técnico de campo,  quero  consultar históricos dos equipamentos, para que eu tenha controle das manutenções realizadas e possa planejar serviços futuros.</strong>
+    <strong>US05:  Eu, como técnico de campo,  quero  consultar históricos dos equipamentos, para que eu tenha controle das manutenções realizadas e possa planejar serviços futuros.</strong>
     <ul>
-      <li><strong>A.</strong> É permitido buscar o histórico de um equipamento por numero de protocolo ou cliente.
+      <li><strong>A -</strong> É permitido buscar o histórico de um equipamento por numero de protocolo ou cliente.
       </li>
-      <li><strong>B.</strong> Sempre que um novo serviço for registrado, o histórico é atualizado automaticamente, garantindo que as informações estejam completas e atualizadas.</li>
-      <li><strong>C.</strong> Apenas técnicos autorizados podem acessar o histórico dos equipamentos vinculados aos seus atendimentos.</li>
+      <li><strong>B -</strong> Sempre que um novo serviço for registrado, o histórico é atualizado automaticamente, garantindo que as informações estejam completas e atualizadas.</li>
+      <li><strong>C -</strong> Apenas técnicos autorizados podem acessar o histórico dos equipamentos vinculados aos seus atendimentos.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu. como atendente, quero consultar a disponibilidade da agenda, para que possa verificar os horários disponíveis  </strong>
+    <strong>US06: Eu. como atendente, quero consultar a disponibilidade da agenda, para que possa verificar os horários disponíveis  </strong>
     <ul>
-      <li><strong>A.</strong> A disponibilidade da agenda é atualizada automaticamente, refletindo alterações feitas por outros atendentes ou eventos no sistema.
+      <li><strong>A -</strong> A disponibilidade da agenda é atualizada automaticamente, refletindo alterações feitas por outros atendentes ou eventos no sistema.
       </li>
-      <li><strong>B.</strong> A agenda pode ser filtrada por técnico, data, tipo de serviço e localização.</li>
-      <li><strong>C.</strong> O atendente pode consultar informações do técnico, como especialidades e região de atendimento, ao verificar a disponibilidade.</li>
-      <li><strong>D.</strong> A atendente pode clicar em um horário disponível para iniciar o processo de agendamento.</li>
+      <li><strong>B -</strong> A agenda pode ser filtrada por técnico, data, tipo de serviço e localização.</li>
+      <li><strong>C -</strong> O atendente pode consultar informações do técnico, como especialidades e região de atendimento, ao verificar a disponibilidade.</li>
+      <li><strong>D -</strong> A atendente pode clicar em um horário disponível para iniciar o processo de agendamento.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu, como atendente, quero criar agendamento do cliente, para que fique registrado na agenda o atendimento do cliente.  </strong>
+    <strong>US07: Eu, como atendente, quero criar atendimento do cliente, para que fique registrado na agenda o atendimento do cliente.  </strong>
     <ul>
-      <li><strong>A.</strong> A atendente deve registrar as informações obrigatórias do cliente (nome, contato,endereço) do serviço solicitado.
+      <li><strong>A -</strong> A atendente deve registrar as informações obrigatórias do cliente (nome, contato e endereço) do serviço solicitado.
       </li>
-      <li><strong>B.</strong> O agendamento aparece imediatamente na agenda dos técnicos e no painel de controle.</li>
-      <li><strong>C.</strong> O sistema verifica automaticamente a disponibilidade do técnico antes de confirmar o agendamento.</li>
+      <li><strong>B -</strong> O agendamento aparece imediatamente na agenda dos técnicos e no painel de controle.</li>
+      <li><strong>C -</strong> O sistema verifica automaticamente a disponibilidade do técnico antes de confirmar o agendamento.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento. </strong>
+    <strong>US10: Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento. </strong>
     <ul>
-      <li><strong>A.</strong> O cliente deve preencher campos obrigatórios(Nome, Endereço, tipo de aparelho).
+      <li><strong>A -</strong> O cliente deve preencher campos obrigatórios(Nome, Endereço, tipo de aparelho).
       </li>
-      <li><strong>B.</strong> Após o envio, o cliente recebe uma confirmação de que a solicitação foi registrada com sucesso, gerando um número de protocolo.</li>
-      <li><strong>C.</strong> O cliente deve receber notificações por e-mail ou SMS informando o status da solicitação, incluindo a confirmação do agendamento e atualizações sobre o progresso.</li>
+      <li><strong>B -</strong> Após o envio, o cliente recebe uma confirmação de que a solicitação foi registrada com sucesso, gerando um número de protocolo.</li>
+      <li><strong>C -</strong> O cliente deve receber notificações por e-mail ou SMS informando o status da solicitação, incluindo a confirmação do agendamento e atualizações sobre o progresso.</li>
     </ul>
   </li>
    <li>
-    <strong>História de Usuário: Eu, como cliente corporativo quero acessar o diagnóstico do equipamento, para que possa visualizar o diagnóstico que o técnico fez.</strong>
+    <strong>US12: Eu, como cliente corporativo quero acessar o diagnóstico do equipamento, para que possa visualizar o diagnóstico que o técnico fez.</strong>
     <ul>
-      <li><strong>A.</strong> O diagnóstico inclui informações detalhadas fornecidas pelo técnico, como problema e causa fornecidas na descrição.
+      <li><strong>A -</strong> O diagnóstico inclui informações detalhadas fornecidas pelo técnico, como problema e causa fornecidas na descrição.
       </li>
-      <li><strong>B.</strong> O diagnóstico fica disponível no sistema assim que o técnico o registra, garantindo que o cliente tenha acesso às informações mais recentes.</li>
+      <li><strong>B -</strong> O diagnóstico fica disponível no sistema assim que o técnico o registra, garantindo que o cliente tenha acesso às informações mais recentes.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu,como gerente de operações quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.</strong>
+    <strong>US16: Eu,como gerente de operações quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.</strong>
     <ul>
-      <li><strong>A.</strong> O relatório apresenta o desempenho individual de cada técnico (Total de serviços realizados e percentual de feedbacks positivos recebidos).
+      <li><strong>A -</strong> O relatório apresenta o desempenho individual de cada técnico (Total de serviços realizados e percentual de feedbacks positivos recebidos).
       </li>
-      <li><strong>B.</strong> O gerente pode filtrar os dados (Período e Região).</li>
-      <li><strong>C</strong> O relatório inclui gráficos (barras, linhas, ou radar) que mostram o desempenho de forma visual e intuitiva.</li>
+      <li><strong>B -</strong> O gerente pode filtrar os dados (Período e Região).</li>
+      <li><strong>C -</strong> O relatório inclui gráficos (barras, linhas, ou radar) que mostram o desempenho de forma visual e intuitiva.</li>
     </ul>
   </li>
   <li>
-    <strong>História de Usuário: Eu, como gerente de operações, quero consultar dashboard de visão geral de operações,  para poder acompanhar as etapas dos serviços </strong>
+    <strong>US17: Eu, como gerente de operações, quero consultar dashboard de visão geral de operações,  para poder acompanhar as etapas dos serviços </strong>
     <ul>
-      <li><strong>A.</strong> O dashboard deve mostrar o número de serviços em cada etapa (Pendente, em andamento, cancelado e concluído).
+      <li><strong>A -</strong> O dashboard deve mostrar o número de serviços em cada etapa (Pendente, em andamento, cancelado e concluído).
       </li>
-      <li><strong>B.</strong> O dashboard deve ser atualizado automaticamente em tempo real para refletir mudanças nas etapas dos serviços.</li>
-      <li><strong>C</strong> O gerente pode filtrar os dados por técnico, região, tipo de serviço ou período de tempo.</li>
+      <li><strong>B -</strong> O dashboard deve ser atualizado automaticamente em tempo real para refletir mudanças nas etapas dos serviços.</li>
+      <li><strong>C -</strong> O gerente pode filtrar os dados por técnico, região, tipo de serviço ou período de tempo.</li>
     </ul>
   </li>
   <li>
-    <strong>História de usuário:  Eu, como gerente de operações , quero consultar relatório de avaliação do cliente, para poder acompanhar os feedbacks dos clientes.</strong>
+    <strong>US18:  Eu, como gerente de operações , quero consultar relatório de avaliação do cliente, para poder acompanhar os feedbacks dos clientes.</strong>
     <ul>
-      <li><strong>A.</strong>O sistema deve exibir um relatório consolidado com os feedbacks recebidos dos clientes, incluindo avaliações numéricas (1 a 5 estrelas) e comentários textuais.
+      <li><strong>A -</strong>O sistema deve exibir um relatório consolidado com os feedbacks recebidos dos clientes, incluindo avaliações numéricas (1 a 5 estrelas) e comentários textuais.
       </li>
-      <li><strong>B.</strong> O gerente pode filtrar o relatório por data, técnico, tipo de serviço ou região.</li>
-      <li><strong>C</strong> O relatório deve ser atualizado automaticamente conforme novos feedbacks são registrados, garantindo que as informações estejam sempre atualizadas.</li>
+      <li><strong>B -</strong> O gerente pode filtrar o relatório por data, técnico, tipo de serviço ou região.</li>
+      <li><strong>C -</strong> O relatório deve ser atualizado automaticamente conforme novos feedbacks são registrados, garantindo que as informações estejam sempre atualizadas.</li>
     </ul>
   </li>
 </ol>
 
+#
+#
 
-**BDD das histórias**
+## **4 - BDD das histórias**
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -144,7 +154,7 @@ Histórias geradas apartir dos PBIs
 <body>
     <ol>
         <li>
-            <strong>História de Usuário:</strong> Eu, como técnico de campo, quero registrar o diagnóstico dos equipamentos, para garantir que as informações sobre os serviços prestados estejam salvas.
+            <strong>US01:</strong> Eu, como técnico de campo, quero registrar o diagnóstico dos equipamentos, para garantir que as informações sobre os serviços prestados estejam salvas.
             <ol type="a">
                 <li>
                     <strong>Técnico registra diagnóstico com foto ou vídeo</strong>
@@ -155,15 +165,15 @@ Histórias geradas apartir dos PBIs
                     </ul>
                 </li>
                 <li>
-                    <strong>Técnico não preenche todos os campos obrigatórios</strong>
+                    <strong>Técnico não preenche algum campo obrigatório(Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição).</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o técnico não preenche todos os campos obrigatórios,</li>
+                        <li><strong>Dado que</strong> o técnico não preenche algum campo obrigatório,</li>
                         <li><strong>Quando</strong> ele tentar concluir o registro do diagnóstico,</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro indicando que os campos obrigatórios precisam ser preenchidos.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Técnico preenche todos os campos obrigatórios e anexa mídia</strong>
+                    <strong>Técnico preenche todos os campos obrigatórios (Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição) e anexa mídia</strong>
                     <ul>
                         <li><strong>Dado que</strong> o técnico preenche todos os campos obrigatórios e anexa uma foto ou vídeo,</li>
                         <li><strong>Quando</strong> ele concluir o registro,</li>
@@ -181,10 +191,10 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>História de Usuário:</strong> Eu, como atendente, quero criar agendamento do cliente, para que fique registrado na agenda o atendimento do cliente.
+            <strong>US07:</strong> Eu, como atendente, quero criar atendimento do cliente, para que fique registrado na agenda o atendimento do cliente.
             <ol type="a">
                 <li>
-                    <strong>Atendente cria agendamento com todos os dados obrigatórios</strong>
+                    <strong>Atendente cria agendamento com todos os dados obrigatórios (nome, contato e endereço)</strong>
                     <ul>
                         <li><strong>Dado que</strong> o atendente está na tela de criação de agendamento,</li>
                         <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,</li>
@@ -192,7 +202,7 @@ Histórias geradas apartir dos PBIs
                     </ul>
                 </li>
                 <li>
-                    <strong>Atendente não preenche todos os campos obrigatórios</strong>
+                    <strong>Atendente não preenche algum campo obrigatório (nome, contato e endereço)</strong>
                     <ul>
                         <li><strong>Dado que</strong> o atendente está na tela de criação de agendamento,</li>
                         <li><strong>Quando</strong> ele tenta criar o agendamento sem preencher todos os campos obrigatórios,</li>
@@ -218,10 +228,10 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>História de Usuário:</strong> Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento.
+            <strong>US10:</strong> Eu, como cliente corporativo, quero solicitar serviço, para que possa solicitar algum atendimento.
             <ol type="a">
                 <li>
-                    <strong>Cliente corporativo solicita serviço com todos os dados obrigatórios</strong>
+                    <strong>Cliente corporativo solicita serviço com todos os dados obrigatórios (Nome, endereço etipo de aparelho).</strong>
                     <ul>
                         <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço,</li>
                         <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,</li>
@@ -229,7 +239,7 @@ Histórias geradas apartir dos PBIs
                     </ul>
                 </li>
                 <li>
-                    <strong>Cliente corporativo não preenche todos os campos obrigatórios</strong>
+                    <strong>Cliente corporativo não preenche algum campo obrigatório (Nome, Endereço e tipo de aparelho).</strong>
                     <ul>
                         <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço,</li>
                         <li><strong>Quando</strong> ele tenta enviar a solicitação sem preencher todos os campos obrigatórios,</li>
@@ -255,7 +265,7 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>História de Usuário:</strong> Eu, como cliente corporativo, quero acessar o diagnóstico do equipamento, para que possa visualizar o diagnóstico que o técnico fez.
+            <strong>US12:</strong> Eu, como cliente corporativo, quero acessar o diagnóstico do equipamento, para que possa visualizar o diagnóstico que o técnico fez.
             <ol type="a">
                 <li>
                     <strong>Cliente corporativo acessa diagnóstico disponível</strong>
@@ -286,7 +296,7 @@ Histórias geradas apartir dos PBIs
             </ol>
         </li>
         <li>
-            <strong>História de Usuário:</strong> Eu, como gerente de operações, quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.
+            <strong>US16:</strong> Eu, como gerente de operações, quero consultar relatório de desempenho de equipe, para poder visualizar o desempenho individual da equipe de técnicos.
             <ol type="a">
                 <li>
                     <strong>Gerente consulta relatório com dados disponíveis</strong>
