@@ -8,7 +8,7 @@ export async function consultarEstoque() {
     return data;
 }
 export async function inserirNoEstoque(documents: any[]) {
-    console.log("Documentos enviados:", documents); // Log dos dados
+    console.log("Documentos enviados:", documents);
     const response = await fetch(`${API_URL}/inserir`, {
         method: "POST",
         headers: {
@@ -17,6 +17,19 @@ export async function inserirNoEstoque(documents: any[]) {
         body: JSON.stringify(documents),
     });
     const data = await response.json();
-    console.log("Resposta da API:", data); // Verifique a resposta
+    console.log("Resposta da API:", data);
+    return data;
+}
+export async function atualizarEstoque(document: any) {
+    console.log("Documento a ser atualizado:", document);
+    const response = await fetch(`${API_URL}/editar/${document._id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(document),
+    });
+    const data = await response.json();
+    console.log("Resposta da API:", data);
     return data;
 }
