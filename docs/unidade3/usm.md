@@ -2,20 +2,22 @@
 
 **User Story Mapping** é uma técnica colaborativa usada para visualizar o fluxo de trabalho do usuário, identificar suas necessidades e organizar funcionalidades de forma estruturada e priorizada.
 
-### Como funciona
+### Como funciona:
 1. **Objetivo do usuário**: Define o que o usuário deseja alcançar (ex.: "Fazer uma compra").
 2. **Jornada do usuário**: Representam etapas amplas do processo do usuário (ex.: "Procurar produtos").
 3. **Histórias de usuário**: Descrevem ações específicas em cada etapa (ex.: "Filtrar por preço").
 4. **Priorização**: As histórias são organizadas por importância e ordem de entrega, destacando o MVP (Produto Mínimo Viável).
 
-### Principais benefícios
+### Principais benefícios:
 - Fornece uma visão clara da jornada do usuário e das funcionalidades necessárias.
 - Ajuda a alinhar equipes de produto e desenvolvimento.
 - Facilita a priorização de tarefas com foco no valor entregue.
 
 # **1 - User Story Mapping EduConnect**
 
-USM do produto EduConnect que tem como objetivo unificar e simplificar a gestão de projetos educacionais interdisciplinares, tornando-a mais acessível e eficientes.
+A plataforma **EduConnect**, foi desenvolvida para facilitar a gestão e a execução de projetos educacionais interdisciplinares, bem como para potencializar o engajamento em atividades extracurriculares. Com uma interface intuitiva e recursos avançados, a plataforma conecta educadores, estudantes e instituições de ensino, promovendo a colaboração, a troca de conhecimentos e a integração de diferentes áreas do saber. Além disso, o EduConnect oferece ferramentas para o acompanhamento de desempenho, planejamento estratégico de projetos e a criação de experiências educativas enriquecedoras, contribuindo para o desenvolvimento integral dos alunos e para a modernização das práticas pedagógicas.
+
+USM do produto EduConnect que tem como objetivo unificar e simplificar a gestão de projetos educacionais interdisciplinares, tornando-a mais acessível e eficientes:
 
 <div style="text-align:center;">
     <iframe width="768" height="432" src="https://miro.com/app/board/uXjVLsmK9wo=/" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
