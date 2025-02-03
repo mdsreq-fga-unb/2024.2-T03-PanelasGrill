@@ -3,12 +3,12 @@
 import Sidebar from "@/components/Sidebar";
 import { Search } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { consultarEstoque, inserirNoEstoque, atualizarEstoque } from "@/services/mongoService";
+import { consultarEstoque, inserirNoEstoque, atualizarEstoque, excluirEstoque } from "@/services/mongoService";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function Estoque() {
-    const [showInput, setShowInput] = useState(false);
+   const [showInput, setShowInput] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const [estoque, setEstoque] = useState<any[]>([]);
     const [showModal, setShowModal] = useState(false);
@@ -81,6 +81,23 @@ export default function Estoque() {
         setTempItem({ ...item });
         setEditItemData({ ...item });
     };
+
+   const handleExcluirClick = async (item: any) => {
+        if (confirm(`Deseja realmente excluir o item "${item.item}"?`)) {
+            try {
+               const result = await excluirEstoque(item._id);
+                if (result.status === "success") {
+                    alert(`Item ${item.item} excluído com sucesso`);
+                    carregarEstoque(); // Atualiza a lista de estoque após a exclusão
+                } else {
+                   alert(`Erro ao excluir item: ${result.message}`);
+                   }
+                 } catch (error) {
+               console.error("Erro ao excluir item:", error);
+              alert("Erro ao excluir item no estoque. Por favor, tente novamente.");
+               }
+             }
+       };
 
     const atualizarItem = async () => {
         if (!editItemData || !editItemData._id) {
@@ -196,11 +213,17 @@ export default function Estoque() {
                                     <td className="p-4 border-b">{item.quantidade}</td>
                                     <td className="p-4 border-b">{item.referencia_quantidade}</td>
                                     <td className="p-4 border-b">
-                                        <button
+                                      <button
                                             onClick={() => handleEditClick(item)}
-                                            className="px-4 py-2 bg-primary-orange text-white rounded-md"
+                                            className="px-4 py-2 bg-primary-orange text-white rounded-md mr-2"
                                         >
                                             Editar
+                                        </button>
+                                         <button
+                                            onClick={() => handleExcluirClick(item)}
+                                             className="px-4 py-2 bg-red-500 text-white rounded-md"
+                                         >
+                                             Excluir
                                         </button>
                                     </td>
                                 </tr>
@@ -324,7 +347,7 @@ export default function Estoque() {
                                 className="w-full p-2 border border-gray-300 rounded-md"
                             >
                                 <option value="Kg">Kg</option>
-                                <option value="unidade">unidade</option>
+                                 <option value="unidade">unidade</option>
                                 <option value="litros">Litros</option>
                                 <option value="gramas">gramas</option>
                             </select>

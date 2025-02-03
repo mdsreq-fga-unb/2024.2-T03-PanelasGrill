@@ -1,0 +1,47 @@
+services:
+  backend:
+    build:
+      context: .  # Caminho correto para o backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb+srv://romuloreis:y3H6bsXl0kWV7XsS@cluster0.3n2im.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0  # Conexão remota
+    volumes:
+      - .:/app  # Monta o diretório raiz no container
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      context: ./panelas-grill # Caminho para o frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./panelas-grill:/app
+      - /app/api
+    networks:
+      - app_network
+
+  mongo:
+    image: mongo:6
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app_network
+
+volumes:
+  mongo_data:
+
+networks:
+  app_network:
+    driver: bridge
