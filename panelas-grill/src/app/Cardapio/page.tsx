@@ -153,7 +153,7 @@ export default function Menu() {
                         return {
                             ...ingrediente,
                             [name]: value,
-                            referencia_quantidade: item?.referencia_quantidade,
+                            referencia_quantidade: item?.referencia_quantidade ?? "",
                         };
                     } else {
                         return {
@@ -173,7 +173,7 @@ export default function Menu() {
                         return {
                             ...ingrediente,
                             [name]: value,
-                            referencia_quantidade: item?.referencia_quantidade,
+                            referencia_quantidade: item?.referencia_quantidade ?? "",
                         };
                     } else {
                         return {
