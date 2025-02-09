@@ -16,9 +16,9 @@ Organização Parceira
 - **2.7** O caso de uso é encerrado
 ## **3. Fluxos Alternativos**
 - **3.1 [FA01]** Atualizar campanha
-    - **3.1.1**O sistema verifica se há campanhas ativas dessa organização [FE02]
-    - **3.1.2**O usuário visualiza uma lista de campanhas ativas da sua organização 
-    - **3.1.2**O usuário escolhe a campanha que deseja alterar e retorna ao 2.2
+    - **3.1.1** O sistema verifica se há campanhas ativas dessa organização [FE02]
+    - **3.1.2** O usuário visualiza uma lista de campanhas ativas da sua organização 
+    - **3.1.2** O usuário escolhe a campanha que deseja alterar e retorna ao 2.2
 ## **4. Fluxos de Exceção**
 - **4.1 [FE01]** Validação do formulário
     - **4.1.1** O sistema identifica se há inconsistências no formulário enviado, a partir da [RN01], se não houver retorna para o 2.5
