@@ -85,13 +85,20 @@ export async function consultarCardapio() {
     }
 
     export async function excluirCardapio(cardapio_id: string) {
-        const response = await fetch(`${API_URL}/cardapio/${cardapio_id}`, {
-            method: "DELETE",
-        });
-        const data = await response.json();
-        console.log("Resposta da API:", data);
-        return data;
+        try {
+            const response = await fetch(`${API_URL}/cardapio/${cardapio_id}`, {
+                method: "DELETE",
+            });
+            if (!response.ok) {
+                throw new Error(`Erro na requisição: ${response.statusText}`);
+            }
+            const data = await response.json();
+            console.log("Resposta da API:", data);
+            return data;
+        } catch (error) {
+            console.error("Erro ao excluir cardápio:", error);
+            throw error;
+        }
     }
-    
     
     
