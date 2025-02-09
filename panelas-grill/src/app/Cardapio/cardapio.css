@@ -1,0 +1,51 @@
+
+.container-ingredientes {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 10px;
+  }
+  
+ 
+  .Ingrediente-container {
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+  }
+  
+ 
+  .igrediente-select {
+    width: 200px; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  .Campo-quantidade input {
+    width: 100px; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ 
+  
+/* Botão de excluir */
+.botao-excluir {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .botao-excluir:hover {
+    background-color: #cc0000;
+  }
+
+
+
+
