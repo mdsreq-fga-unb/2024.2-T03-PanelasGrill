@@ -52,6 +52,14 @@ export default function Menu() {
         ingredientes: [],
     });
 
+    const removerIngrediente_edit = (index: number) => {
+        if (isEditing && editCardapioData) {
+            const novosIngredientes = [...editCardapioData.ingredientes];
+            novosIngredientes.splice(index, 1); // Remove o ingrediente na posição index
+            setEditCardapioData({ ...editCardapioData, ingredientes: novosIngredientes });
+        }
+    };
+
     const carregarCardapios = async () => {
         try {
             const data = await consultarCardapio();
@@ -331,12 +339,6 @@ export default function Menu() {
                                             Editar
                                         </button>
                                         <button
-                                            onClick={() => handlePrepareCardapio(cardapio)}
-                                            className="px-4 py-2 bg-green-500 text-white rounded-md"
-                                        >
-                                            Preparar
-                                        </button>
-                                        <button
                                             onClick={() => handleDeleteCardapio(cardapio._id as string)}
                                             className="px-4 py-2 bg-red-500 text-white rounded-md"
                                         >
@@ -360,6 +362,7 @@ export default function Menu() {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg" style={{ width: "1000px" }} >
                         <h1 className="text-2xl font-semibold mb-4 text-black ">Adicionar Cardápio</h1>
+                        <p className="text-sm text-black-500 mb-4"> * Insira a quantidade por pessoa para cada ingrediente.</p>
                         <div className="space-y-4 text-black">
                             <input
                                 type="text"
@@ -428,6 +431,7 @@ export default function Menu() {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg w-96" style={{ width: "1000px" }} >
                         <h1 className="text-2xl font-semibold mb-4 text-black ">Editar Cardápio</h1>
+                        <p className="text-sm text-black-500 mb-4"> * Insira a quantidade por pessoa para cada ingrediente.</p>
                         <div className="space-y-4 text-black">
                             <input
                                 type="text"
@@ -464,7 +468,7 @@ export default function Menu() {
                                     </div>
                                     <button
                                             className="botao-excluir"
-                                            onClick={() => removerIngrediente(index)}
+                                            onClick={() => removerIngrediente_edit(index)}
                                         >
                                             <Trash size={18} />
                                     </button>
