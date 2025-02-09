@@ -17,7 +17,7 @@ export default function Menu() {
     const [tempCardapio, settempCardapio] = useState<any | null>(null);
     const [editCardapioData, setEditCardapioData] = useState<any | null>(null);
     const [estoque, setEstoque] = useState<any[]>([]);
-
+  
         interface NovoItem {
           _id?: string;
           item: string;
