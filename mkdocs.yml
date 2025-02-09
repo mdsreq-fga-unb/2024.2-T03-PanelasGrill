@@ -22,6 +22,7 @@ nav:
    - Estudos de caso:
       - PBB: unidade3/pbb.md
       - USM: unidade3/usm.md
+      - Casos de uso: unidade4/UC.md
    - Políticas de boas práticas:
       - Políticas de Boas Práticas para Branch: Politicas/politica_branch.md
       - Políticas de Boas Práticas para Commit: Politicas/politica_commit.md
