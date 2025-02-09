@@ -11,7 +11,7 @@ O estudo de caso escolhido pelo grupo foi o **ConnectCare** que é um aplicativo
 </div>
 
 
-**Todos os Casos de Uso:**:
+**Todos os Casos de Uso:**
 
 | Caso de Uso                         | Ator                           | Objetivo                                             | Resultado                                         |
 |--------------------------------------|--------------------------------|------------------------------------------------------|--------------------------------------------------|
