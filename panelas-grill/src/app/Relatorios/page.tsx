@@ -198,7 +198,7 @@ export default function Menu() {
             const resultado = await inserirNoEstoque(documentosParaInserir);
 
             if (resultado.status === "success") {
-                alert("Insumos adicionados/removidos do estoque com sucesso!");
+                alert("Insumos adicionados do estoque com sucesso!");
                 resetSteps();
                 // Recarrega o estoque para refletir as mudanças
                 carregarDados();

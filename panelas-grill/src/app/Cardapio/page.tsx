@@ -51,6 +51,7 @@ export default function Menu() {
         nome: "",
         ingredientes: [],
     });
+
     const carregarCardapios = async () => {
         try {
             const data = await consultarCardapio();
@@ -243,10 +244,10 @@ export default function Menu() {
     };
 
     const handleDeleteCardapio = async (cardapioId: string) => {
-        console.log("ID do cardápio a ser excluído:", cardapioId); // Verifique o ID no console
         if (window.confirm("Tem certeza de que deseja excluir este cardápio?")) {
             try {
                 const result = await excluirCardapio(cardapioId);
+
                 if (result.status === "success") {
                     alert("Cardápio excluído com sucesso!");
                     carregarCardapios(); // Recarrega os cardápios após a exclusão
@@ -298,7 +299,7 @@ export default function Menu() {
                         )}
                     </div>
                 </header>
-                <main className="flex-1 p-6 bg-primary-gray text-black">
+                <main className="flex-1 p-6 bg-primary-gray">
                     <h3 className="text-xl font-semibold mb-4">Lista de Cardápios</h3>
                     <table className="table-auto w-full bg-white border border-gray-300 rounded-lg">
                         <thead>
@@ -317,10 +318,7 @@ export default function Menu() {
                                             {cardapio.ingredientes?.map((ingrediente: IngredienteModel, i: number) => (
                                                 <li key={i}>
                                                     {estoque.find(item => item._id === ingrediente.item_estoque_id)?.item}
-                                                    <span>        </span>
-                                                    {ingrediente.quantidade}
-                                                    <span>  </span>
-                                                    {ingrediente.referencia_quantidade}
+
                                                 </li>
                                             ))}
                                         </ul>
@@ -439,19 +437,22 @@ export default function Menu() {
                                 className="w-full p-2 border border-gray-300 rounded-md"
                                 placeholder="Nome do cardápio"
                             />
+                        <div className="container-ingredientes">
+
                             {editCardapioData?.ingredientes?.map((ingrediente: IngredienteModel, index: number) => (
-                                <div key={index} className="space-y-2">
+                                <div key={index} className="Ingrediente-container">
                                     <select
                                         name="item_estoque_id"
                                         value={ingrediente.item_estoque_id}
                                         onChange={(e) => handleIngredienteChange(e as React.ChangeEvent<HTMLSelectElement>, index)}
-                                        className="w-full p-2 border border-gray-300 rounded-md"
+                                        className="igrediente-select"
                                     >
                                         <option value="">Selecione um item</option>
                                         {estoque.map((item: NovoItem) => (
                                             <option key={item._id} value={item._id}>{item.item}</option>
                                         ))}
                                     </select>
+                                <div className="Campo-quantidade">
                                     <input
                                         type="number"
                                         name="quantidade"
@@ -460,8 +461,17 @@ export default function Menu() {
                                         className="w-full p-2 border border-gray-300 rounded-md"
                                         placeholder="Quantidade"
                                     />
+                                    </div>
+                                    <button
+                                            className="botao-excluir"
+                                            onClick={() => removerIngrediente(index)}
+                                        >
+                                            <Trash size={18} />
+                                    </button>
                                 </div>
                             ))}
+                               
+                        </div>
                             <button onClick={handleAddIngrediente} className="px-4 py-2 bg-gray-300 text-black rounded-md">
                                 Adicionar Ingrediente
                             </button>
