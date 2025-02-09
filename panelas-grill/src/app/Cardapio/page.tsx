@@ -51,7 +51,6 @@ export default function Menu() {
         nome: "",
         ingredientes: [],
     });
-
     const carregarCardapios = async () => {
         try {
             const data = await consultarCardapio();
@@ -244,10 +243,10 @@ export default function Menu() {
     };
 
     const handleDeleteCardapio = async (cardapioId: string) => {
+        console.log("ID do cardápio a ser excluído:", cardapioId); // Verifique o ID no console
         if (window.confirm("Tem certeza de que deseja excluir este cardápio?")) {
             try {
                 const result = await excluirCardapio(cardapioId);
-
                 if (result.status === "success") {
                     alert("Cardápio excluído com sucesso!");
                     carregarCardapios(); // Recarrega os cardápios após a exclusão
@@ -299,7 +298,7 @@ export default function Menu() {
                         )}
                     </div>
                 </header>
-                <main className="flex-1 p-6 bg-primary-gray">
+                <main className="flex-1 p-6 bg-primary-gray text-black">
                     <h3 className="text-xl font-semibold mb-4">Lista de Cardápios</h3>
                     <table className="table-auto w-full bg-white border border-gray-300 rounded-lg">
                         <thead>

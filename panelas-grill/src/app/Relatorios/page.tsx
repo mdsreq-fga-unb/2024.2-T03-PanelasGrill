@@ -5,13 +5,21 @@ import { Search, Eye } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { consultarEstoque, consultarCardapio } from "@/services/mongoService";
+import { consultarEstoque, consultarCardapio, inserirNoEstoque } from "@/services/mongoService"; // Importe inserirNoEstoque
 
 interface IngredienteModel {
     item_estoque_id: string;
     quantidade: number;
     referencia_quantidade: string;
 }
+
+interface ItemParaInserir { // Defina a interface
+    item: string;
+    tipo: string;
+    quantidade: number;
+    referencia_quantidade: string;
+}
+
 
 export default function Menu() {
     const { data: session, status } = useSession();
@@ -24,7 +32,7 @@ export default function Menu() {
     const [selectedMenu, setSelectedMenu] = useState<string | null>(null);
     const [proportionType, setProportionType] = useState<string | null>(null);
     const [quantity, setQuantity] = useState<number | null>(null);
-    const [showRelatoriosSections, setShowRelatoriosSection] = useState(false);
+    const [showRelatoriosSection, setShowRelatoriosSection] = useState(false); // Corrigido o nome da variavel
     const [estoque, setEstoque] = useState<any[]>([]); // Estado para armazenar o estoque
     const [cardapios, setCardapios] = useState<any[]>([]); // Estado para armazenar os cardápios
     const [loading, setLoading] = useState(false); // Estado para controlar o carregamento
@@ -83,7 +91,7 @@ export default function Menu() {
         if (status === "unauthenticated") {
             router.push("/Login");
         } else if (status === "authenticated") {
-            setShowRelatoriosSection(true);
+            setShowRelatoriosSection(true); // Use o nome correto da variavel
         }
     }, [status, router]);
 
@@ -149,6 +157,117 @@ export default function Menu() {
         setProportionType(null);
         setQuantity(null);
     };
+
+    const handleFinalizarRegistroEntrada = async () => {
+        const cardapioSelecionado = cardapios.find(cardapio => cardapio._id === selectedMenu);
+
+        if (!cardapioSelecionado) {
+            alert("Cardápio não encontrado.");
+            return;
+        }
+
+        const documentosParaInserir = cardapioSelecionado.ingredientes.map((ingrediente: IngredienteModel) => {
+            const itemEstoque = estoque.find(item => item._id === ingrediente.item_estoque_id);
+
+            if (!itemEstoque) {
+                console.warn(`Item de estoque com ID ${ingrediente.item_estoque_id} não encontrado no estoque.`);
+                return null; // Ignora este ingrediente
+            }
+
+            const quantidadeAdicional = quantidades[ingrediente.item_estoque_id] || 0;
+              // Validar se a quantidade em estoque é suficiente para remover
+              if (itemEstoque.quantidade + quantidadeAdicional < 0) {
+                alert(`Quantidade insuficiente de ${itemEstoque.item} em estoque.`);
+                return null;
+            }
+
+            return {
+                item: itemEstoque.item,
+                tipo: itemEstoque.tipo,
+                quantidade: itemEstoque.quantidade + quantidadeAdicional,
+                referencia_quantidade: itemEstoque.referencia_quantidade,
+            };
+        }).filter((doc: any): doc is ItemParaInserir => doc !== null); // Filtra ingredientes ignorados
+    
+        if (documentosParaInserir.length === 0) {
+            alert("Nenhum item para adicionar ao estoque.");
+            return;
+        }
+
+        try {
+            const resultado = await inserirNoEstoque(documentosParaInserir);
+
+            if (resultado.status === "success") {
+                alert("Insumos adicionados/removidos do estoque com sucesso!");
+                resetSteps();
+                // Recarrega o estoque para refletir as mudanças
+                carregarDados();
+            } else {
+                alert(`Erro ao adicionar/remover insumos ao estoque: ${resultado.message}`);
+            }
+        } catch (error) {
+            console.error("Erro ao inserir no estoque:", error);
+            alert("Erro ao inserir no estoque. Verifique o console.");
+        }
+    };
+    const handleFinalizarRegistroSaida = async () => {
+      const cardapioSelecionado = cardapios.find(cardapio => cardapio._id === selectedMenu);
+
+      if (!cardapioSelecionado) {
+          alert("Cardápio não encontrado.");
+          return;
+      }
+
+      const documentosParaRemover = cardapioSelecionado.ingredientes.map((ingrediente: IngredienteModel) => {
+          const itemEstoque = estoque.find(item => item._id === ingrediente.item_estoque_id);
+
+          if (!itemEstoque) {
+              console.warn(`Item de estoque com ID ${ingrediente.item_estoque_id} não encontrado no estoque.`);
+              return null; // Ignora este ingrediente
+          }
+          let quantidadeARemover;
+          if(reportType==='saida'){
+            quantidadeARemover = ingrediente.quantidade * (quantity || 1)
+          }else{
+            quantidadeARemover = quantidades[ingrediente.item_estoque_id] || 0;
+          }
+
+
+          // Validar se a quantidade em estoque é suficiente para remover
+          if (itemEstoque.quantidade < quantidadeARemover) {
+              alert(`Quantidade insuficiente de ${itemEstoque.item} em estoque.`);
+              return null;
+          }
+
+          return {
+              item: itemEstoque.item,
+              tipo: itemEstoque.tipo,
+              quantidade: itemEstoque.quantidade - quantidadeARemover,
+              referencia_quantidade: itemEstoque.referencia_quantidade,
+          };
+      }).filter((doc: any): doc is ItemParaInserir => doc !== null); // Filtra ingredientes ignorados
+
+      if (documentosParaRemover.length === 0) {
+          alert("Nenhum item para remover do estoque.");
+          return;
+      }
+
+      try {
+          const resultado = await inserirNoEstoque(documentosParaRemover);
+
+          if (resultado.status === "success") {
+              alert("Insumos removidos do estoque com sucesso!");
+              resetSteps();
+              // Recarrega o estoque para refletir as mudanças
+              carregarDados();
+          } else {
+              alert(`Erro ao remover insumos do estoque: ${resultado.message}`);
+          }
+      } catch (error) {
+          console.error("Erro ao remover do estoque:", error);
+          alert("Erro ao remover do estoque. Verifique o console.");
+      }
+  };
 
     return (
         <div className="bg-primary-gray h-screen flex">
@@ -403,7 +522,7 @@ export default function Menu() {
                                     <button 
                                         onClick={() => {
                                             const allQuantitiesFilled = cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.every((ingrediente: IngredienteModel) => {
-                                                return quantidades[ingrediente.item_estoque_id] > 0; // Verifica se a quantidade está preenchida
+                                                return quantidades[ingrediente.item_estoque_id] >= 0; // Verifica se a quantidade está preenchida
                                             });
 
                                             if (allQuantitiesFilled) {
@@ -482,101 +601,101 @@ export default function Menu() {
                         )}
 
                     {currentStep === 3 && reportType === "entrada" && (
+                        
+        
                         <div className="mt-6">
-                            <p className="text-gray-700 font-semibold text-3xl font-poppins">Clique no botão abaixo para concluir o registro!</p>
-                            <p className="font-poppins text-md text-black font-semibold mt-5">Ao clicar em "Realizar Registro", os insumos relacionados serão registrados no estoque. Certifique-se de que os itens estão sendo inseridos corretamente, pois esta ação não é reversível!</p>
-                            {/* Exibir informações atualizadas */}
-                            {selectedMenu && (
-                                <div className="mt-4">
-                                    <h4 className="text-xl font-semibold text-black">Cardápio Selecionado: {cardapios.find(cardapio => cardapio._id === selectedMenu)?.nome}</h4>
-                                    <table className="w-3/5 bg-white border border-gray-300 mt-2">
-                                        <thead>
-                                            <tr className="bg-gray-100 text-black">
-                                                <th className="p-4 text-left border-b">Insumo</th>
-                                                <th className="p-4 text-left border-b">Referência</th>
-                                                <th className="p-4 text-left border-b">Quantidade</th>
+                        <p className="text-gray-700 font-semibold text-3xl font-poppins">Clique no botão abaixo para concluir o registro!</p>
+                        <p className="font-poppins text-md text-black font-semibold mt-5">Ao clicar em "Realizar Registro", os insumos relacionados serão registrados no estoque. Certifique-se de que os itens estão sendo inseridos corretamente, pois esta ação não é reversível!</p>
+                        {/* Exibir informações atualizadas */}
+                        {selectedMenu && (
+                            <div className="mt-4">
+                                <h4 className="text-xl font-semibold text-black">Cardápio Selecionado: {cardapios.find(cardapio => cardapio._id === selectedMenu)?.nome}</h4>
+                                <table className="w-3/5 bg-white border border-gray-300 mt-2">
+                                    <thead>
+                                        <tr className="bg-gray-100 text-black">
+                                            <th className="p-4 text-left border-b">Insumo</th>
+                                            <th className="p-4 text-left border-b">Referência</th>
+                                            <th className="p-4 text-left border-b">Quantidade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.map((ingrediente: IngredienteModel, index: number) => (
+                                            <tr key={index} className="hover:bg-gray-50 text-black">
+                                                <td className="p-4 border-b">
+                                                    {estoque.find(item => item._id === ingrediente.item_estoque_id)?.item}
+                                                </td>
+                                                <td className="p-4 border-b">
+                                                    {ingrediente.referencia_quantidade}
+                                                </td>
+                                                <td className="p-4 border-b">
+                                                    {quantidades[ingrediente.item_estoque_id]}
+                                                </td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.map((ingrediente: IngredienteModel, index: number) => (
-                                                <tr key={index} className="hover:bg-gray-50 text-black">
-                                                    <td className="p-4 border-b">
-                                                        {estoque.find(item => item._id === ingrediente.item_estoque_id)?.item}
-                                                    </td>
-                                                    <td className="p-4 border-b">
-                                                        {ingrediente.referencia_quantidade}
-                                                    </td>
-                                                    <td className="p-4 border-b">
-                                                        {quantidades[ingrediente.item_estoque_id]}
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                            {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.length === 0 && (
-                                                <tr>
-                                                    <td colSpan={3} className="text-center p-4">Nenhum ingrediente encontrado.</td>
-                                                </tr>
-                                            )}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            )}
-                            <button 
-                                onClick={() => {
-                                    resetSteps();
-                                    // Aqui você pode implementar a lógica para finalizar o registro
-                                    alert("Registro realizado com sucesso!"); // Exemplo de mensagem
-                                }} 
-                                className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
-                            >
-                                Realizar Registro
-                            </button>
-                        </div>
+                                        ))}
+                                        {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.length === 0 && (
+                                            <tr>
+                                                <td colSpan={3} className="text-center p-4">Nenhum ingrediente encontrado.</td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
+                        <button 
+                            onClick={handleFinalizarRegistroEntrada}
+                            className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
+                        >
+                            Realizar Registro
+                        </button>
+                    </div>
                     )}
 
                     {currentStep === 4 && reportType === "saida" && (
-                        <div className="mt-6">
-                            <p className="text-gray-700 font-semibold text-3xl font-poppins">Aperte no botão abaixo para finalizar!</p>
-                            <h4 className="text-xl font-semibold text-black mt-4">Cardápio Selecionado: {cardapios.find(cardapio => cardapio._id === selectedMenu)?.nome}</h4>
-                            <table className="w-3/5 bg-white border border-gray-300 mt-2">
-                                <thead>
-                                    <tr className="bg-gray-100 text-black">
-                                        <th className="p-4 text-left border-b">Insumo</th>
-                                        <th className="p-4 text-left border-b">Referência</th>
-                                        <th className="p-4 text-left border-b">Quantidade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.map((ingrediente: IngredienteModel, index: number) => (
-                                        <tr key={index} className="hover:bg-gray-50 text-black">
-                                            <td className="p-4 border-b">
-                                                {estoque.find(item => item._id === ingrediente.item_estoque_id)?.item}
-                                            </td>
-                                            <td className="p-4 border-b">
-                                                {ingrediente.referencia_quantidade}
-                                            </td>
-                                            <td className="p-4 border-b">
-                                                {quantidades[ingrediente.item_estoque_id] || (ingrediente.quantidade * (quantity || 1))}
-                                            </td>
-                                        </tr>
-                                    ))}
-                                    {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.length === 0 && (
-                                        <tr>
-                                            <td colSpan={3} className="text-center p-4">Nenhum ingrediente encontrado.</td>
-                                        </tr>
-                                    )}
-                                </tbody>
-                            </table>
-                            <button 
-                                onClick={() => {
-                                    resetSteps();
-                                    // Aqui você pode implementar a lógica para finalizar o registro
-                                    alert("Registro realizado com sucesso!"); // Exemplo de mensagem
-                                }} 
-                                className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
-                            >
-                                Realizar Registro
-                            </button>
-                        </div>
+                         <div className="mt-6">
+                         <p className="text-gray-700 font-semibold text-3xl font-poppins">Clique no botão abaixo para concluir o registro!</p>
+                         <p className="font-poppins text-md text-black font-semibold mt-5">Ao clicar em "Realizar Registro", os insumos relacionados serão registrados no estoque. Certifique-se de que os itens estão sendo inseridos corretamente, pois esta ação não é reversível!</p>
+                         {/* Exibir informações atualizadas */}
+                         {selectedMenu && (
+                             <div className="mt-4">
+                                 <h4 className="text-xl font-semibold text-black">Cardápio Selecionado: {cardapios.find(cardapio => cardapio._id === selectedMenu)?.nome}</h4>
+                                 <table className="w-3/5 bg-white border border-gray-300 mt-2">
+                                     <thead>
+                                         <tr className="bg-gray-100 text-black">
+                                             <th className="p-4 text-left border-b">Insumo</th>
+                                             <th className="p-4 text-left border-b">Referência</th>
+                                             <th className="p-4 text-left border-b">Quantidade</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody>
+                                         {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.map((ingrediente: IngredienteModel, index: number) => (
+                                             <tr key={index} className="hover:bg-gray-50 text-black">
+                                                 <td className="p-4 border-b">
+                                                     {estoque.find(item => item._id === ingrediente.item_estoque_id)?.item}
+                                                 </td>
+                                                 <td className="p-4 border-b">
+                                                     {ingrediente.referencia_quantidade}
+                                                 </td>
+                                                 <td className="p-4 border-b">
+                                                 {quantidades[ingrediente.item_estoque_id] || (ingrediente.quantidade * (quantity || 1))}
+                                                 </td>
+                                             </tr>
+                                         ))}
+                                         {cardapios.find(cardapio => cardapio._id === selectedMenu)?.ingredientes.length === 0 && (
+                                             <tr>
+                                                 <td colSpan={3} className="text-center p-4">Nenhum ingrediente encontrado.</td>
+                                             </tr>
+                                         )}
+                                     </tbody>
+                                 </table>
+                             </div>
+                         )}
+                         <button
+                             onClick={handleFinalizarRegistroSaida}
+                             className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
+                         >
+                             Realizar Registro
+                         </button>
+                     </div>
                     )}
                 </main>
             </div>
