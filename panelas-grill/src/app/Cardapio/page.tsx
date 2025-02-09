@@ -5,8 +5,15 @@ import { Trash } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { consultarEstoque, consultarCardapio, criarCardapio, editarCardapio, prepararCardapio } from "@/services/mongoService";
-import './cardapio.css';
+import {
+    consultarEstoque,
+    consultarCardapio,
+    criarCardapio,
+    editarCardapio,
+    prepararCardapio,
+    excluirCardapio, // Importe a função de exclusão de cardápio
+} from "@/services/mongoService";
+import "./cardapio.css";
 
 interface NovoItem {
     _id?: string;
@@ -191,7 +198,7 @@ export default function Menu() {
         }
     };
 
-    const handleEditClick = (cardapio: NovoCardapio) => { // Tipagem Correta
+    const handleEditClick = (cardapio: NovoCardapio) => {
         setIsEditing(true);
         settempCardapio({ ...cardapio });
         setEditCardapioData({ ...cardapio });
@@ -232,6 +239,24 @@ export default function Menu() {
             } catch (error: any) {
                 console.log("Erro ao preparar cardápio:", error);
                 alert(`Erro ao preparar o cardápio: ${error.message}`);
+            }
+        }
+    };
+
+    const handleDeleteCardapio = async (cardapioId: string) => {
+        if (window.confirm("Tem certeza de que deseja excluir este cardápio?")) {
+            try {
+                const result = await excluirCardapio(cardapioId);
+
+                if (result.status === "success") {
+                    alert("Cardápio excluído com sucesso!");
+                    carregarCardapios(); // Recarrega os cardápios após a exclusão
+                } else {
+                    alert(`Erro ao excluir cardápio: ${result.message}`);
+                }
+            } catch (error) {
+                console.error("Erro ao excluir cardápio:", error);
+                alert("Erro ao excluir cardápio. Por favor, tente novamente.");
             }
         }
     };
@@ -313,6 +338,12 @@ export default function Menu() {
                                             className="px-4 py-2 bg-green-500 text-white rounded-md"
                                         >
                                             Preparar
+                                        </button>
+                                        <button
+                                            onClick={() => handleDeleteCardapio(cardapio._id as string)}
+                                            className="px-4 py-2 bg-red-500 text-white rounded-md"
+                                        >
+                                            Excluir
                                         </button>
                                     </td>
                                 </tr>

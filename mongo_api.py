@@ -179,3 +179,17 @@ def preparar_cardapio(cardapio_id:str, quantidade_pratos: int):
         raise e
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao preparar cardápio: {e}")
+    
+@app.delete("/cardapio/{cardapio_id}")
+def excluir_cardapio(cardapio_id: str):
+    try:
+        client = conectar_mongo()
+        db = client["estoques"]
+        cardapio_collection = db["cardapios"]
+        result = cardapio_collection.delete_one({"_id": ObjectId(cardapio_id)})
+        if result.deleted_count > 0:
+            return {"status": "success", "message": "Cardápio excluido com sucesso"}
+        else:
+            raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro ao excluir cardápio: {e}")

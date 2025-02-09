@@ -1,5 +1,6 @@
 // src/services/mongoServices.ts
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export async function consultarEstoque() {
     const response = await fetch(`${API_URL}/consultar`);
@@ -82,3 +83,15 @@ export async function consultarCardapio() {
         const data = await response.json();
         return data;
     }
+
+    export async function excluirCardapio(cardapio_id: string) {
+        const response = await fetch(`${API_URL}/cardapio/${cardapio_id}`, {
+            method: "DELETE",
+        });
+        const data = await response.json();
+        console.log("Resposta da API:", data);
+        return data;
+    }
+    
+    
+    
