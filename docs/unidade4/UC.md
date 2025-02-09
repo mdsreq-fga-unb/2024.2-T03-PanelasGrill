@@ -6,7 +6,12 @@ O estudo de caso escolhido pelo grupo foi o **ConnectCare** que é um aplicativo
 
 **Diagrama de Casos de Uso**:
 
-**Casos de uso**:
+<div style="text-align:center;">
+    <iframe width="1534" height="868" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=uml.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1jFgbUHnHkhjGAVR4HeIKUZ9j6qGjQXYi%26export%3Ddownload" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+</div>
+
+
+**Todos os Casos de Uso:**:
 
 | Caso de Uso                         | Ator                           | Objetivo                                             | Resultado                                         |
 |--------------------------------------|--------------------------------|------------------------------------------------------|--------------------------------------------------|
@@ -20,17 +25,27 @@ O estudo de caso escolhido pelo grupo foi o **ConnectCare** que é um aplicativo
 | Consultar histórico do paciente      | Profissional de Saúde          | Acessar informações médicas do paciente             | Histórico exibido                                |
 | Registrar atendimentos               | Profissional de Saúde          | Registrar informações sobre atendimentos            | Atendimento registrado                           |
 | Atualizar prontuário do paciente     | Profissional de Saúde          | Manter informações médicas atualizadas              | Prontuário atualizado                            |
-| Criar perfil profissional            | Agentes Comunitários de Saúde e Profissional de Saúde   | Criar um perfil para profissionais                  | Perfil criado                                    |
-| Gerenciar agenda                     | Agentes Comunitários de Saúde  | Controlar horários e compromissos                   | Agenda gerenciada                                |
-| Registrar visitas                    | Agentes Comunitários de Saúde  | Registrar visitas feitas a pacientes                | Visita registrada                                |
-| Criar relatório da comunidade        | Agentes Comunitários de Saúde  | Produzir um relatório sobre a situação da comunidade | Relatório gerado                                 |
+| Criar perfil profissional            | Agente Comunitário de Saúde e Profissional de Saúde   | Criar um perfil para profissionais                  | Perfil criado                                    |
+| Gerenciar agenda                     | Agente Comunitário de Saúde e Profissional de Saúde  | Controlar horários e compromissos                   | Agenda gerenciada                                |
+| Registrar visitas                    | Agente Comunitário de Saúde  | Registrar visitas feitas a pacientes                | Visita registrada                                |
+| Criar relatório da comunidade        | Agente Comunitário de Saúde  | Produzir um relatório sobre a situação da comunidade | Relatório gerado                                 |
 | Gerenciar iniciativas de saúde       | Organização Parceira           | Criar e administrar campanhas de saúde              | Iniciativa cadastrada                            |
 | Monitorar impacto das campanhas      | Organização Parceira           | Avaliar o sucesso de iniciativas de saúde           | Relatório de impacto gerado                      |
-| Monitorar indicadores de uso         | Administradores do Sistema     | Acompanhar métricas de uso do sistema               | Indicadores monitorados                          |
-| Gerenciar usuários                   | Administradores do Sistema     | Administrar contas e permissões                     | Usuários gerenciados                             |
-| Responder dúvidas e feedback dos usuários | Administradores do Sistema | Atender solicitações e dúvidas                      | Dúvidas respondidas                              |
-| Analisar informações de parceiro     | Administradores do Sistema     | Avaliar e validar dados de organizações parceiras   | Informações analisadas                           |
+| Monitorar indicadores de uso         | Administrador do Sistema     | Acompanhar métricas de uso do sistema               | Indicadores monitorados                          |
+| Gerenciar usuários                   | Administrador do Sistema     | Administrar contas e permissões                     | Usuários gerenciados                             |
+| Responder dúvidas e feedback dos usuários | Administrador do Sistema | Atender solicitações e dúvidas                      | Dúvidas respondidas                              |
+| Analisar informações de parceiro     | Administrador do Sistema     | Avaliar e validar dados de organizações parceiras   | Informações analisadas                           |
 
 
 
-**Especificação de Casos de Uso**:
+**Especificação dos Casos de Uso**:
+
+Caso de Uso: [Criar perfil paciente](criar.md)
+
+Caso de Uso: [Agendar consulta](agendar.md)
+
+Caso de Uso: [Gerenciar agenda](gerenciar.md)
+
+Caso de Uso: [Buscar Serviços de Sáude](buscar.md)
+
+Caso de Uso: [Gerenciar iniciativas de sáude](campanhas.md)
