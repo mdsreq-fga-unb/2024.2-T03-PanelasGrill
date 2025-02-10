@@ -109,7 +109,8 @@ export default function Historico() {
                                 <option value="atualizacao">Atualização</option>
                                 <option value="inclusao_cardapio">Inclusão Cardápio</option>
                                 <option value="exclusao_cardapio">Exclusão Cardápio</option>
-                                {/* Add more options as needed */}
+                                <option value="entrada_produto">Entrada Registro </option>
+                                <option value="saida_produto">Saida Registro</option>
                             </select>
                         </div>
                         <div>

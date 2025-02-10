@@ -28,7 +28,7 @@ export default function Estoque() {
         item: "",
         tipo: "carne",
         quantidade: 0,
-        referencia_quantidade: "kg",
+        referencia_quantidade: "unidade",
     });
       const router = useRouter();
       const { data: session, status } = useSession();
@@ -286,6 +286,8 @@ export default function Estoque() {
                                 <option value="bebida">Bebida</option>
                                 <option value="tempero">Tempero</option>
                                 <option value="óleo e gordura">Óleo e Gordura</option>
+                                <option value="legume">Legume</option>
+                                <option value="outros">Outros</option>
                             </select>
                             <input
                                 type="number"
@@ -351,6 +353,8 @@ export default function Estoque() {
                                 <option value="bebida">Bebida</option>
                                 <option value="tempero">Tempero</option>
                                 <option value="óleo e gordura">Óleo e Gordura</option>
+                                <option value="legume">Legume</option>
+                                <option value="outros">Outros</option>
                             </select>
                             <input
                                 type="number"
