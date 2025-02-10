@@ -10,6 +10,8 @@ import Estoque from "@/assets/estoque.jpg";
 import Registros from "@/assets/Registros.jpg";
 import Cardapio from "@/assets/Cardapio.jpg";
 import Historico from "@/assets/historico.jpg";
+import Relatorio from "@/assets/relatorio.jpg";
+import Link from "next/link";
 
 
 export default function Menu() {
@@ -61,16 +63,19 @@ export default function Menu() {
                 <main className="flex-1 p-6 bg-gray-100">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
-                            { title: "Estoque", description: "Gerencie seu estoque.", img: Estoque },
-                            { title: "Registros", description: "Fazer um novo registro.", img: Registros },
-                            { title: "Cardápio", description: "Gerencie seus cardápios.", img: Cardapio },
-                            { title: "Histórico", description: "Veja seu histórico.", img: Historico },
+                            { title: "Estoque", description: "Controle e organize seu estoque de produtos.", img: Estoque, link: "/Estoque" },
+                            { title: "Registros", description: "Registre novas entradas e saídas.", img: Registros, link: "/Relatorios" },
+                            { title: "Cardápio", description: "Crie e edite seus cardápios.", img: Cardapio, link: "/Cardapio" },
+                            { title: "Relatórios", description: "Acesse relatórios diários e mensais detalhados.", img: Relatorio, link: "/Registro" },
+                            { title: "Histórico", description: "Consulte o histórico completo de atividades.", img: Historico, link: "/Historico" },
                         ].map((item, index) => (
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                                 <Image alt={`Imagem de ${item.title}`} className="w-full h-40 object-cover rounded-t-lg" src={item.img} width="600" height="400" />
                                 <h3 className="text-xl font-bold mt-4 text-black">{item.title}</h3>
                                 <p className="text-gray-600 mt-2">{item.description}</p>
+                                <Link href={item.link}>
                                 <button className="mt-4 bg-primary-orange text-white py-2 px-4 rounded hover:bg-secondary-gray">Acessar</button>
+                                </Link>
                             </div>
                         ))}
                     </div>
