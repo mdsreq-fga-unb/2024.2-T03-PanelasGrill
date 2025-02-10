@@ -5,6 +5,7 @@ from pymongo.server_api import ServerApi
 from typing import List, Dict
 from bson import ObjectId
 from pydantic import BaseModel
+from datetime import datetime
 
 app = FastAPI()
 
@@ -48,6 +49,18 @@ class CardapioModel(BaseModel):
     ingredientes: List[IngredienteModel]
 
 
+def registrar_transacao(tipo: str, detalhes: Dict):
+    client = conectar_mongo()
+    db = client["estoques"]
+    transacoes_collection = db["transacoes"]
+    transacao = {
+        "tipo": tipo,
+        **detalhes,
+        "data": datetime.now()
+    }
+    transacoes_collection.insert_one(transacao)
+
+
 @app.get("/consultar")
 def consultar_documentos():
     try:
@@ -71,6 +84,7 @@ def inserir_documentos(documents: List[ItemModel]):
         collection = db["produtos"]
         for doc in documents:
             collection.update_one({"item": doc.item}, {"$set": doc.dict()}, upsert=True)
+            registrar_transacao("entrada_produto", {"produto": doc.dict()})
         return {"status": "success", "message": "Documentos inseridos ou atualizados com sucesso"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao inserir documentos: {e}")
@@ -88,6 +102,7 @@ def atualizar_documentos(item_id: str, updated_item: ItemModel):
             upsert=False
         )
         if result.matched_count > 0:
+            registrar_transacao("edicao_produto", {"item_id": item_id, "produto": updated_item.dict()})
             return {"status": "success", "message": "Documento atualizado com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Documento com ID {item_id} não encontrado")
@@ -100,21 +115,26 @@ def excluir_documentos(item_id: str):
         client = conectar_mongo()
         db = client["estoques"]
         collection = db["produtos"]
+        produto = collection.find_one({"_id": ObjectId(item_id)})
         result = collection.delete_one({"_id": ObjectId(item_id)})
         if result.deleted_count > 0:
+            registrar_transacao("saida_produto", {"item_id": item_id, "produto": produto})
             return {"status": "success", "message": "Documento excluido com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Documento com ID {item_id} não encontrado")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao excluir documento: {e}")
-    
+
 @app.post("/cardapio")
 def criar_cardapio(cardapio: CardapioModel):
     try:
         client = conectar_mongo()
         db = client["estoques"]
         cardapio_collection = db["cardapios"]
-        result = cardapio_collection.insert_one(cardapio.dict())
+        cardapio_dict = cardapio.dict()
+        cardapio_dict['ingredientes'] = [ingrediente.dict() for ingrediente in cardapio.ingredientes]
+        result = cardapio_collection.insert_one(cardapio_dict)
+        registrar_transacao("criacao_cardapio", {"cardapio_nome": cardapio.nome, "ingredientes": cardapio_dict["ingredientes"]})
         return {"status": "success", "message": "Cardápio criado com sucesso", "id": str(result.inserted_id)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao criar cardápio: {e}")
@@ -131,18 +151,22 @@ def consultar_cardapios():
         return {"status": "success", "data": documentos}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao consultar cardápios: {e}")
+
 @app.put("/cardapio/{cardapio_id}")
 def editar_cardapio(cardapio_id: str, updated_cardapio: CardapioModel):
     try:
         client = conectar_mongo()
         db = client["estoques"]
         cardapio_collection = db["cardapios"]
+        updated_cardapio_dict = updated_cardapio.dict()
+        updated_cardapio_dict['ingredientes'] = [ingrediente.dict() for ingrediente in updated_cardapio.ingredientes]
         result = cardapio_collection.update_one(
             {"_id": ObjectId(cardapio_id)},
-            {"$set": updated_cardapio.dict()},
+            {"$set": updated_cardapio_dict},
             upsert=False
         )
         if result.matched_count > 0:
+            registrar_transacao("edicao_cardapio", {"cardapio_id": cardapio_id, "cardapio": updated_cardapio_dict})
             return {"status": "success", "message": "Cardápio atualizado com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
@@ -152,7 +176,6 @@ def editar_cardapio(cardapio_id: str, updated_cardapio: CardapioModel):
 @app.post("/cardapio/preparar/{cardapio_id}")
 def preparar_cardapio(cardapio_id:str, quantidade_pratos: int):
     try:
-        print(f"Cardapio ID: {cardapio_id}, Quantidade de Pratos: {quantidade_pratos}")
         client = conectar_mongo()
         db = client["estoques"]
         cardapio_collection = db["cardapios"]
@@ -172,6 +195,7 @@ def preparar_cardapio(cardapio_id:str, quantidade_pratos: int):
                     {"_id": ObjectId(ingrediente["item_estoque_id"])},
                     {"$inc": {"quantidade": -quantidade_necessaria}}
                 )
+            registrar_transacao("preparacao_cardapio", {"cardapio_id": cardapio_id, "quantidade_pratos": quantidade_pratos})
             return {"status": "success", "message": "Cardápio preparado com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
@@ -179,20 +203,33 @@ def preparar_cardapio(cardapio_id:str, quantidade_pratos: int):
         raise e
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao preparar cardápio: {e}")
-    
+
 @app.delete("/cardapio/{cardapio_id}")
 def excluir_cardapio(cardapio_id: str):
     try:
-        print(f"Tentando excluir cardápio com ID: {cardapio_id}")  # Log para depuração
         client = conectar_mongo()
         db = client["estoques"]
         cardapio_collection = db["cardapios"]
+        cardapio = cardapio_collection.find_one({"_id": ObjectId(cardapio_id)})
         result = cardapio_collection.delete_one({"_id": ObjectId(cardapio_id)})
-        print(f"Resultado da exclusão: {result.raw_result}")  # Log para depuração
         if result.deleted_count > 0:
+            registrar_transacao("exclusao_cardapio", {"cardapio_nome": cardapio["nome"], "ingredientes": cardapio.get("ingredientes", [])})
             return {"status": "success", "message": "Cardápio excluido com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
     except Exception as e:
-        print(f"Erro ao excluir cardápio: {e}")  # Log para depuração
         raise HTTPException(status_code=500, detail=f"Erro ao excluir cardápio: {e}")
+
+@app.get("/transacoes")
+def consultar_transacoes():
+    try:
+        client = conectar_mongo()
+        db = client["estoques"]
+        transacoes_collection = db["transacoes"]
+        transacoes = list(transacoes_collection.find())
+        for transacao in transacoes:
+            transacao["_id"] = str(transacao["_id"])
+            transacao["data"] = transacao["data"].isoformat()
+        return {"status": "success", "data": transacoes}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro ao consultar transações: {e}")
