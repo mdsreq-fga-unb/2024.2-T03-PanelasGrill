@@ -211,63 +211,61 @@ export default function Menu() {
         }
     };
     const handleFinalizarRegistroSaida = async () => {
-      const cardapioSelecionado = cardapios.find(cardapio => cardapio._id === selectedMenu);
+        const cardapioSelecionado = cardapios.find(cardapio => cardapio._id === selectedMenu);
 
-      if (!cardapioSelecionado) {
-          alert("Cardápio não encontrado.");
-          return;
-      }
+        if (!cardapioSelecionado) {
+            alert("Cardápio não encontrado.");
+            return;
+        }
 
-      const documentosParaRemover = cardapioSelecionado.ingredientes.map((ingrediente: IngredienteModel) => {
-          const itemEstoque = estoque.find(item => item._id === ingrediente.item_estoque_id);
+        const documentosParaRemover = cardapioSelecionado.ingredientes.map((ingrediente: IngredienteModel) => {
+            const itemEstoque = estoque.find(item => item._id === ingrediente.item_estoque_id);
 
-          if (!itemEstoque) {
-              console.warn(`Item de estoque com ID ${ingrediente.item_estoque_id} não encontrado no estoque.`);
-              return null; // Ignora este ingrediente
-          }
-          let quantidadeARemover;
-          if(reportType==='saida'){
-            quantidadeARemover = ingrediente.quantidade * (quantity || 1)
-          }else{
-            quantidadeARemover = quantidades[ingrediente.item_estoque_id] || 0;
-          }
+            if (!itemEstoque) {
+                console.warn(`Item de estoque com ID ${ingrediente.item_estoque_id} não encontrado no estoque.`);
+                return null; // Ignora este ingrediente
+            }
 
+            // Use a quantidade do estado 'quantidades' se estiver disponível,
+            // senão, use a quantidade original do cardápio
+            const quantidadeARemover = quantidades[ingrediente.item_estoque_id] !== undefined
+                ? quantidades[ingrediente.item_estoque_id]  // Usa a quantidade alterada
+                : (reportType === 'saida' ? ingrediente.quantidade * (quantity || 1) : ingrediente.quantidade);  // Usa a quantidade original
 
-          // Validar se a quantidade em estoque é suficiente para remover
-          if (itemEstoque.quantidade < quantidadeARemover) {
-              alert(`Quantidade insuficiente de ${itemEstoque.item} em estoque.`);
-              return null;
-          }
+            // Validar se a quantidade em estoque é suficiente para remover
+            if (itemEstoque.quantidade < quantidadeARemover) {
+                alert(`Quantidade insuficiente de ${itemEstoque.item} em estoque.`);
+                return null;
+            }
 
-          return {
-              item: itemEstoque.item,
-              tipo: itemEstoque.tipo,
-              quantidade: itemEstoque.quantidade - quantidadeARemover,
-              referencia_quantidade: itemEstoque.referencia_quantidade,
-          };
-      }).filter((doc: any): doc is ItemParaInserir => doc !== null); // Filtra ingredientes ignorados
+            return {
+                item: itemEstoque.item,
+                tipo: itemEstoque.tipo,
+                quantidade: itemEstoque.quantidade - quantidadeARemover,
+                referencia_quantidade: itemEstoque.referencia_quantidade,
+            };
+        }).filter((doc: any): doc is ItemParaInserir => doc !== null);
 
-      if (documentosParaRemover.length === 0) {
-          alert("Nenhum item para remover do estoque.");
-          return;
-      }
+        if (documentosParaRemover.length === 0) {
+            alert("Nenhum item para remover do estoque.");
+            return;
+        }
 
-      try {
-          const resultado = await inserirNoEstoque(documentosParaRemover);
+        try {
+            const resultado = await inserirNoEstoque(documentosParaRemover);
 
-          if (resultado.status === "success") {
-              alert("Insumos removidos do estoque com sucesso!");
-              resetSteps();
-              // Recarrega o estoque para refletir as mudanças
-              carregarDados();
-          } else {
-              alert(`Erro ao remover insumos do estoque: ${resultado.message}`);
-          }
-      } catch (error) {
-          console.error("Erro ao remover do estoque:", error);
-          alert("Erro ao remover do estoque. Verifique o console.");
-      }
-  };
+            if (resultado.status === "success") {
+                alert("Insumos removidos do estoque com sucesso!");
+                resetSteps();
+                carregarDados();
+            } else {
+                alert(`Erro ao remover insumos do estoque: ${resultado.message}`);
+            }
+        } catch (error) {
+            console.error("Erro ao remover do estoque:", error);
+            alert("Erro ao remover do estoque. Verifique o console.");
+        }
+    };
 
     return (
         <div className="bg-primary-gray h-screen flex">
@@ -601,7 +599,7 @@ export default function Menu() {
 
                     {currentStep === 3 && reportType === "entrada" && (
                         
-        
+
                         <div className="mt-6">
                         <p className="text-gray-700 font-semibold text-3xl font-poppins">Clique no botão abaixo para concluir o registro!</p>
                         <p className="font-poppins text-md text-black font-semibold mt-5">Ao clicar em "Realizar Registro", os insumos relacionados serão registrados no estoque. Certifique-se de que os itens estão sendo inseridos corretamente, pois esta ação não é reversível!</p>
