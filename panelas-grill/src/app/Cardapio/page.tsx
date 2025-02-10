@@ -307,7 +307,7 @@ export default function Menu() {
                         )}
                     </div>
                 </header>
-                <main className="flex-1 p-6 bg-primary-gray">
+                <main className="flex-1 p-6 bg-primary-gray text-black">
                     <h3 className="text-xl font-semibold mb-4">Lista de Cardápios</h3>
                     <table className="table-auto w-full bg-white border border-gray-300 rounded-lg">
                         <thead>
@@ -362,7 +362,7 @@ export default function Menu() {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg" style={{ width: "1000px" }} >
                         <h1 className="text-2xl font-semibold mb-4 text-black ">Adicionar Cardápio</h1>
-                        <p className="text-sm text-black-500 mb-4"> * Insira a quantidade por pessoa para cada ingrediente.</p>
+                        <p className="text-sm text-black mb-4"> * Insira a quantidade por pessoa para cada ingrediente.</p>
                         <div className="space-y-4 text-black">
                             <input
                                 type="text"
@@ -386,7 +386,7 @@ export default function Menu() {
                                                 <option key={item._id} value={item._id}>{item.item}</option>
                                             ))}
                                         </select>
-                                        <div className="Campo-quantidade">
+                                        <div className="Campo-quantidade mr-2">
                                             <input
                                                 type="number"
                                                 name="quantidade"
@@ -395,6 +395,9 @@ export default function Menu() {
                                                 className="w-full p-2 border border-gray-300 rounded-md"
                                                 placeholder="Quantidade"
                                             />
+                                            <span className="text-black text-lg ml-2">
+                                                {estoque.find((item) => item._id === ingrediente.item_estoque_id)?.referencia_quantidade || ""}
+                                            </span>
                                         </div>
                                         <button
                                             className="botao-excluir"
@@ -419,7 +422,7 @@ export default function Menu() {
                             </button>
                             <button
                                 onClick={adicionarCardapio}
-                                className="px-4 py-2 bg-primary-orange text-white rounded-md"
+                                className="px-4 py-2 bg-[#21c900] text-white rounded-md"
                             >
                                 Adicionar
                             </button>
@@ -431,7 +434,7 @@ export default function Menu() {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg w-96" style={{ width: "1000px" }} >
                         <h1 className="text-2xl font-semibold mb-4 text-black ">Editar Cardápio</h1>
-                        <p className="text-sm text-black-500 mb-4"> * Insira a quantidade por pessoa para cada ingrediente.</p>
+                        <p className="text-sm text-black-500 mb-4 text-black"> * Insira a quantidade por pessoa para cada ingrediente.</p>
                         <div className="space-y-4 text-black">
                             <input
                                 type="text"
@@ -465,6 +468,9 @@ export default function Menu() {
                                         className="w-full p-2 border border-gray-300 rounded-md"
                                         placeholder="Quantidade"
                                     />
+                                    <span className="text-black text-lg ml-2">
+                                        {estoque.find((item) => item._id === ingrediente.item_estoque_id)?.referencia_quantidade || ""}
+                                    </span>
                                     </div>
                                     <button
                                             className="botao-excluir"

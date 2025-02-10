@@ -643,7 +643,7 @@ export default function Menu() {
                         )}
                         <button 
                             onClick={handleFinalizarRegistroEntrada}
-                            className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
+                            className="bg-[#21c900] text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
                         >
                             Realizar Registro
                         </button>
@@ -691,7 +691,7 @@ export default function Menu() {
                          )}
                          <button
                              onClick={handleFinalizarRegistroSaida}
-                             className="bg-primary-orange text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
+                             className="bg-[#21c900] text-white px-6 py-3 rounded-md shadow-md mt-4 hover:bg-orange-600"
                          >
                              Realizar Registro
                          </button>
