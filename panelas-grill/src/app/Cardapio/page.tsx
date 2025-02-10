@@ -430,11 +430,87 @@ export default function Menu() {
                     </div>
                 </div>
             )}
+            {showModal && !isEditing && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+                    <div className="bg-white p-6 rounded-lg" style={{ width: "1000px" }}>
+                        <h1 className="text-2xl font-semibold mb-4 text-black">Adicionar Cardápio</h1>
+                        <p className="text-sm text-black mb-4">* Insira a quantidade por pessoa para cada ingrediente.</p>
+                        <div className="space-y-4 text-black">
+                              <input
+                                type="text"
+                                name="nome"
+                                value={novoCardapio.nome}
+                                onChange={handleInputChange}
+                                className="w-full p-2 border border-gray-300 rounded-md"
+                                placeholder="Nome do cardápio"
+                            />
+                            <div className="container-ingredientes grid grid-cols-2 gap-4">
+                                {novoCardapio.ingredientes.map((ingrediente, index) => (
+                                    <div key={index} className="Ingrediente-container flex flex-col gap-2">
+                                        <select
+                                            name="item_estoque_id"
+                                            value={ingrediente.item_estoque_id}
+                                            onChange={(e) => handleIngredienteChange(e, index)}
+                                            className="igrediente-select p-2 border border-gray-300 rounded-md"
+                                        >
+                                            <option value="">Selecione um item</option>
+                                            {estoque.map((item) => (
+                                                <option key={item._id} value={item._id}>{item.item}</option>
+                                            ))}
+                                        </select>
+                                        <div className="Campo-quantidade flex items-center">
+                                        <input
+                                            type="number"
+                                            name="quantidade"
+                                            value={ingrediente.quantidade}
+                                            onChange={(e) => {
+                                                const value = Math.max(0, parseInt(e.target.value, 10) || 0);
+                                                handleIngredienteChange({ target: { name: e.target.name, value: value.toString() } } as React.ChangeEvent<HTMLInputElement>, index);
+                                            }}
+                                            className="w-full p-2 border border-gray-300 rounded-md"
+                                            placeholder="Quantidade"
+                                            min="0"
+                                        />
+                                            <span className="text-black text-lg ml-2">
+                                                {estoque.find((item) => item._id === ingrediente.item_estoque_id)?.referencia_quantidade || ""}
+                                            </span>
+                                        </div>
+                                        <button
+                                            className="botao-excluir p-2 bg-red-500 text-white rounded-md"
+                                            onClick={() => removerIngrediente(index)}
+                                        >
+                                            <p>Excluir</p>
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                            <button onClick={handleAddIngrediente} className="px-4 py-2 bg-gray-300 text-black rounded-md">
+                                Adicionar Ingrediente
+                            </button>
+                        </div>
+                        <div className="mt-6 flex justify-end space-x-4">
+                            <button
+                                onClick={() => setShowModal(false)}
+                                className="px-4 py-2 bg-gray-300 text-black rounded-md"
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                onClick={adicionarCardapio}
+                                className="px-4 py-2 bg-[#21c900] text-white rounded-md"
+                            >
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {isEditing && tempCardapio && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-white p-6 rounded-lg w-96" style={{ width: "1000px" }} >
-                        <h1 className="text-2xl font-semibold mb-4 text-black ">Editar Cardápio</h1>
-                        <p className="text-sm text-black-500 mb-4 text-black"> * Insira a quantidade por pessoa para cada ingrediente.</p>
+                    <div className="bg-white p-6 rounded-lg" style={{ width: "1000px" }}>
+                        <h1 className="text-2xl font-semibold mb-4 text-black">Editar Cardápio</h1>
+                        <p className="text-sm text-black mb-4">* Insira a quantidade por pessoa para cada ingrediente.</p>
                         <div className="space-y-4 text-black">
                             <input
                                 type="text"
@@ -444,44 +520,47 @@ export default function Menu() {
                                 className="w-full p-2 border border-gray-300 rounded-md"
                                 placeholder="Nome do cardápio"
                             />
-                        <div className="container-ingredientes">
-
-                            {editCardapioData?.ingredientes?.map((ingrediente: IngredienteModel, index: number) => (
-                                <div key={index} className="Ingrediente-container">
-                                    <select
-                                        name="item_estoque_id"
-                                        value={ingrediente.item_estoque_id}
-                                        onChange={(e) => handleIngredienteChange(e as React.ChangeEvent<HTMLSelectElement>, index)}
-                                        className="igrediente-select"
-                                    >
-                                        <option value="">Selecione um item</option>
-                                        {estoque.map((item: NovoItem) => (
-                                            <option key={item._id} value={item._id}>{item.item}</option>
-                                        ))}
-                                    </select>
-                                <div className="Campo-quantidade">
-                                    <input
-                                        type="number"
-                                        name="quantidade"
-                                        value={ingrediente.quantidade}
-                                        onChange={(e) => handleIngredienteChange(e as React.ChangeEvent<HTMLInputElement>, index)}
-                                        className="w-full p-2 border border-gray-300 rounded-md"
-                                        placeholder="Quantidade"
-                                    />
-                                    <span className="text-black text-lg ml-2">
-                                        {estoque.find((item) => item._id === ingrediente.item_estoque_id)?.referencia_quantidade || ""}
-                                    </span>
-                                    </div>
-                                    <button
-                                            className="botao-excluir"
+                            
+                            <div className="container-ingredientes grid grid-cols-2 gap-4">
+                                {editCardapioData?.ingredientes?.map((ingrediente, index) => (
+                                    <div key={index} className="Ingrediente-container flex flex-col gap-2">
+                                        <select
+                                            name="item_estoque_id"
+                                            value={ingrediente.item_estoque_id}
+                                            onChange={(e) => handleIngredienteChange(e, index)}
+                                            className="igrediente-select p-2 border border-gray-300 rounded-md"
+                                        >
+                                            <option value="">Selecione um item</option>
+                                            {estoque.map((item) => (
+                                                <option key={item._id} value={item._id}>{item.item}</option>
+                                            ))}
+                                        </select>
+                                        <div className="Campo-quantidade flex items-center">
+                                        <input
+                                            type="number"
+                                            name="quantidade"
+                                            value={ingrediente.quantidade}
+                                            onChange={(e) => {
+                                                const value = Math.max(0, parseInt(e.target.value, 10) || 0);
+                                                handleIngredienteChange({ target: { name: e.target.name, value: value.toString() } } as React.ChangeEvent<HTMLInputElement>, index);
+                                            }}
+                                            className="w-full p-2 border border-gray-300 rounded-md"
+                                            placeholder="Quantidade"
+                                            min="0"
+                                        />
+                                            <span className="text-black text-lg ml-2">
+                                                {estoque.find((item) => item._id === ingrediente.item_estoque_id)?.referencia_quantidade || ""}
+                                            </span>
+                                        </div>
+                                        <button
+                                            className="botao-excluir p-2 bg-red-500 text-white rounded-md"
                                             onClick={() => removerIngrediente_edit(index)}
                                         >
-                                            <Trash size={18} />
-                                    </button>
-                                </div>
-                            ))}
-                               
-                        </div>
+                                            <p>Excluir</p>
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
                             <button onClick={handleAddIngrediente} className="px-4 py-2 bg-gray-300 text-black rounded-md">
                                 Adicionar Ingrediente
                             </button>
