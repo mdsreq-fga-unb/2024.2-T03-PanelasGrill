@@ -13,7 +13,7 @@
 # testing
 /coverage
 __pycache__/
-*.pyc
+__pycache__/
 
 
 # next.js
