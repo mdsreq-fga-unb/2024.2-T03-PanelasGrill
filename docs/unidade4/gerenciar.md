@@ -1,5 +1,6 @@
 # **UC: Gerenciar agenda**
 
+<<<<<<< HEAD
 ## **1. Gerenciar Agenda**
 - ### **1.1 Breve Descrição**
 Este caso de uso descreve como um profissional da saúde ou um agente comunitário  utiliza o ConnectCarre para gerenciar sua agenda.
