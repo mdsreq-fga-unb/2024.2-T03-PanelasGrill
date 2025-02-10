@@ -53,6 +53,26 @@ export default function Estoque() {
     }, []);
 
     const adicionarItem = async () => {
+        // Verifica se o nome do item está vazio
+        if (!novoItem.item.trim()) {
+            alert("Por favor, insira um nome para o item.");
+            return; // Interrompe a execução se o nome estiver vazio
+        }
+    
+        // Carregar o estoque atual para verificar duplicidade
+        const estoqueAtual = await consultarEstoque();
+        if (estoqueAtual.status !== "success") {
+            alert(`Erro ao carregar estoque: ${estoqueAtual.message}`);
+            return;
+        }
+    
+        // Verifica se o nome do item já existe no estoque
+        const itemExistente = estoqueAtual.data.find((item: NovoItem) => item.item.toLowerCase() === novoItem.item.toLowerCase());
+        if (itemExistente) {
+            alert("Este nome de item já existe. Por favor, escolha um nome diferente.");
+            return; // Interrompe a execução se o nome já existir
+        }
+    
         console.log("Item a ser enviado:", novoItem);
         try {
             const resultado = await inserirNoEstoque([novoItem]);
@@ -62,7 +82,7 @@ export default function Estoque() {
                 setShowModal(false);
                 setNovoItem({
                     item: "",
-                    tipo: "",
+                    tipo: "carne",
                     quantidade: 0,
                     referencia_quantidade: "kg",
                 });
@@ -296,7 +316,7 @@ export default function Estoque() {
                             </button>
                             <button
                                 onClick={adicionarItem}
-                                className="px-4 py-2 bg-primary-orange text-white rounded-md"
+                                className="px-4 py-2 bg-[#21c900] text-white rounded-md"
                             >
                                 Adicionar
                             </button>
