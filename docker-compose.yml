@@ -23,8 +23,8 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./panelas-grill:/app
-      - /app/api
+      - ./panelas-grill/public:/app/public
+
     networks:
       - app_network
 
