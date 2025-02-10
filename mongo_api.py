@@ -220,6 +220,19 @@ def excluir_cardapio(cardapio_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao excluir cardápio: {e}")
 
+# Função para converter ObjectId e datetime recursivamente
+def converter_objetos(documento):
+    if isinstance(documento, list):
+        return [converter_objetos(item) for item in documento]
+    elif isinstance(documento, dict):
+        return {chave: converter_objetos(valor) for chave, valor in documento.items()}
+    elif isinstance(documento, ObjectId):
+        return str(documento)
+    elif isinstance(documento, datetime):
+        return documento.isoformat()
+    else:
+        return documento
+
 @app.get("/transacoes")
 def consultar_transacoes():
     try:
@@ -227,9 +240,11 @@ def consultar_transacoes():
         db = client["estoques"]
         transacoes_collection = db["transacoes"]
         transacoes = list(transacoes_collection.find())
-        for transacao in transacoes:
-            transacao["_id"] = str(transacao["_id"])
-            transacao["data"] = transacao["data"].isoformat()
-        return {"status": "success", "data": transacoes}
+
+        # Aplicar a conversão para cada transação
+        transacoes_convertidas = [converter_objetos(transacao) for transacao in transacoes]
+
+        return {"status": "success", "data": transacoes_convertidas}
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao consultar transações: {e}")
