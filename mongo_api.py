@@ -37,7 +37,7 @@ def conectar_mongo():
 class ItemModel(BaseModel):
     item: str
     tipo: str
-    quantidade: int
+    quantidade: float  # Alterado para aceitar float
     referencia_quantidade: str
 
 class IngredienteModel(BaseModel):
@@ -57,6 +57,7 @@ def registrar_transacao(tipo: str, detalhes: Dict):
     transacao = {
         "tipo": tipo,
         **detalhes,
+        "quantidade": detalhes.get("quantidade", "N/A"),
         "data": datetime.now()
     }
     transacoes_collection.insert_one(transacao)
@@ -85,7 +86,7 @@ def inserir_documentos(documents: List[ItemModel]):
         collection = db["produtos"]
         for doc in documents:
             collection.update_one({"item": doc.item}, {"$set": doc.dict()}, upsert=True)
-            registrar_transacao("entrada_produto", {"produto": doc.dict()})
+            registrar_transacao("entrada_produto", {"produto": doc.dict(), "quantidade": doc.quantidade})
         return {"status": "success", "message": "Documentos inseridos ou atualizados com sucesso"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao inserir documentos: {e}")
@@ -103,7 +104,7 @@ def atualizar_documentos(item_id: str, updated_item: ItemModel):
             upsert=False
         )
         if result.matched_count > 0:
-            registrar_transacao("edicao_produto", {"item_id": item_id, "produto": updated_item.dict()})
+            registrar_transacao("edicao_produto", {"item_id": item_id, "produto": updated_item.dict(), "quantidade": updated_item.quantidade})
             return {"status": "success", "message": "Documento atualizado com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Documento com ID {item_id} não encontrado")
@@ -119,7 +120,7 @@ def excluir_documentos(item_id: str):
         produto = collection.find_one({"_id": ObjectId(item_id)})
         result = collection.delete_one({"_id": ObjectId(item_id)})
         if result.deleted_count > 0:
-            registrar_transacao("saida_produto", {"item_id": item_id, "produto": produto})
+            registrar_transacao("saida_produto", {"item_id": item_id, "produto": produto, "quantidade": produto.get("quantidade", 0)})
             return {"status": "success", "message": "Documento excluido com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Documento com ID {item_id} não encontrado")
@@ -215,7 +216,6 @@ def excluir_cardapio(cardapio_id: str):
         result = cardapio_collection.delete_one({"_id": ObjectId(cardapio_id)})
         if result.deleted_count > 0:
             registrar_transacao("exclusao_cardapio", {"cardapio_nome": cardapio["nome"], "ingredientes": cardapio.get("ingredientes", [])})
-            registrar_transacao("exclusao_cardapio", {"cardapio_nome": cardapio["nome"], "ingredientes": cardapio.get("ingredientes", [])})#####
             return {"status": "success", "message": "Cardápio excluido com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
