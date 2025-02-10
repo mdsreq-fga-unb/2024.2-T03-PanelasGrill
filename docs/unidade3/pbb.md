@@ -160,22 +160,22 @@ Histórias geradas apartir dos PBIs
                     <strong>Técnico registra diagnóstico com foto ou vídeo</strong>
                     <ul>
                         <li><strong>Dado que</strong> o técnico está na tela de registro de diagnóstico,</li>
-                        <li><strong>Quando</strong> ele anexar uma foto ou vídeo relacionado ao diagnóstico,</li>
+                        <li><strong>Quando</strong> ele anexar uma foto ou vídeo relacionado ao diagnóstico,como 'foto_diagnostico.jpg' ou 'video_diagnostico.mp4',"</li>
                         <li><strong>Então</strong> o sistema deve permitir a anexação e exibir a mídia corretamente.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Técnico não preenche algum campo obrigatório(Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição).</strong>
+                    <strong>Técnico não preenche algum campo obrigatório,como Cliente, Técnico responsável, Data, Número de protocolo, Tipo de problema e Descrição.</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o técnico não preenche algum campo obrigatório,</li>
+                        <li><strong>Dado que</strong> o técnico não preenche algum campo obrigatório,como Cliente, Técnico responsável, Data, Número de protocolo, Tipo de problema e Descrição.</li>
                         <li><strong>Quando</strong> ele tentar concluir o registro do diagnóstico,</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro indicando que os campos obrigatórios precisam ser preenchidos.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Técnico preenche todos os campos obrigatórios (Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição) e anexa mídia</strong>
+                    <strong>Técnico preenche todos os campos obrigatórios,como Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição e anexa mídia</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o técnico preenche todos os campos obrigatórios e anexa uma foto ou vídeo,</li>
+                        <li><strong>Dado que</strong> o técnico preenche todos os campos obrigatórios, como Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição e anexa uma foto ou vídeo, como 'foto_diagnostico.jpg' ou 'video_diagnostico.mp4'</li>
                         <li><strong>Quando</strong> ele concluir o registro,</li>
                         <li><strong>Então</strong> o sistema deve salvar automaticamente as informações no sistema central e exibir uma confirmação de que o diagnóstico foi registrado com sucesso.</li>
                     </ul>
@@ -183,7 +183,7 @@ Histórias geradas apartir dos PBIs
                 <li>
                     <strong>Falha ao salvar informações no sistema central</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o técnico preenche todos os campos obrigatórios e anexa uma foto ou vídeo,</li>
+                        <li><strong>Dado que</strong> o técnico preenche todos os campos obrigatórios,como Cliente, Técnico responsavel, Data, Número de protocolo Tipo de problema e descrição e anexa uma foto ou vídeo,como 'foto_diagnostico.jpg' ou 'video_diagnostico.mp4'.</li>
                         <li><strong>Quando</strong> o sistema falha ao tentar salvar as informações no sistema central,</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro informando que houve uma falha ao salvar os dados.</li>
                     </ul>
@@ -194,18 +194,18 @@ Histórias geradas apartir dos PBIs
             <strong>US07:</strong> Eu, como atendente, quero criar atendimento do cliente, para registrar o atendimento do cliente na agenda e garantir que o serviço seja agendado corretamente.
             <ol type="a">
                 <li>
-                    <strong>Atendente cria agendamento com todos os dados obrigatórios (nome, contato e endereço)</strong>
+                    <strong>Atendente cria agendamento com todos os dados obrigatórios,como nome, contato e endereço.</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o atendente está na tela de criação de agendamento,</li>
-                        <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,</li>
+                        <li><strong>Dado que</strong> o atendente está na tela de criação de agendamento.</li>
+                        <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,como nome, contato e endereço.</li>
                         <li><strong>Então</strong> o sistema deve registrar o agendamento e exibir uma confirmação de que o agendamento foi criado com sucesso.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Atendente não preenche algum campo obrigatório (nome, contato e endereço)</strong>
+                    <strong>Atendente não preenche algum campo obrigatório,como nome, contato e endereço</strong>
                     <ul>
                         <li><strong>Dado que</strong> o atendente está na tela de criação de agendamento,</li>
-                        <li><strong>Quando</strong> ele tenta criar o agendamento sem preencher todos os campos obrigatórios,</li>
+                        <li><strong>Quando</strong> ele tenta criar o agendamento sem preencher todos os campos obrigatórios,como nome, contato e endereço.</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro indicando que todos os campos obrigatórios precisam ser preenchidos.</li>
                     </ul>
                 </li>
@@ -220,7 +220,7 @@ Histórias geradas apartir dos PBIs
                 <li>
                     <strong>Atendente cria agendamento e sistema falha ao salvar</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o atendente preenche todos os campos obrigatórios,</li>
+                        <li><strong>Dado que</strong> o atendente preenche todos os campos obrigatórios,como nome, contato e endereço.</li>
                         <li><strong>Quando</strong> ele tenta criar o agendamento,</li>
                         <li><strong>Então</strong> o sistema falha ao tentar salvar o agendamento e exibe uma mensagem de erro informando que não foi possível salvar o agendamento.</li>
                     </ul>
@@ -231,18 +231,18 @@ Histórias geradas apartir dos PBIs
             <strong>US10:</strong> Eu, como cliente corporativo, quero solicitar serviço, para solicitar atendimento.
             <ol type="a">
                 <li>
-                    <strong>Cliente corporativo solicita serviço com todos os dados obrigatórios (Nome, endereço etipo de aparelho).</strong>
+                    <strong>Cliente corporativo solicita serviço com todos os dados obrigatórios,como Nome, endereço e tipo de aparelho.</strong>
                     <ul>
-                        <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço,</li>
-                        <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,</li>
+                        <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço.</li>
+                        <li><strong>Quando</strong> ele preenche todos os campos obrigatórios,como Nome, endereço e tipo de aparelho.</li>
                         <li><strong>Então</strong> o sistema deve registrar a solicitação e exibir uma confirmação de que o serviço foi solicitado com sucesso.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Cliente corporativo não preenche algum campo obrigatório (Nome, Endereço e tipo de aparelho).</strong>
+                    <strong>Cliente corporativo não preenche algum campo obrigatório, como nome, endereço e tipo de aparelho.</strong>
                     <ul>
                         <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço,</li>
-                        <li><strong>Quando</strong> ele tenta enviar a solicitação sem preencher todos os campos obrigatórios,</li>
+                        <li><strong>Quando</strong> ele tenta enviar a solicitação sem preencher todos os campos obrigatórios, como nome, endereço etipo de aparelho.</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro indicando que todos os campos obrigatórios precisam ser preenchidos.</li>
                     </ul>
                 </li>
@@ -250,7 +250,7 @@ Histórias geradas apartir dos PBIs
                     <strong>Cliente corporativo solicita serviço com dados inválidos</strong>
                     <ul>
                         <li><strong>Dado que</strong> o cliente corporativo está na tela de solicitação de serviço,</li>
-                        <li><strong>Quando</strong> ele preenche algum campo com dados inválidos,</li>
+                        <li><strong>Quando</strong> ele preenche algum campo, como nome, endereço e tipo de aparelho,com dados inválidos,</li>
                         <li><strong>Então</strong> o sistema deve exibir uma mensagem de erro indicando o problema com os dados fornecidos.</li>
                     </ul>
                 </li>
