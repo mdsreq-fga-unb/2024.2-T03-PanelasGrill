@@ -276,10 +276,9 @@ export default function Menu() {
             <div className="flex-1 bg-white flex flex-col pl-72 ml-3">
                 <header className="flex justify-between items-center p-6 border-b border-[#E8E8E8] bg-white ">
                     <div>
-                        <h2 className="text-4xl font-bold text-slate-900 mb-2">Relatórios</h2>
-                        <h3 className="text-xl text-gray-600">Guia de acesso!</h3>
+                        <h2 className="text-4xl font-bold text-slate-900 mb-2">Registros Diários</h2>
+                        <h3 className="text-xl text-gray-600">Registrar relatório de saída ou de entrada de insumos!</h3>
                     </div>
-
                 </header>
 
                 {/* Conteúdo principal */}
@@ -311,7 +310,7 @@ export default function Menu() {
 
                     {currentStep === 0 && (
                         <div className="mb-4 mt-4">
-                            <p className="text-gray-700 font-semibold text-3xl font-poppins">Que tipo de relatório você deseja fazer?</p>
+                            <p className="text-gray-700 font-semibold text-3xl font-poppins">Que tipo de registro você deseja fazer?</p>
                             <div className="flex space-x-7 py-6 text-xl font-poppins">
                                 <button onClick={() => handleReportTypeClick("entrada")} className="bg-white text-gray-700 px-4 py-2 rounded-xl border-4 border-secondary-gray hover:bg-gray-200">Relatório de Entrada</button>
                                 <button onClick={() => handleReportTypeClick("saida")} className="bg-white text-gray-700 px-4 py-2 rounded-xl border-4 border-secondary-gray hover:bg-gray-200">Relatório de Saída</button>
