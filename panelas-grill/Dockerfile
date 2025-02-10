@@ -13,12 +13,11 @@ RUN npm install
 # Copiando o restante dos arquivos
 COPY . .
 
-# Construindo a aplicação
+# **Adicionando a etapa de build**
 RUN npm run build
 
-# Expondo a porta do React
+# Expondo a porta do Next.js
 EXPOSE 3000
 
-# Comando para rodar a aplicação
-CMD ["npm", "run", "dev"]
-
+# **Alterando o comando para rodar a versão de produção**
+CMD ["npm", "run", "start"]

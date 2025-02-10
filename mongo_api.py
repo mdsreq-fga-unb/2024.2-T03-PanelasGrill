@@ -13,7 +13,7 @@ app = FastAPI()
 # Adicionando o middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Adicione outros domínios, se necessário
+    allow_origins=["http://localhost:3000", "https://2024-2-t03-panelas-grill.vercel.app"],  # Adicione outros domínios, se necessário
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],  # Incluir o método DELETE
     allow_headers=["*"],

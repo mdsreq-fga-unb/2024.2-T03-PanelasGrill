@@ -20,31 +20,29 @@ const handler = NextAuth({
         password: { label: "Senha", type: "password" },
       },
       async authorize(credentials) {
-        console.log("Autenticando com:", credentials); // Log para ver as credenciais recebidas
+        console.log("Autenticando com:", credentials);
 
-        // Buscando o usuário no banco de dados simulado
         const user = users.find(user => user.email === credentials?.email);
-
         if (user) {
-          // Verificando a senha de forma assíncrona
           const isPasswordValid = await bcrypt.compare(credentials?.password || "", user.passwordHash);
-          console.log("Senha válida:", isPasswordValid); // Log para verificar se a senha está correta
+          console.log("Senha válida:", isPasswordValid);
 
           if (isPasswordValid) {
-            return { id: user.id.toString(), email: user.email }; // Se a senha for válida, retorna os dados do usuário
+            return { id: user.id.toString(), email: user.email };
           }
         }
 
-        console.log("Autenticação falhou"); // Log para falha na autenticação
-        return null; // Se falhar, retorna null
+        console.log("Autenticação falhou");
+        return null;
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET, // <---- Aqui está o uso da variável de ambiente
   pages: {
-    signIn: "/login", // Página personalizada de login
+    signIn: "/login",
   },
   session: {
-    strategy: "jwt", // Usando JWT para a sessão
+    strategy: "jwt",
   },
   callbacks: {
     async jwt({ token, user }) {
@@ -61,5 +59,6 @@ const handler = NextAuth({
     },
   },
 });
+
 
 export { handler as GET, handler as POST };
