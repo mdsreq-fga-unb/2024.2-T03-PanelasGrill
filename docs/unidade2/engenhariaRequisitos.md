@@ -2,7 +2,7 @@
 
 ## **4.1 Atividades e Técnicas**
 
-### **Planejamento da Release**
+### **Concepção**
 
 #### **Elicitação e Descoberta**
 
@@ -38,7 +38,7 @@
 
 ---
 
-### **Planejamento da Sprint**
+### **Elaboração**
 
 #### **Análise e Consenso**
 
@@ -62,13 +62,13 @@
 
 #### **Organização e Atualização**
 
-- **Refinamento do backlog:** Revisão constante do backlog para priorizar e ajustar os itens com base no feedback e nos objetivos da sprint.  
+- **Refinamento do backlog:** Revisão constante do backlog para priorizar e ajustar os itens com base no feedback e nos objetivos da fase.  
 
 **Resultado esperado:** Funcionalidades refinadas e backlog atualizado.
 
 ---
 
-### **Execução da Sprint**
+### **Construção**
 
 #### **Representação**
 
@@ -93,52 +93,33 @@
 
 ---
 
-### **Revisão da Sprint**
+### **Transição**
 
 #### **Verificação e Validação**
 
 - **Demonstração para o cliente:** Apresentação do trabalho realizado para coleta de feedback sobre as funcionalidades entregues.  
 
-**Stakeholders envolvidos:** Clientes, usuários finais e patrocinadores.
 
 **Resultado esperado:** Validação do cliente e ajustes com base no feedback recebido.
 
-#### **Organização e Atualização**
 
-- **Atualização do backlog:** Ajuste dos itens do backlog com base nos resultados da sprint e no feedback do cliente.  
-
-**Resultado esperado:** Backlog atualizado com status das funcionalidades e novas priorizações para as sprints futuras.
-
----
-
-### **Retrospectiva da Sprint**
-
-#### **Análise e Organização**
-
-- **Revisão da sprint:** Discussão em equipe para avaliar o que funcionou bem e identificar pontos de melhoria.  
-
-**Resultado esperado:** Coleta de feedback da equipe, identificação de boas práticas e plano de ação para melhoria contínua.
-
----
 
 ## **4.2 Engenharia de Requisitos e ScrumXP**
 
-| **Fases do ScrumXP**       | **Atividade da Engenharia de Requisitos** | **Prática**                   | **Técnica**                                                       | **Resultados Esperados**                                                                 |
+| **Fases do Open Up**       | **Atividade da Engenharia de Requisitos** | **Prática**                   | **Técnica**                                                       | **Resultados Esperados**                                                                 |
 |----------------------------|-------------------------------------------|---------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| **Planejamento da Release** | **Elicitação e Descoberta**            | Levantamento de requisitos     | Entrevistas com stakeholders, análise de concorrentes | Visão de produto e declaração do problema                                              |
+| **Concepção** | **Elicitação e Descoberta**            | Levantamento de requisitos     | Entrevistas com stakeholders, análise de concorrentes | Visão de produto e declaração do problema                                              |
 |                            | **Análise e Consenso**                 | Análise de requisitos          | Análise de risco                                                  | Visão clara e compartilhada do produto
 |                            | **Verificação e Validação**        | Validando requisitos       | Definition of Done (DoD) e Checklist de Verificação                                      | Verificar se corresponde com o DoD.                                                 |
 |                            | **Declaração**        | Refinamento de requisitos       | Product Backlog Building (PBB)                                      | Atualizar backlog                                          |
-| **Planejamento da Sprint** | **Análise e Consenso**                 | Análise de dependências        | Discussão com a equipe, análise de tarefas                       | Consenso da equipe sobre os requisitos e dependências necessárias                      |
+| **Elaboração** | **Análise e Consenso**                 | Análise de dependências        | Discussão com a equipe, análise de tarefas                       | Consenso da equipe sobre os requisitos e dependências necessárias                      |
 |                            | **Declaração**                       | Definição de critério de aceitação | Critérios de aceitação detalhados                                  | User stories com critérios de aceitação claros e objetivos bem definidos             |
 |                            | **Verificação e Validação**         | Verificação dos requisitos da sprint | Definition of Ready (DoR)                                          | Equipe pronta para iniciar o desenvolvimento                                           |
 |                            | **Organização e Atualização**        | Refinamento dos Requisitos      | Refinamento do Backlog                                             | Funcionalidades a serem desenvolvidas selecionadas e backlog atualizado                |
-| **Execução da Sprint**   | **Representação**                    | Desenvolvimento de protótipos    | Mockup                                                             | Prototipagem que auxilia a equipe no desenvolvimento correto                           |
+| **Construção**   | **Representação**                    | Desenvolvimento de protótipos    | Mockup                                                             | Prototipagem que auxilia a equipe no desenvolvimento correto                           |
 |                            | **Verificação e Validação**         | Validação dos requisitos da Sprint | Definition of Done (DoD)                                           | Requisitos bem definidos e claros, com critérios de validação corretos                 |
 |                            | **Organização e Atualização**        | Organização das funcionalidades em andamento | Lista de Requisitos                                               | Funcionalidades prontas e organizadas para entrega                                      |
-| **Revisão da Sprint**     | **Verificação e Validação**         | Demonstração para o cliente      | Feedback                                                           | Validação do cliente e ajustes com base no feedback recebido                        |
-|                            | **Organização e Atualização**        | Organização das funcionalidades implementadas | Backlog de Requisitos                                             | Backlog atualizado com status das funcionalidades e novas priorizações                |
-| **Retrospectiva da Sprint**| **Análise e Organização**             | Revisão da sprint               | Discussão com a equipe e análise                                   | Coleta de feedback da equipe, identificação de boas práticas e plano de ação de melhoria |
+| **Transição**     | **Verificação e Validação**         | Demonstração para o cliente e Revisão do produto finalizado      | Feedback                                                           | Validação do cliente                         |
 
 ---
 
