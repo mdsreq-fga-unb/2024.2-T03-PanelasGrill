@@ -5,6 +5,7 @@ interface HistoricoItem {
     produto: string | { item: string };
     tipo: string;
     quantidade?: number;
+    referencia_quantidade: string;
     data: string;
 }
 
@@ -30,7 +31,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, items }) => {
                         <div key={item._id} className="p-4 border rounded-lg bg-gray-50">
                             <p><strong>Produto:</strong> {typeof item.produto === 'string' ? item.produto : item.produto?.item ?? 'N/A'}</p>
                             <p><strong>Tipo:</strong> {item.tipo}</p>
-                            <p><strong>Quantidade:</strong> {item.quantidade !== undefined ? item.quantidade : 'N/A'}</p>
+                            <p><strong>Quantidade:</strong> {item.quantidade !== undefined ? item.quantidade : 'N/A'} - {item.referencia_quantidade} </p>
                             <p><strong>Data:</strong> {new Date(item.data).toLocaleString('pt-BR', {
                                 day: '2-digit', 
                                 month: '2-digit', 
