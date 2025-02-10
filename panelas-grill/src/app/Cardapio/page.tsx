@@ -1,7 +1,6 @@
 "use client";
 import Sidebar from "@/components/Sidebar";
-import { Search } from "lucide-react";
-import { Trash } from "lucide-react";
+import { Search,Trash,Pencil,X } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -309,7 +308,7 @@ export default function Menu() {
                 </header>
                 <main className="flex-1 p-6 bg-primary-gray text-black">
                     <h3 className="text-xl font-semibold mb-4">Lista de Cardápios</h3>
-                    <table className="table-auto w-full bg-white border border-gray-300 rounded-lg">
+                    <table className="table-auto w-11/12 bg-white border border-gray-300 rounded-lg">
                         <thead>
                             <tr className="bg-gray-100">
                                 <th className="p-4 text-left border-b">Nome</th>
@@ -334,15 +333,15 @@ export default function Menu() {
                                     <td className="p-4 border-b">
                                         <button
                                             onClick={() => handleEditClick(cardapio)}
-                                            className="px-4 py-2 bg-primary-orange text-white rounded-md mr-2"
+                                            className="px-2 py-1 bg-primary-orange text-white rounded-md mr-2"
                                         >
-                                            Editar
+                                            <Pencil/>
                                         </button>
                                         <button
                                             onClick={() => handleDeleteCardapio(cardapio._id as string)}
-                                            className="px-4 py-2 bg-red-500 text-white rounded-md"
+                                            className="px-2 py-1 bg-red-500 text-white rounded-md"
                                         >
-                                            Excluir
+                                            <X/>
                                         </button>
                                     </td>
                                 </tr>

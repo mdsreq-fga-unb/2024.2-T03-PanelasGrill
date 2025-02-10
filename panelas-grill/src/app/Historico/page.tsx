@@ -9,9 +9,9 @@ import { consultarHistorico } from "@/services/mongoService";
 
 interface HistoricoItem {
     _id: string;
-    produto: string | { item: string }; // Adjusted to handle both string and object
+    produto: string | { item: string; quantidade?: number; referencia_quantidade?: string }; // Ajustado para lidar com string e objeto
     tipo: string;
-    quantidade: number;
+    quantidade?: number; // Tornado opcional
     data: string;
 }
 
@@ -22,9 +22,9 @@ export default function Historico() {
     const [showInput, setShowInput] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const [historico, setHistorico] = useState<HistoricoItem[]>([]);
-    const [selectedType, setSelectedType] = useState<string>(""); // State for selected type
-    const [startDate, setStartDate] = useState<string>(""); // State for start date
-    const [endDate, setEndDate] = useState<string>(""); // State for end date
+    const [selectedType, setSelectedType] = useState<string>(""); // Estado para tipo selecionado
+    const [startDate, setStartDate] = useState<string>(""); // Estado para data inicial
+    const [endDate, setEndDate] = useState<string>(""); // Estado para data final
 
     useEffect(() => {
         if (status === "unauthenticated") {
@@ -36,7 +36,7 @@ export default function Historico() {
         const fetchHistorico = async () => {
             const { status, data } = await consultarHistorico();
             if (status === "success") {
-                console.log("Fetched Data:", data); // Log the fetched data
+                console.log("Fetched Data:", data); // Log dos dados buscados
                 setHistorico(data);
             }
         };
@@ -44,7 +44,7 @@ export default function Historico() {
         fetchHistorico();
     }, []);
 
-    // Sort the historico array by date in descending order
+    // Ordena o array de histórico por data em ordem decrescente
     const sortedHistorico = historico.sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime());
 
     const filteredHistorico = sortedHistorico.filter(item => {
@@ -63,7 +63,7 @@ export default function Historico() {
 
         const matchesType = selectedType ? item.tipo === selectedType : true;
 
-        // Date filtering logic
+        // Lógica de filtragem de data
         const itemDate = new Date(item.data);
         const isWithinDateRange = (!startDate || itemDate >= new Date(startDate)) && (!endDate || itemDate <= new Date(endDate));
 
@@ -85,12 +85,11 @@ export default function Historico() {
                         <h3 className="text-xl text-gray-600">Histórico de alterações do estoque!</h3>
                     </div>
                     <button
-                            onClick={() => router.push("/Registro")}
-                            className="p-4 bg-primary-orange flex flex-row text-white text-xl font-poppins rounded-2xl border-2 text-center justify-center"
-                        >
-                            
-                            Ir para Relatórios
-                        </button>
+                        onClick={() => router.push("/Registro")}
+                        className="p-4 bg-primary-orange flex flex-row text-white text-xl font-poppins rounded-2xl border-2 text-center justify-center"
+                    >
+                        Ir para Relatórios
+                    </button>
                 </header>
 
                 <main className="flex-1 p-6 bg-gray-100 text-black">
@@ -107,10 +106,11 @@ export default function Historico() {
                                 <option value="entrada">Entrada</option>
                                 <option value="saida">Saída</option>
                                 <option value="atualizacao">Atualização</option>
-                                <option value="inclusao_cardapio">Inclusão Cardápio</option>
-                                <option value="exclusao_cardapio">Exclusão Cardápio</option>
-                                <option value="entrada_produto">Entrada Registro </option>
-                                <option value="saida_produto">Saida Registro</option>
+                                <option value="inclusao_cardapio">Inclusão de Cardápio</option>
+                                <option value="exclusao_cardapio">Exclusão de Cardápio</option>
+                                <option value="entrada_produto">Entrada Registro</option>
+                                <option value="saida_produto">Saída Registro</option>
+                                <option value="criacao_cardapio">Criação de Cardápio</option>
                             </select>
                         </div>
                         <div>
@@ -135,24 +135,27 @@ export default function Historico() {
                         </div>
                     </div>
                     <div className="space-y-4">
-                        {filteredHistorico.map(item => (
-                            <div key={item._id} className="p-4 border rounded-lg bg-white shadow-sm">
-                                <p>
-                                    <strong>Produto:</strong> 
-                                    {typeof item.produto === 'string' ? item.produto : item.produto?.item ?? 'N/A'}
-                                </p>
-                                <p><strong>Tipo:</strong> {item.tipo}</p>
-                                <p><strong>Quantidade:</strong> {item.quantidade !== undefined ? item.quantidade : 'N/A'}</p> {/* Check for undefined */}
-                                <p><strong>Data:</strong> {new Date(item.data).toLocaleString('pt-BR', { 
-                                    day: '2-digit', 
-                                    month: '2-digit', 
-                                    year: 'numeric', 
-                                    hour: '2-digit', 
-                                    minute: '2-digit', 
-                                    hour12: false 
-                                })}</p>
-                            </div>
-                        ))}
+                        {filteredHistorico.map(item => {
+                            // Acessa os campos corretamente
+                            const produto = typeof item.produto === 'object' ? item.produto.item : item.produto || 'Sem nome';
+                            const quantidade = typeof item.produto === 'object' ? item.produto.quantidade : item.quantidade; // Acesso correto à quantidade
+
+                            return (
+                                <div key={item._id} className="p-4 border rounded-lg bg-white shadow-sm">
+                                    <p><strong>Produto:</strong> {produto}</p>
+                                    <p><strong>Tipo:</strong> {item.tipo}</p>
+                                    <p><strong>Quantidade:</strong> {quantidade !== undefined ? quantidade : 'N/A'}</p> {/* Verifica se é undefined */}
+                                    <p><strong>Data:</strong> {new Date(item.data).toLocaleString('pt-BR', { 
+                                        day: '2-digit', 
+                                        month: '2-digit', 
+                                        year: 'numeric', 
+                                        hour: '2-digit', 
+                                        minute: '2-digit', 
+                                        hour12: false 
+                                    })}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </main>
             </div>
