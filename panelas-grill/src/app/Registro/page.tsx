@@ -13,7 +13,8 @@ interface HistoricoItem {
     _id: string;
     produto: string | { item: string };
     tipo: string;
-    quantidade: number;
+    quantidade?: number;
+    referencia_quantidade: string;
     data: string;
 }
 
