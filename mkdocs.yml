@@ -32,6 +32,7 @@ nav:
          - Unidade I: unidade1/licoesAprendidas.md
          - Unidade II: unidade2/LicoesAprendidasII.md
          - Unidade III: unidade3/lincoesAprendidas3.md
+         - Unidade IV: unidade4/licoesaprendidas4.md
 
 theme:
    name: material 
