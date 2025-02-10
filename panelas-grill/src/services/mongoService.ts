@@ -100,5 +100,18 @@ export async function consultarCardapio() {
             throw error;
         }
     }
-    
+    export async function consultarHistorico() {
+        try {
+            const response = await fetch(`${API_URL}/transacoes`);
+            if (!response.ok) {
+                throw new Error(`Erro na requisição: ${response.statusText}`);
+            }
+            const data = await response.json();
+            console.log("Resposta da API:", data);
+            return data;
+        } catch (error) {
+            console.error("Erro ao consultar histórico:", error);
+            throw error;
+        }
+    }
     

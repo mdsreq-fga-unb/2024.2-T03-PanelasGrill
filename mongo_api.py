@@ -215,7 +215,6 @@ def excluir_cardapio(cardapio_id: str):
         result = cardapio_collection.delete_one({"_id": ObjectId(cardapio_id)})
         if result.deleted_count > 0:
             registrar_transacao("exclusao_cardapio", {"cardapio_nome": cardapio["nome"], "ingredientes": cardapio.get("ingredientes", [])})
-            registrar_transacao("exclusao_cardapio", {"cardapio_nome": cardapio["nome"], "ingredientes": cardapio.get("ingredientes", [])})
             return {"status": "success", "message": "Cardápio excluido com sucesso"}
         else:
             raise HTTPException(status_code=404, detail=f"Cardápio com ID {cardapio_id} não encontrado")
