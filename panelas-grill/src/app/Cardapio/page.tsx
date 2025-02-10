@@ -280,7 +280,7 @@ export default function Menu() {
                 <header className="flex justify-between items-center p-6 border-b border-[#E8E8E8] bg-white">
                     <div>
                         <h2 className="text-4xl font-bold text-slate-900 mb-2">Cardápios</h2>
-                        <h3 className="text-xl text-gray-600">Guia de acesso!</h3>
+                        <h3 className="text-xl text-gray-600">Lista de cardápios criados!</h3>
                     </div>
                     <div className="flex items-center space-x-6 mr-10 relative">
                         <button

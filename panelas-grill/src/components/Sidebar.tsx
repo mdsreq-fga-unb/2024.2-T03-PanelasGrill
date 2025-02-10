@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link"; 
 import { usePathname } from "next/navigation"; 
 import Logo from "@/assets/logo.png";
-import { LayoutDashboard, Box, ScrollText, PanelsTopLeft, LogOut } from "lucide-react";
+import { LayoutDashboard, Box, ScrollText, PanelsTopLeft, LogOut, History, Utensils, BookText} from "lucide-react";
 
 const Sidebar: React.FC = () => {
   const pathname = usePathname();
@@ -43,16 +43,26 @@ const Sidebar: React.FC = () => {
           }`}
         >
           <ScrollText className="mr-4" />
-          Relatório
+          Registros
         </Link>
+        
         <Link
           href="/Cardapio"
           className={`p-4 w-full flex flex-row items-center font-bold text-2xl ${
             isActive("/Cardapio") ? "text-primary-orange" : "text-gray-700 hover:text-primary-orange"
           }`}
         >
-          <PanelsTopLeft className="mr-4" />
+          <Utensils className="mr-4" />
           Cardápio
+        </Link>
+        <Link
+          href="/Registro"
+          className={`p-4 w-full flex flex-row items-center font-bold text-2xl ${
+            isActive("/Registro") ? "text-primary-orange" : "text-gray-700 hover:text-primary-orange"
+          }`}
+        >
+          <BookText className="mr-4" />
+          Relatórios
         </Link>
         <Link
           href="/Login"
@@ -63,6 +73,7 @@ const Sidebar: React.FC = () => {
           <LogOut className="mr-4" />
           Sair
         </Link>
+        
       </nav>
       <div className="p-4 text-gray-500 text-sm text-center">Ajuda</div>
     </div>
