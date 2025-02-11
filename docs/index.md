@@ -6,6 +6,12 @@
 ## Quem Somos?
 Somos um grupo da disciplina de Requisitos da Universidade de Brasília, ministrada pelo Professor Dr. George Marsicano. Esta disciplina tem como principal objetivo estabelecer uma compreensão clara do software e promover o compromisso entre todos os participantes de um projeto de desenvolvimento de software.
 
+Acessa o nosso site [aqui](https://2024-2-t03-panelas-grill.vercel.app/)
+
+- Login para testes 
+    - usuário: user@example.com
+    - senha: senha123 
+
 ## Video da Unidade I
 
 video da nossa apresentação da unidade 1 [Aqui](https://youtu.be/ZLc3KXdBXrU).
@@ -25,9 +31,26 @@ video da nossa apresentação da unidade II [aqui](https://www.youtube.com/watch
 ## Vídeo da Unidade III
 
 <center>
-video da nossa apresentação da unidade II [aqui](https://www.youtube.com/watch?v=fRpXKCLcq6Y)
+video da nossa apresentação da unidade III [aqui](https://www.youtube.com/watch?v=fRpXKCLcq6Y)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fRpXKCLcq6Y?si=2wE_ycCsgpo_5x5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+</center>
+
+
+
+## Vídeo da Unidade IV
+
+<center>
+video da nossa apresentação da unidade IV [aqui](https://www.youtube.com/watch?v=ZYVKTm5adzw)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZYVKTm5adzw?si=tp9qPqaSfh_PXpo5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+## Vídeo do Cliente
+
+<center>
+video da nossa apresentação da unidade IV [aqui](https://www.youtube.com/watch?v=F1QUQe4g7mM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F1QUQe4g7mM?si=eL99QA1sji1fx8HX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
 
 ## Equipe
