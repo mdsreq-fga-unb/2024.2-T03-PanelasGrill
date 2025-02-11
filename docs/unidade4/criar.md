@@ -63,9 +63,8 @@ Este caso de uso permite ao paciente cadastrar seu perfil no "ConnectCare", forn
 
 
 ## **11. Regras de Negócio**
-- **11.2** RN01: As sugestões de serviços devem considerar idade, condições de saúde e localização.
-- **11.3** RN02: O aplicativo deve permitir o cadastro offline, sincronizando dados quando houver conexão.
-- **11.4** RN04: A idade do paciente deve ser um número inteiro positivo.
+- **11.1** RN01: O aplicativo deve permitir o cadastro offline, sincronizando dados quando houver conexão.
+- **11.2** RN02: A idade do paciente deve ser um número inteiro positivo.
 
 
 
