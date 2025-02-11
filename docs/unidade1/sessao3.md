@@ -2,9 +2,9 @@
 
 ## **3.1 Estratégia Priorizada**
 
-- **Abordagem**: Ágil
-- **Ciclo de Vida**: Iterativo e incremental
-- **Processo**: Scrum/XP
+- **Abordagem**: Ágil com elementos dirigido por plano 
+- **Ciclo de Vida**:Interativo e Incremental
+- **Processo**: Open Up
 
 ## **3.2 Quadro Comparativo**
 
@@ -12,75 +12,75 @@
   <thead style="background-color: #D3D3D3;">
     <tr>
       <th><strong>Características</strong></th>
-      <th><strong>RAD</strong></th>
-      <th><strong>Scrum/XP</strong></th>
+      <th><strong>Processo Unificado</strong></th>
+      <th><strong>Open Up</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Abordagem geral</strong></td>
-      <td>Adota formas rápidas com objetivos bem definidos e análise de requisitos extremamente bem alinhada, assim tendo uma abordagem iterativa e incremental.</td>
-      <td>Adota uma abordagem iterativa, entregando continuamente pequenas partes do projeto, o que permite ajustes rápidos e feedbacks constantes.</td>
+      <td>Busca identificar todos os requisitos no início do projeto.É iterativo e incremental</td>
+      <td>É um Processo Unificado enxuto que aplica abordagens iterativas e incrementais dentro de um ciclo de vida estruturado.</td>
     </tr>
     <tr>
       <td><strong>Foco em arquitetura</strong></td>
-      <td>Possui um foco na arquitetura nas fases iniciais, mas o RAD permite flexibilidade ao longo do projeto. </td>
-      <td>Possui um foco mais ágil, a arquitetura é evoluída ao longo do projeto. </td>
+      <td>A arquitetura é definida e validada no inicio, antes do desenvolvimento.</td>
+      <td>Projetado para ser flexível  </td>
     </tr>
     <tr>
       <td><strong>Estrutura de Processo</strong></td>
-      <td>O RAD segue fases de desenvolvimento </td>
-      <td>Sprints curtas e fases. </td>
+      <td>É dividida em fases, que podem ser feitas em interações </td>
+      <td>Tem uma estrutura parecida com PU, porém mais simplificada. </td>
     </tr>
     <tr>
       <td><strong>Flexibilidade de requisitos</strong></td>
-      <td>Permite adaptações e alterações mesmo em fases avançadas do projeto.</td>
-      <td>O scrum XP permite uma alta flexibilidade de requisitos, permitindo uma adaptabilidade rápida.</td>
+      <td>Os requisitos são definidos na fase de Elaboração, mudanças nos requistos podem ser mais difíceis de integrar.</td>
+      <td>Flexível, mudanças são esperadas ao longo do processo.</td>
     </tr>
     <tr>
       <td><strong>Colaboração com cliente</strong></td>
-      <td>Feedback de maneira constante. Os protótipos são apresentados antecipadamente e com frequência.</td>
-      <td>A comunicação é aberta e frequente. Feedback do cliente e da equipe garante que o software esteja no caminho certo.</td>
+      <td>Colaboração com o cliente é importante, mas de forma estruturada.</td>
+      <td>Colaboração com o cliente contínuo durante todo o processo.</td>
     </tr>
     <tr>
       <td><strong>Complexidade do processo</strong></td>
-      <td>Esforço nas fases iniciais para  definir os requisitos, protótipos e gestão do projeto. </td>
-      <td>Busca soluções simples para os problemas de desenvolvimento, facilitando a manutenção e a evolução do software.</td>
+      <td>Possui uma estrutura bem definida, o que pode tornar complexo e detalhado. </td>
+      <td>Mais simples e leve, apenas os essenciais, minimizando burocracia .</td>
     </tr>
     <tr>
       <td><strong>Qualidade Técnica</strong></td>
-      <td>Pode ser afetada devido ao foco em velocidade e flexibilidade.</td>
-      <td>Alta ênfase na qualidade técnica, com práticas como TDD (Test-Driven Development), pair programming e integração contínua para garantir um código limpo e funcional.</td>
+      <td>Foca fortemente em boas práticas de engenharia de software, o que contribui para a qualidade técnica.</td>
+      <td>Como OpenUP foca em qualidade técnica por meio de práticas ágeis, torna-se um processo de qualidade técnica moderada.</td>
     </tr>
     <tr>
       <td><strong>Práticas de desenvolvimento</strong></td>
-      <td>Entregas rápidas e feedbacks.</td>
-      <td>Possui programação em pares, Desenvolvimento orientado a testes (TDD), Integração contínua, Refatoração e Jogos de planejamento.</td>
+      <td>Práticas de desenvolvimento bastante estruturadas e baseadas em boas práticas de engenharia de software.</td>
+      <td> Práticas de desenvolvimento flexíveis. </td>
     </tr>
     <tr>
       <td><strong>Adaptação ao Projeto de Panelas Grill</strong></td>
-      <td>Projetos que exigem rapidez no desenvolvimento, alta flexibilidade e forte envolvimento do cliente.</td>
-      <td>O scrum XP são ideias para projetos com Requisitos insertos </td>
+      <td>Projetos que exigem estrutura definida e boas práticas</td>
+      <td>Adequado para projetos menores ou ambientes ágeis. </td>
     </tr>
     <tr>
       <td><strong>Documentação</strong></td>
-      <td>Documentação leve</td>
-      <td>Documentação leve/td>
+      <td>Documentação moderada</td>
+      <td>Documentação leve <td>
     </tr>
     <tr>
       <td><strong>Controle de Qualidade</strong></td>
-      <td>Pode ser afetada devido ao foco na velocidade.</td>
-      <td>As práticas de desenvolvimento como TDD e programação em pares permite um controle de qualidade eficiente. </td>
+      <td>Adota práticas formais e estruturadas ao longo de todo o ciclo de vida do desenvolvimento.</td>
+      <td> Foca no controle de qualidade com base nas práticas ágeis. </td>
     </tr>
     <tr>
       <td><strong>Escalabilidade</strong></td>
-      <td>O RAD é mais adequado para projetos de pequeno a médio porte, principalmente devido ao seu foco em entregas rápidas e protótipos.</td>
-      <td>Escalável, mas mais indicado para equipes menores e médias devido à sua abordagem colaborativa e interativa constante. </td>
+      <td>Adequado tanto para projetos grandes quanto para equipes grandes e complexas.</td>
+      <td>Projetos menores. </td>
     </tr>
     <tr>
       <td><strong>Suporte a Equipes de Desenvolvimento</strong></td>
-      <td>O RAD oferece um forte suporte a equipes pequenas e média.</td>
-      <td>Suporta equipes menores e mais colaborativas, com papéis mais flexíveis, permitindo maior adaptação ao ritmo do projeto. </td>
+      <td>Forte suporte a equipes de desenvolvimento, especialmente em grandes equipes e projetos complexos..</td>
+      <td>Suporte razoável a equipes de desenvolvimento, mas sua flexibilidade pode ser um desafio em projetos com equipes grandes ou distribuídas.. </td>
     </tr>
   </tbody>
 </table>
@@ -88,24 +88,20 @@
 
 ## **3.3 Justificativa**
 
-Para poder identificar o nosso processo ideal foi feito o GUPTA, o resultado está logo abaixo.
-<center>
-  ![GUPTA](../imagens/GUPTA1.jpg)
-</center>
-<center>
-  ![GUPTA2](../imagens/GUPTA2.jpg)
-</center>
+Com base em nossas discussões em equipe, decidimos adotar o Open Up. Considerando os princípios abordados na disciplina de Requisitos, buscamos um modelo de trabalho menos burocrático e mais simplificado. Como o tempo é um fator essencial para os demais membros, o Open Up se destaca por oferecer uma estratégia que reduz a carga de trabalho, tornando o processo mais ágil e eficiente.
 
-Com base nos resultados apresentados pelo GUPTA, a equipe optou por adotar o Scrum XP. Além de ser a abordagem recomendada, todos os membros da equipe já possuíam experiência prévia com essa metodologia.
+Também decidimos utilizar alguns elementos orientados a plano. Como o projeto já foi iniciado com a coleta de dados para identificar os requisitos, percebemos que seria mais eficaz levantar todos os requisitos no início, para que pudéssemos focar na construção posteriormente. 
+
+Assim optamos por adotar as fases mais simples do Open Up, pois assim conseguiríamos atender à nossa necessidade de otimizar o tempo, sem comprometer a eficiência do processo.
+
 
 ## **3.4 Referências para o quadro comparativo**
-<small>DevMedia. Agile Development: XP e Scrum em uma Abordagem Comparativa. Disponível em: <https://www.devmedia.com.br/agile-development-xp-e-scrum-em-uma-abordagem-comparativa/30808>. Acesso em: 23 nov. 2024.</small>
+<small>EstrategiaConcursos. Engenharia-software-processo-unificado-rup. Disponível em: <https://www.estrategiaconcursos.com.br/blog/engenharia-software-processo-unificado-rup/>. Acesso em: 08 fev. 2025.</small>
 
-<small>Casa do Desenvolvedor. XP e Scrum: qual método utilizar para gerir seus projetos de software?. Disponível em: <https://blog.casadodesenvolvedor.com.br/xp-scrum/#:~:text=Inspirado%20nas%20pr%C3%A1ticas%20japonesas%20de,ajustes%20r%C3%A1pidos%20e%20feedbacks%20constantes>. Acesso em: 23 nov. 2024.</small>
+<small>Medium. OpenUP: Um processo integrado e ágil em: <https://medium.com/@LucianeS/openup-um-processo-integrado-e-agil-a4400c17ce62>. Acesso em: 08 fev. 2025.</small>
 
-<small>Ucloud. Metodologia RAD. Disponível em: <https://ucloudglobal.com/br/blog/metodologia-rad/>. Acesso em: 23 nov. 2024.</small>
+<small>Medium. O Processo Unificado em: <https://medium.com/contexto-delimitado/o-processo-unificado-d102b1fc9d00>. Acesso em: 08 fev. 2025.</small>
 
-<small>TreinaWeb. O que é RAD - Rapid Application Development?. Disponível em: <https://www.treinaweb.com.br/blog/o-que-e-rad-rapid-application-development/>. Acesso em: 23 nov. 2024.</small>
 
 
 ## Historico de Versão 
@@ -113,3 +109,4 @@ Com base nos resultados apresentados pelo GUPTA, a equipe optou por adotar o Scr
 |------------|--------|-------------------------------------------------------|------------|
 | 10/10/2024 | 1.0    | Documento inicial  | Grupo    |
 | 24/10/2024 | 1.1    | Correção dos feedbacks levantados pelo professor  |   Jose Vinicius      |
+| 08/02/2025 | 2.0    | Correção dos feedbacks levantados pelo professor  |   Jose Vinicius      |
