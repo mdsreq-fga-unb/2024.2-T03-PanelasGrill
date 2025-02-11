@@ -74,7 +74,6 @@ Com base na priorização do backlog, foram selecionadas para o MVP as história
 | **US10** | Registrar novos insumos                  | Eu como usuário quero registrar novos insumos utilizados na produção para manter o controle de estoque atualizado. |
 | **US11** | Editar insumos associados ao cardápio    | Eu como usuário quero editar os insumos associados a um cardápio para refletir mudanças na receita ou produção. |
 | **US13** | Excluir insumos                          | Eu como usuário quero excluir insumos que não são mais utilizados para manter o cadastro atualizado. |
-| **US14** | Analisar custo de cada prato             | Eu como usuário quero analisar o custo de cada prato produzido para definir preços adequados e controlar margem. |
 | **US17**| Encerrar sessão na plataforma| Eu como usuário quero encerrar minha sessão para evitar acessos não autorizados à minha conta  |
 
 ---
